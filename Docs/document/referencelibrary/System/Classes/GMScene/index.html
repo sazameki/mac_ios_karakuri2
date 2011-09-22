@@ -1,0 +1,207 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMScene Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMScene"></a>
+	<h1>GMScene Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p>ゲームのシーン管理を行うためのクラスです。
+</p>
+		<p></p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>コンストラクタとデストラクタ</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMScene/GMScene/GMScene()">GMScene()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMScene/~GMScene/virtual_~GMScene()">~GMScene()</a></li>
+			
+			</ul>
+		
+			<h3>メインの操作</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMScene/willAppear/virtual_void_willAppear(GMGraphics*_g)">willAppear(GMGraphics* g)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMScene/didDisappear/virtual_void_didDisappear()">didDisappear()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMScene/drawView/virtual_void_drawView(GMGraphics*_g)">drawView(GMGraphics* g)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMScene/drawView2/virtual_void_drawView2(GMGraphics*_g2)">drawView2(GMGraphics* g2)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMScene/updateModel/virtual_void_updateModel(GMInput*_input)">updateModel(GMInput* input)</a></li>
+			
+			</ul>
+		
+			<h3>コントロール関係の操作</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMScene/buttonPressed/virtual_void_buttonPressed(GMButton*_button)">buttonPressed(GMButton* button)</a></li>
+			
+			</ul>
+		
+			<h3>サブクラス内で使うためのユーティリティ・メソッド</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMScene/drawView2Mirrored/void_drawView2Mirrored(GMGraphics*_g2)">drawView2Mirrored(GMGraphics* g2)</a></li>
+			
+			</ul>
+		
+			<h3>その他の操作</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMScene/getName/std::string_getName()_const">getName() const</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+		<h2>Instant Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMScene/GMScene/GMScene()"></a>
+				<h3>GMScene</h3>
+				<div class="declare">GMScene()</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMScene/~GMScene/virtual_~GMScene()"></a>
+				<h3>~GMScene</h3>
+				<div class="declare">virtual ~GMScene()</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMScene/willAppear/virtual_void_willAppear(GMGraphics*_g)"></a>
+				<h3>willAppear</h3>
+				<div class="declare">virtual void    willAppear(GMGraphics* g)</div>
+				
+					<div class="abstract">画面に描画される直前に呼ばれるメソッドです。リソース読み込みとモデル変数の初期化を行います。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMScene/didDisappear/virtual_void_didDisappear()"></a>
+				<h3>didDisappear</h3>
+				<div class="declare">virtual void    didDisappear()</div>
+				
+					<div class="abstract">画面に表示されなくなった直後に呼ばれるメソッドです。リソースの解放を行います。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMScene/drawView/virtual_void_drawView(GMGraphics*_g)"></a>
+				<h3>drawView</h3>
+				<div class="declare">virtual void    drawView(GMGraphics* g)</div>
+				
+					<div class="abstract">このシーンの描画を行います。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMScene/drawView2/virtual_void_drawView2(GMGraphics*_g2)"></a>
+				<h3>drawView2</h3>
+				<div class="declare">virtual void    drawView2(GMGraphics* g2)</div>
+				
+					<div class="abstract">このシーンのサブディスプレイへの描画を行います。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMScene/updateModel/virtual_void_updateModel(GMInput*_input)"></a>
+				<h3>updateModel</h3>
+				<div class="declare">virtual void    updateModel(GMInput* input)</div>
+				
+					<div class="abstract">シーンのモデル内容を1フレーム分更新します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMScene/buttonPressed/virtual_void_buttonPressed(GMButton*_button)"></a>
+				<h3>buttonPressed</h3>
+				<div class="declare">virtual void    buttonPressed(GMButton* button)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMScene/drawView2Mirrored/void_drawView2Mirrored(GMGraphics*_g2)"></a>
+				<h3>drawView2Mirrored</h3>
+				<div class="declare">void    drawView2Mirrored(GMGraphics* g2)</div>
+				
+					<div class="abstract">サブディスプレイの描画をミラー処理で行います。drawView2() メソッドから呼び出してください。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMScene/getName/std::string_getName()_const"></a>
+				<h3>getName</h3>
+				<div class="declare">std::string     getName() const</div>
+				
+					<div class="abstract">このシーンに設定された名前を取得します。
+</div>
+				
+				
+			</div>
+		
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

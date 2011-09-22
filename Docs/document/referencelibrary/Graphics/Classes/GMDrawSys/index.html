@@ -1,0 +1,218 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMDrawSys Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMDrawSys"></a>
+	<h1>GMDrawSys Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p>もっとも基本的な描画機能を提供するためのクラスです。
+</p>
+		<p><p>OpenGL / OpenGL ES の描画命令の発行はすべてこのクラスによって行われます。</p><p>アルファブレンディングの設定はこのクラスで管理しています。</p>
+</p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>アルファブレンディングの設定</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDrawSys/GetBlendMode/static_GMBlendMode_GetBlendMode()">GetBlendMode()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDrawSys/SetBlendMode/static_void_SetBlendMode(GMBlendMode_mode)">SetBlendMode(GMBlendMode mode)</a></li>
+			
+			</ul>
+		
+			<h3>頂点配列を使用した描画</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDrawSys/DrawPrimitivesUser/static_void_DrawPrimitivesUser(GMPrimitiveType_type,_GMVertexDataVC*_data,_int_startIndex,_int_primitiveCount)">DrawPrimitivesUser(GMPrimitiveType type, GMVertexDataVC* data, int startIndex, int primitiveCount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDrawSys/DrawPrimitivesUser/static_void_DrawPrimitivesUser(GMPrimitiveType_type,_GMVertexDataVT*_data,_int_startIndex,_int_primitiveCount)">DrawPrimitivesUser(GMPrimitiveType type, GMVertexDataVT* data, int startIndex, int primitiveCount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDrawSys/DrawPrimitivesUser/static_void_DrawPrimitivesUser(GMPrimitiveType_type,_GMVertexDataVCT*_data,_int_startIndex,_int_primitiveCount)">DrawPrimitivesUser(GMPrimitiveType type, GMVertexDataVCT* data, int startIndex, int primitiveCount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDrawSys/DrawPrimitivesUser/static_void_DrawPrimitivesUser(GMPrimitiveType_type,_GMVertexDataVNT*_data,_int_startIndex,_int_primitiveCount)">DrawPrimitivesUser(GMPrimitiveType type, GMVertexDataVNT* data, int startIndex, int primitiveCount)</a></li>
+			
+			</ul>
+		
+			<h3>頂点バッファを使用した描画（未実装）</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDrawSys/DrawPrimitives/static_void_DrawPrimitives(GMPrimitiveType_type,_int_startIndex,_int_primitiveCount)">DrawPrimitives(GMPrimitiveType type, int startIndex, int primitiveCount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDrawSys/SetVertexBuffer/static_void_SetVertexBuffer(GMVertexBuffer*_vertexBuffer)">SetVertexBuffer(GMVertexBuffer* vertexBuffer)</a></li>
+			
+			</ul>
+		
+			<h3>頂点インデックスバッファを使用した描画（未実装）</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDrawSys/DrawPrimitivesIndexed/static_void_DrawPrimitivesIndexed(GMPrimitiveType_type,_int_startIndex,_int_primitiveCount)">DrawPrimitivesIndexed(GMPrimitiveType type, int startIndex, int primitiveCount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDrawSys/SetIndexBuffer/static_void_SetIndexBuffer(GMIndexBuffer*_indexBuffer)">SetIndexBuffer(GMIndexBuffer* indexBuffer)</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+
+	
+
+	
+		<h2>Class Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDrawSys/GetBlendMode/static_GMBlendMode_GetBlendMode()"></a>
+				<h3>GetBlendMode</h3>
+				<div class="declare">static GMBlendMode GetBlendMode()</div>
+				
+					<div class="abstract">現在のブレンドモードを取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDrawSys/SetBlendMode/static_void_SetBlendMode(GMBlendMode_mode)"></a>
+				<h3>SetBlendMode</h3>
+				<div class="declare">static void    SetBlendMode(GMBlendMode mode)</div>
+				
+					<div class="abstract">ブレンドモードを設定します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						<p>以下の値を指定することができます。<ul><li>GMBlendModeAlpha（アルファ合成）</li><li>GMBlendModeAdd（加算合成）</li><li>GMBlendModeClear（クリア合成）</li><li>GMBlendModeCopy（コピー合成）</li><li>GMBlendModeInvert（反転合成）</li><li>GMBlendModeMultiply（乗算合成）</li><li>GMBlendModeScreen（スクリーン合成）</li><li>GMBlendModeXOR（XOR合成）</li></ul></p>
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDrawSys/DrawPrimitivesUser/static_void_DrawPrimitivesUser(GMPrimitiveType_type,_GMVertexDataVC*_data,_int_startIndex,_int_primitiveCount)"></a>
+				<h3>DrawPrimitivesUser</h3>
+				<div class="declare">static void DrawPrimitivesUser(GMPrimitiveType type, GMVertexDataVC* data, int startIndex, int primitiveCount)</div>
+				
+					<div class="abstract">渡されたバッファに対して、頂点配列を使用した描画を行います。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDrawSys/DrawPrimitivesUser/static_void_DrawPrimitivesUser(GMPrimitiveType_type,_GMVertexDataVT*_data,_int_startIndex,_int_primitiveCount)"></a>
+				<h3>DrawPrimitivesUser</h3>
+				<div class="declare">static void DrawPrimitivesUser(GMPrimitiveType type, GMVertexDataVT* data, int startIndex, int primitiveCount)</div>
+				
+					<div class="abstract">渡されたバッファに対して、頂点配列を使用した描画を行います。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDrawSys/DrawPrimitivesUser/static_void_DrawPrimitivesUser(GMPrimitiveType_type,_GMVertexDataVCT*_data,_int_startIndex,_int_primitiveCount)"></a>
+				<h3>DrawPrimitivesUser</h3>
+				<div class="declare">static void DrawPrimitivesUser(GMPrimitiveType type, GMVertexDataVCT* data, int startIndex, int primitiveCount)</div>
+				
+					<div class="abstract">渡されたバッファに対して、頂点配列を使用した描画を行います。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDrawSys/DrawPrimitivesUser/static_void_DrawPrimitivesUser(GMPrimitiveType_type,_GMVertexDataVNT*_data,_int_startIndex,_int_primitiveCount)"></a>
+				<h3>DrawPrimitivesUser</h3>
+				<div class="declare">static void DrawPrimitivesUser(GMPrimitiveType type, GMVertexDataVNT* data, int startIndex, int primitiveCount)</div>
+				
+					<div class="abstract">渡されたバッファに対して、頂点配列を使用した描画を行います。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDrawSys/DrawPrimitives/static_void_DrawPrimitives(GMPrimitiveType_type,_int_startIndex,_int_primitiveCount)"></a>
+				<h3>DrawPrimitives</h3>
+				<div class="declare">static void DrawPrimitives(GMPrimitiveType type, int startIndex, int primitiveCount)</div>
+				
+					<div class="abstract">SetVertexBuffer() でセットされた頂点バッファを使用して、プリミティブの描画を行います。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDrawSys/SetVertexBuffer/static_void_SetVertexBuffer(GMVertexBuffer*_vertexBuffer)"></a>
+				<h3>SetVertexBuffer</h3>
+				<div class="declare">static void SetVertexBuffer(GMVertexBuffer* vertexBuffer)</div>
+				
+					<div class="abstract">DrawPrimitives() で描画するための頂点バッファを設定します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDrawSys/DrawPrimitivesIndexed/static_void_DrawPrimitivesIndexed(GMPrimitiveType_type,_int_startIndex,_int_primitiveCount)"></a>
+				<h3>DrawPrimitivesIndexed</h3>
+				<div class="declare">static void DrawPrimitivesIndexed(GMPrimitiveType type, int startIndex, int primitiveCount)</div>
+				
+					<div class="abstract">SetVertexBuffer() でセットされた頂点バッファに対して、SetIndexBuffer() でセットされた頂点インデックスバッファを使用して、プリミティブの描画を行います。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDrawSys/SetIndexBuffer/static_void_SetIndexBuffer(GMIndexBuffer*_indexBuffer)"></a>
+				<h3>SetIndexBuffer</h3>
+				<div class="declare">static void SetIndexBuffer(GMIndexBuffer* indexBuffer)</div>
+				
+					<div class="abstract">DrawPrimitivesIndexed() で描画するための頂点インデックスバッファを設定します。
+</div>
+				
+				
+			</div>
+		
+	
+
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

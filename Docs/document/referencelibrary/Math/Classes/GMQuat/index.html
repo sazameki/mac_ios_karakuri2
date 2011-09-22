@@ -1,0 +1,498 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMQuat Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMQuat"></a>
+	<h1>GMQuat Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p>クォータニオンを表現するためのクラスです。
+</p>
+		<p></p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>生成メソッド</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMQuat/CreateFromAxisAngle/static_GMQuat_CreateFromAxisAngle(const_GMVector3D@_axis,_double_angle)">CreateFromAxisAngle(const GMVector3D& axis, double angle)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMQuat/CreateFromYawPitchRoll/static_GMQuat_CreateFromYawPitchRoll(double_yaw,_double_pitch,_double_roll)">CreateFromYawPitchRoll(double yaw, double pitch, double roll)</a></li>
+			
+			</ul>
+		
+			<h3>数値補完</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMQuat/EaseIn/static_GMQuat_EaseIn(const_GMQuat@_q1,_const_GMQuat@_q2,_double_amount)">EaseIn(const GMQuat& q1, const GMQuat& q2, double amount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMQuat/EaseInOut/static_GMQuat_EaseInOut(const_GMQuat@_q1,_const_GMQuat@_q2,_double_amount)">EaseInOut(const GMQuat& q1, const GMQuat& q2, double amount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMQuat/EaseOut/static_GMQuat_EaseOut(const_GMQuat@_q1,_const_GMQuat@_q2,_double_amount)">EaseOut(const GMQuat& q1, const GMQuat& q2, double amount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMQuat/Lerp/static_GMQuat_Lerp(const_GMQuat@_q1,_const_GMQuat@_q2,_double_amount)">Lerp(const GMQuat& q1, const GMQuat& q2, double amount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMQuat/Slerp/static_GMQuat_Slerp(const_GMQuat@_q1,_const_GMQuat@_q2,_double_amount)">Slerp(const GMQuat& q1, const GMQuat& q2, double amount)</a></li>
+			
+			</ul>
+		
+			<h3>コンストラクタ</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/GMQuat/GMQuat()">GMQuat()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/GMQuat/GMQuat(double_x,_double_y,_double_z,_double_w)">GMQuat(double x, double y, double z, double w)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/GMQuat/GMQuat(const_GMQuat@_quat)">GMQuat(const GMQuat& quat)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/GMQuat/GMQuat(const_GMMatrix@_mat)">GMQuat(const GMMatrix& mat)</a></li>
+			
+			</ul>
+		
+			<h3>メインの操作</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/concat/GMQuat_concat(const_GMQuat@_quat)_const">concat(const GMQuat& quat) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/conjugate/GMQuat@_conjugate()">conjugate()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/dot/double_dot(const_GMQuat@_quat)_const">dot(const GMQuat& quat) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/equals/bool_equals(const_GMQuat@_quat,_double_accuracy)_const">equals(const GMQuat& quat, double accuracy) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/inverse/GMQuat_inverse()_const">inverse() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/length/double_length()_const">length() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/lengthSq/double_lengthSq()_const">lengthSq() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/normal/GMQuat_normal()_const">normal() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/normalize/GMQuat@_normalize()">normalize()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/toMatrix/GMMatrix_toMatrix()_const">toMatrix() const</a></li>
+			
+			</ul>
+		
+			<h3>演算子のオーバーロード</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/operator=/GMQuat@_operator=(const_GMQuat@_quat)">operator=(const GMQuat& quat)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/operator-/GMQuat_operator-()_const">operator-() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/operator+/GMQuat_operator+(const_GMQuat@_quat)_const">operator+(const GMQuat& quat) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/operator-/GMQuat_operator-(const_GMQuat@_quat)_const">operator-(const GMQuat& quat) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/operator*/GMQuat_operator*(const_GMQuat@_quat)_const">operator*(const GMQuat& quat) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/operator*/GMQuat_operator*(double_scale)_const">operator*(double scale) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/operator//GMQuat_operator/(const_GMQuat@_quat)_const">operator/(const GMQuat& quat) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/operator//GMQuat_operator/(double_value)_const">operator/(double value) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/operator+=/GMQuat@_operator+=(const_GMQuat@_quat)">operator+=(const GMQuat& quat)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/operator-=/GMQuat@_operator-=(const_GMQuat@_quat)">operator-=(const GMQuat& quat)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/operator*=/GMQuat@_operator*=(const_GMQuat@_quat)">operator*=(const GMQuat& quat)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/operator=/GMQuat@_operator*=(double_scale)">GMQuat&     operator*=(double scale)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/operator/=/GMQuat@_operator/=(const_GMQuat@_quat)">operator/=(const GMQuat& quat)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/operator/=/GMQuat@_operator/=(double_value)">operator/=(double value)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/operator==/bool_operator==(const_GMQuat@_quat)_const">operator==(const GMQuat& quat) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMQuat/operator!=/bool_operator!=(const_GMQuat@_quat)_const">operator!=(const GMQuat& quat) const</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+		<h2>Constants</h2>		
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Identity</h3>
+				<div class="declare">static const GMQuat&    Identity</div>
+				
+				
+			</div>
+		
+	
+
+	
+		<h2>Instant Variables</h2>
+		
+			<a name=""></a>
+			<h3>x</h3>
+			<div class="declare">double x</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>y</h3>
+			<div class="declare">double y</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>z</h3>
+			<div class="declare">double z</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>w</h3>
+			<div class="declare">double w</div>
+			
+			
+		
+	
+
+	
+		<h2>Class Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMQuat/CreateFromAxisAngle/static_GMQuat_CreateFromAxisAngle(const_GMVector3D@_axis,_double_angle)"></a>
+				<h3>CreateFromAxisAngle</h3>
+				<div class="declare">static GMQuat   CreateFromAxisAngle(const GMVector3D& axis, double angle)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMQuat/CreateFromYawPitchRoll/static_GMQuat_CreateFromYawPitchRoll(double_yaw,_double_pitch,_double_roll)"></a>
+				<h3>CreateFromYawPitchRoll</h3>
+				<div class="declare">static GMQuat   CreateFromYawPitchRoll(double yaw, double pitch, double roll)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMQuat/EaseIn/static_GMQuat_EaseIn(const_GMQuat@_q1,_const_GMQuat@_q2,_double_amount)"></a>
+				<h3>EaseIn</h3>
+				<div class="declare">static GMQuat   EaseIn(const GMQuat& q1, const GMQuat& q2, double amount)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMQuat/EaseInOut/static_GMQuat_EaseInOut(const_GMQuat@_q1,_const_GMQuat@_q2,_double_amount)"></a>
+				<h3>EaseInOut</h3>
+				<div class="declare">static GMQuat   EaseInOut(const GMQuat& q1, const GMQuat& q2, double amount)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMQuat/EaseOut/static_GMQuat_EaseOut(const_GMQuat@_q1,_const_GMQuat@_q2,_double_amount)"></a>
+				<h3>EaseOut</h3>
+				<div class="declare">static GMQuat   EaseOut(const GMQuat& q1, const GMQuat& q2, double amount)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMQuat/Lerp/static_GMQuat_Lerp(const_GMQuat@_q1,_const_GMQuat@_q2,_double_amount)"></a>
+				<h3>Lerp</h3>
+				<div class="declare">static GMQuat   Lerp(const GMQuat& q1, const GMQuat& q2, double amount)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMQuat/Slerp/static_GMQuat_Slerp(const_GMQuat@_q1,_const_GMQuat@_q2,_double_amount)"></a>
+				<h3>Slerp</h3>
+				<div class="declare">static GMQuat   Slerp(const GMQuat& q1, const GMQuat& q2, double amount)</div>
+				
+				
+			</div>
+		
+	
+
+	
+		<h2>Instant Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/GMQuat/GMQuat()"></a>
+				<h3>GMQuat</h3>
+				<div class="declare">GMQuat()</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/GMQuat/GMQuat(double_x,_double_y,_double_z,_double_w)"></a>
+				<h3>GMQuat</h3>
+				<div class="declare">GMQuat(double x, double y, double z, double w)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/GMQuat/GMQuat(const_GMQuat@_quat)"></a>
+				<h3>GMQuat</h3>
+				<div class="declare">GMQuat(const GMQuat& quat)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/GMQuat/GMQuat(const_GMMatrix@_mat)"></a>
+				<h3>GMQuat</h3>
+				<div class="declare">GMQuat(const GMMatrix& mat)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/concat/GMQuat_concat(const_GMQuat@_quat)_const"></a>
+				<h3>concat</h3>
+				<div class="declare">GMQuat      concat(const GMQuat& quat) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/conjugate/GMQuat@_conjugate()"></a>
+				<h3>conjugate</h3>
+				<div class="declare">GMQuat&     conjugate()</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/dot/double_dot(const_GMQuat@_quat)_const"></a>
+				<h3>dot</h3>
+				<div class="declare">double      dot(const GMQuat& quat) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/equals/bool_equals(const_GMQuat@_quat,_double_accuracy)_const"></a>
+				<h3>equals</h3>
+				<div class="declare">bool        equals(const GMQuat& quat, double accuracy) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/inverse/GMQuat_inverse()_const"></a>
+				<h3>inverse</h3>
+				<div class="declare">GMQuat      inverse() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/length/double_length()_const"></a>
+				<h3>length</h3>
+				<div class="declare">double      length() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/lengthSq/double_lengthSq()_const"></a>
+				<h3>lengthSq</h3>
+				<div class="declare">double      lengthSq() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/normal/GMQuat_normal()_const"></a>
+				<h3>normal</h3>
+				<div class="declare">GMQuat      normal() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/normalize/GMQuat@_normalize()"></a>
+				<h3>normalize</h3>
+				<div class="declare">GMQuat&     normalize()</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/toMatrix/GMMatrix_toMatrix()_const"></a>
+				<h3>toMatrix</h3>
+				<div class="declare">GMMatrix    toMatrix() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/operator=/GMQuat@_operator=(const_GMQuat@_quat)"></a>
+				<h3>operator=</h3>
+				<div class="declare">GMQuat&     operator=(const GMQuat& quat)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/operator-/GMQuat_operator-()_const"></a>
+				<h3>operator-</h3>
+				<div class="declare">GMQuat      operator-() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/operator+/GMQuat_operator+(const_GMQuat@_quat)_const"></a>
+				<h3>operator+</h3>
+				<div class="declare">GMQuat      operator+(const GMQuat& quat) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/operator-/GMQuat_operator-(const_GMQuat@_quat)_const"></a>
+				<h3>operator-</h3>
+				<div class="declare">GMQuat      operator-(const GMQuat& quat) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/operator*/GMQuat_operator*(const_GMQuat@_quat)_const"></a>
+				<h3>operator*</h3>
+				<div class="declare">GMQuat      operator*(const GMQuat& quat) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/operator*/GMQuat_operator*(double_scale)_const"></a>
+				<h3>operator*</h3>
+				<div class="declare">GMQuat      operator*(double scale) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/operator//GMQuat_operator/(const_GMQuat@_quat)_const"></a>
+				<h3>operator/</h3>
+				<div class="declare">GMQuat      operator/(const GMQuat& quat) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/operator//GMQuat_operator/(double_value)_const"></a>
+				<h3>operator/</h3>
+				<div class="declare">GMQuat      operator/(double value) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/operator+=/GMQuat@_operator+=(const_GMQuat@_quat)"></a>
+				<h3>operator+=</h3>
+				<div class="declare">GMQuat&     operator+=(const GMQuat& quat)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/operator-=/GMQuat@_operator-=(const_GMQuat@_quat)"></a>
+				<h3>operator-=</h3>
+				<div class="declare">GMQuat&     operator-=(const GMQuat& quat)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/operator*=/GMQuat@_operator*=(const_GMQuat@_quat)"></a>
+				<h3>operator*=</h3>
+				<div class="declare">GMQuat&     operator*=(const GMQuat& quat)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/operator=/GMQuat@_operator*=(double_scale)"></a>
+				<h3>operator=</h3>
+				<div class="declare">GMQuat&     operator*=(double scale)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/operator/=/GMQuat@_operator/=(const_GMQuat@_quat)"></a>
+				<h3>operator/=</h3>
+				<div class="declare">GMQuat&     operator/=(const GMQuat& quat)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/operator/=/GMQuat@_operator/=(double_value)"></a>
+				<h3>operator/=</h3>
+				<div class="declare">GMQuat&     operator/=(double value)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/operator==/bool_operator==(const_GMQuat@_quat)_const"></a>
+				<h3>operator==</h3>
+				<div class="declare">bool        operator==(const GMQuat& quat) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMQuat/operator!=/bool_operator!=(const_GMQuat@_quat)_const"></a>
+				<h3>operator!=</h3>
+				<div class="declare">bool        operator!=(const GMQuat& quat) const</div>
+				
+				
+			</div>
+		
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

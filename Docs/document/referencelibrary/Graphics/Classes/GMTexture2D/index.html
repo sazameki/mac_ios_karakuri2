@@ -1,0 +1,179 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMTexture2D Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMTexture2D"></a>
+	<h1>GMTexture2D Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+			<h2>Sub Classes</h2>
+			<ul>
+			
+				<li><a href="../../../Graphics/Classes/GMRenderTarget2D/index.html#//apple_ref/cpp/cl/GMRenderTarget2D">GMRenderTarget2D</a></li>
+			
+			</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p><p>2次元のテクスチャを表現するためのクラスです。</p><p>このクラスは、テクスチャの描画はサポートしません。テクスチャの描画には、GMDraw クラスか GMSpriteBatch クラスを利用します。</p>
+</p>
+		<p></p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>コンストラクタ</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMTexture2D/GMTexture2D/GMTexture2D(int_width,_int_height)_throw(GMInvalidOperationException,_GMOutOfMemoryException)">GMTexture2D(int width, int height) throw(GMInvalidOperationException, GMOutOfMemoryException)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMTexture2D/GMTexture2D/GMTexture2D(int_width,_int_height,_GMTextureFormat_format)_throw(GMInvalidOperationException,_GMOutOfMemoryException)">GMTexture2D(int width, int height, GMTextureFormat format) throw(GMInvalidOperationException, GMOutOfMemoryException)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMTexture2D/GMTexture2D/GMTexture2D(const_std::string@_imageName,_GMTexture2DScaleMode_mode_=_GMTexture2DScaleModeLinear)">GMTexture2D(const std::string& imageName, GMTexture2DScaleMode mode = GMTexture2DScaleModeLinear)</a></li>
+			
+			</ul>
+		
+			<h3>サイズ関係のメソッド</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMTexture2D/getSize/GMVector2D_getSize()_const">getSize() const</a></li>
+			
+			</ul>
+		
+			<h3>スケーリング関係のメソッド</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMTexture2D/getScale/GMVector2D_getScale()_const">getScale() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMTexture2D/setScale/void_setScale(const_GMVector2D@_scale)">setScale(const GMVector2D& scale)</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+		<h2>Instant Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMTexture2D/GMTexture2D/GMTexture2D(int_width,_int_height)_throw(GMInvalidOperationException,_GMOutOfMemoryException)"></a>
+				<h3>GMTexture2D</h3>
+				<div class="declare">GMTexture2D(int width, int height) throw(GMInvalidOperationException, GMOutOfMemoryException)</div>
+				
+					<div class="abstract">幅と高さを指定して、32bit ARGB フォーマットのテクスチャを作成します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						幅と高さには、2の乗数しか指定できません。
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMTexture2D/GMTexture2D/GMTexture2D(int_width,_int_height,_GMTextureFormat_format)_throw(GMInvalidOperationException,_GMOutOfMemoryException)"></a>
+				<h3>GMTexture2D</h3>
+				<div class="declare">GMTexture2D(int width, int height, GMTextureFormat format) throw(GMInvalidOperationException, GMOutOfMemoryException)</div>
+				
+					<div class="abstract">幅と高さを指定して、指定されたフォーマットのテクスチャを作成します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						幅と高さには、2の乗数しか指定できません。
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMTexture2D/GMTexture2D/GMTexture2D(const_std::string@_imageName,_GMTexture2DScaleMode_mode_=_GMTexture2DScaleModeLinear)"></a>
+				<h3>GMTexture2D</h3>
+				<div class="declare">GMTexture2D(const std::string& imageName, GMTexture2DScaleMode mode = GMTexture2DScaleModeLinear)</div>
+				
+					<div class="abstract">画像ファイルの名前を指定してテクスチャを作成します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						第2引数に GMTexture2DScaleModeLinear か GMTexture2DScaleModeNearest を指定することで、拡大・縮小時の補完方法を指定することができます。
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMTexture2D/getSize/GMVector2D_getSize()_const"></a>
+				<h3>getSize</h3>
+				<div class="declare">GMVector2D  getSize() const</div>
+				
+					<div class="abstract">テクスチャのサイズをピクセル単位で取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMTexture2D/getScale/GMVector2D_getScale()_const"></a>
+				<h3>getScale</h3>
+				<div class="declare">GMVector2D  getScale() const</div>
+				
+					<div class="abstract">縦横ともに、1.0を基準として何パーセントを実際のテクスチャ領域としているかを取得します（テクスチャのサイズには2の乗数しか指定できないため）
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMTexture2D/setScale/void_setScale(const_GMVector2D@_scale)"></a>
+				<h3>setScale</h3>
+				<div class="declare">void    setScale(const GMVector2D& scale)</div>
+				
+					<div class="abstract">縦横ともに、1.0を基準として何パーセントを実際のテクスチャ領域としているかを設定します（テクスチャのサイズには2の乗数しか指定できないため）
+</div>
+				
+				
+			</div>
+		
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../css/main.css" type="text/css" />
+	<title>DocSet Maker Data Types</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../index.html" target="_top">Back to TOC</a></p>
+
+	<h1>Graphics Data Types</h1>
+	
+	
+		<h2>Enumerations</h2>
+		
+			<a name="//apple_ref/cpp/tag/GMBlendMode"></a>
+			<h3>GMBlendMode</h3>
+			<div class="declare">enum GMBlendMode {<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMBlendModeAlpha,<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMBlendModeAdd,<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMBlendModeClear,<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMBlendModeCopy,<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMBlendModeInvert,<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMBlendModeMultiply,<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMBlendModeScreen,<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMBlendModeXOR,<br />
+				
+			};</div>
+			
+			
+			
+				<div class="constants">
+					<h4>Constants</h4>
+					<dl>
+					
+						<dt>GMBlendModeAlpha</dt><dd>アルファ合成</dd>
+					
+						<dt>GMBlendModeAdd</dt><dd>加算合成</dd>
+					
+						<dt>GMBlendModeClear</dt><dd>クリア合成</dd>
+					
+						<dt>GMBlendModeCopy</dt><dd>コピー合成</dd>
+					
+						<dt>GMBlendModeInvert</dt><dd>反転合成</dd>
+					
+						<dt>GMBlendModeMultiply</dt><dd>乗算合成</dd>
+					
+						<dt>GMBlendModeScreen</dt><dd>スクリーン合成</dd>
+					
+						<dt>GMBlendModeXOR</dt><dd>XOR合成</dd>
+					
+					</dl>
+				</div>
+			
+		
+			<a name="//apple_ref/cpp/tag/GMPrimitiveType"></a>
+			<h3>GMPrimitiveType</h3>
+			<div class="declare">enum GMPrimitiveType {<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMPrimitiveTypePointList,<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMPrimitiveTypeLineList,<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMPrimitiveTypeLineStrip,<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMPrimitiveTypeTriangleList,<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMPrimitiveTypeTriangleStrip,<br />
+				
+			};</div>
+			
+			
+			
+				<div class="constants">
+					<h4>Constants</h4>
+					<dl>
+					
+						<dt>GMPrimitiveTypePointList</dt><dd>点のリスト</dd>
+					
+						<dt>GMPrimitiveTypeLineList</dt><dd>線のリスト</dd>
+					
+						<dt>GMPrimitiveTypeLineStrip</dt><dd>連続した線のリスト</dd>
+					
+						<dt>GMPrimitiveTypeTriangleList</dt><dd>三角形のリスト</dd>
+					
+						<dt>GMPrimitiveTypeTriangleStrip</dt><dd>連続した三角形のリスト</dd>
+					
+					</dl>
+				</div>
+			
+		
+			<a name="//apple_ref/cpp/tag/GMSpriteSortMode"></a>
+			<h3>GMSpriteSortMode</h3>
+			<div class="declare">enum GMSpriteSortMode {<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMSpriteSortModeImmediate,<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMSpriteSortModeDeferred,<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMSpriteSortModeTexture,<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMSpriteSortModeBackToFront,<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMSpriteSortModeFrontToBack,<br />
+				
+			};</div>
+			
+				<div class="abstract">スプライト描画のソート方法を指定する定数です。
+</div>
+			
+			
+			
+				<div class="constants">
+					<h4>Constants</h4>
+					<dl>
+					
+						<dt>GMSpriteSortModeImmediate</dt><dd>バッチ処理を行わず、即座に描画が行われます。</dd>
+					
+						<dt>GMSpriteSortModeDeferred</dt><dd>描画命令を発行した順に描画が行われます。（デフォルト）</dd>
+					
+						<dt>GMSpriteSortModeTexture</dt><dd>テクスチャによって描画順をソートします。</dd>
+					
+						<dt>GMSpriteSortModeBackToFront</dt><dd>layerDepth指定による深さで逆順にソートします。</dd>
+					
+						<dt>GMSpriteSortModeFrontToBack</dt><dd>layerDepth指定による深さでソートします。</dd>
+					
+					</dl>
+				</div>
+			
+		
+			<a name="//apple_ref/cpp/tag/GMTextureFormat"></a>
+			<h3>GMTextureFormat</h3>
+			<div class="declare">enum GMTextureFormat {<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMTextureFormat_RGBA8,<br />
+				
+					&nbsp;&nbsp;&nbsp;&nbsp;GMTextureFormat_A8,<br />
+				
+			};</div>
+			
+			
+			
+				<div class="constants">
+					<h4>Constants</h4>
+					<dl>
+					
+						<dt>GMTextureFormat_RGBA8</dt><dd>各チャンネルに 8bit ずつ使用する、32bit RGBA ピクセルフォーマットです (unsigned byte)。</dd>
+					
+						<dt>GMTextureFormat_A8</dt><dd>8bit のアルファチャンネルのみのピクセルフォーマットです (unsigned byte)。</dd>
+					
+					</dl>
+				</div>
+			
+		
+	
+
+	
+
+	
+
+	
+
+	
+
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

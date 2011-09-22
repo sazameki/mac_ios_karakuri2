@@ -1,0 +1,149 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMRandom Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMRandom"></a>
+	<h1>GMRandom Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p>乱数を生成するクラスです。
+</p>
+		<p><p><a href="http://www.jstatsoft.org/v08/i14/" target="_blank">XorShift</a> 法を 128bit で使って、疑似乱数を生成します。</p><p>乱数のシードは、ゲームの起動時に time() 関数（標準C言語ライブラリ）と getpid() 関数（POSIX.1規格）のリターン値を元にして設定されます。デモなどでのシーン再現のために乱数シードを保存する場合には、GetFirstSeed() メソッドを使ってシードを取得し、任意のタイミングで SetFirstSeed() メソッドを使ってシードを設定します。</p>
+</p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>乱数の生成</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMRandom/NextDouble/static_double_NextDouble()">NextDouble()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMRandom/NextInt/static_int_NextInt()">NextInt()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMRandom/NextInt/static_int_NextInt(int_upper)">NextInt(int upper)</a></li>
+			
+			</ul>
+		
+			<h3>乱数シードの管理</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMRandom/GetFirstSeed/static_unsigned_GetFirstSeed()">GetFirstSeed()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMRandom/SetFirstSeed/static_void_SetFirstSeed(unsigned_seed0)">SetFirstSeed(unsigned seed0)</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+
+	
+
+	
+		<h2>Class Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMRandom/NextDouble/static_double_NextDouble()"></a>
+				<h3>NextDouble</h3>
+				<div class="declare">static double NextDouble()</div>
+				
+					<div class="abstract">0.0 ～ 1.0 の範囲で double 型の擬似乱数をリターンします。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMRandom/NextInt/static_int_NextInt()"></a>
+				<h3>NextInt</h3>
+				<div class="declare">static int NextInt()</div>
+				
+					<div class="abstract">int 型の擬似乱数をリターンします。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						32ビットの int 型が取り得るすべての値が、ほぼ均等な確率で生成されます。
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMRandom/NextInt/static_int_NextInt(int_upper)"></a>
+				<h3>NextInt</h3>
+				<div class="declare">static int NextInt(int upper)</div>
+				
+					<div class="abstract">0 から指定された値までの範囲（0 は含み、指定された値は含まない）の int 型の擬似乱数をリターンします。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						指定された範囲内で取り得るすべての値が、ほぼ均等な確率で生成されます。
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMRandom/GetFirstSeed/static_unsigned_GetFirstSeed()"></a>
+				<h3>GetFirstSeed</h3>
+				<div class="declare">static unsigned GetFirstSeed()</div>
+				
+					<div class="abstract">現在のこのクラスにおける最初の乱数シードを取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMRandom/SetFirstSeed/static_void_SetFirstSeed(unsigned_seed0)"></a>
+				<h3>SetFirstSeed</h3>
+				<div class="declare">static void     SetFirstSeed(unsigned seed0)</div>
+				
+					<div class="abstract">最初の乱数シードを設定します。
+</div>
+				
+				
+			</div>
+		
+	
+
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

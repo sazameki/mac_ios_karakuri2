@@ -1,0 +1,564 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMVector2D Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMVector2D"></a>
+	<h1>GMVector2D Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p></p>
+		<p></p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>数値補完</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMVector2D/Barycentric/static_GMVector2D_Barycentric(const_GMVector2D@_v1,_const_GMVector2D@_v2,_const_GMVector2D@_v3,_double_amount1,_double_amount2)">Barycentric(const GMVector2D& v1, const GMVector2D& v2, const GMVector2D& v3, double amount1, double amount2)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMVector2D/CatmullRom/static_GMVector2D_CatmullRom(const_GMVector2D@_vec1,_const_GMVector2D@_vec2,_const_GMVector2D@_vec3,_const_GMVector2D@_vec4,_double_amount)">CatmullRom(const GMVector2D& vec1, const GMVector2D& vec2, const GMVector2D& vec3, const GMVector2D& vec4, double amount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMVector2D/EaseIn/static_GMVector2D_EaseIn(const_GMVector2D@_vec1,_const_GMVector2D@_vec2,_double_amount)">EaseIn(const GMVector2D& vec1, const GMVector2D& vec2, double amount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMVector2D/EaseInOut/static_GMVector2D_EaseInOut(const_GMVector2D@_vec1,_const_GMVector2D@_vec2,_double_amount)">EaseInOut(const GMVector2D& vec1, const GMVector2D& vec2, double amount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMVector2D/EaseOut/static_GMVector2D_EaseOut(const_GMVector2D@_vec1,_const_GMVector2D@_vec2,_double_amount)">EaseOut(const GMVector2D& vec1, const GMVector2D& vec2, double amount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMVector2D/Hermite/static_GMVector2D_Hermite(const_GMVector2D@_vec1,_const_GMVector2D@_tan1,_const_GMVector2D@_vec2,_const_GMVector2D@_tan2,_double_amount)">Hermite(const GMVector2D& vec1, const GMVector2D& tan1, const GMVector2D& vec2, const GMVector2D& tan2, double amount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMVector2D/Lerp/static_GMVector2D_Lerp(const_GMVector2D@_vec1,_const_GMVector2D@_vec2,_double_amount)">Lerp(const GMVector2D& vec1, const GMVector2D& vec2, double amount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMVector2D/SmoothStep/static_GMVector2D_SmoothStep(const_GMVector2D@_vec1,_const_GMVector2D@_vec2,_double_amount)">SmoothStep(const GMVector2D& vec1, const GMVector2D& vec2, double amount)</a></li>
+			
+			</ul>
+		
+			<h3>数値処理</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMVector2D/Max/static_GMVector2D_Max(const_GMVector2D@_vec1,_const_GMVector2D@_vec2)">Max(const GMVector2D& vec1, const GMVector2D& vec2)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMVector2D/Min/static_GMVector2D_Min(const_GMVector2D@_vec1,_const_GMVector2D@_vec2)">Min(const GMVector2D& vec1, const GMVector2D& vec2)</a></li>
+			
+			</ul>
+		
+			<h3>コンストラクタ</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/GMVector2D/GMVector2D()">GMVector2D()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/GMVector2D/GMVector2D(double_value)">GMVector2D(double value)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/GMVector2D/GMVector2D(double_x,_double_y)">GMVector2D(double x, double y)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/GMVector2D/GMVector2D(const_GMVector2D@_vec)">GMVector2D(const GMVector2D& vec)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/clamp/GMVector2D_clamp(const_GMVector2D@_min,_const_GMVector2D@_max)_const">clamp(const GMVector2D& min, const GMVector2D& max) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/cross/double_cross(const_GMVector2D@_vec)_const">cross(const GMVector2D& vec) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/distance/double_distance(const_GMVector2D@_vec)_const">distance(const GMVector2D& vec) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/distanceSq/double_distanceSq(const_GMVector2D@_vec)_const">distanceSq(const GMVector2D& vec) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/dot/double_dot(const_GMVector2D@_vec)_const">dot(const GMVector2D& vec) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/equals/bool_equals(const_GMVector2D@_vec,_double_accuracy)_const">equals(const GMVector2D& vec, double accuracy) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/length/double_length()_const">length() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/lengthSq/double_lengthSq()_const">lengthSq() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/normal/GMVector2D_normal()_const">normal() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/normalize/GMVector2D@_normalize()">normalize()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/reflect/GMVector2D_reflect(const_GMVector2D@_normal)_const">reflect(const GMVector2D& normal) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/transform/GMVector2D_transform(const_GMMatrix@_matrix)_const">transform(const GMMatrix& matrix) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/transform/GMVector2D_transform(const_GMQuat@_quat)_const">transform(const GMQuat& quat) const</a></li>
+			
+			</ul>
+		
+			<h3>演算子のオーバーロード</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/operator=/GMVector2D@_operator=(const_GMVector2D@_vec)">operator=(const GMVector2D& vec)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/operator-/GMVector2D_operator-()_const">operator-() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/operator+/GMVector2D_operator+(const_GMVector2D@_vec)_const">operator+(const GMVector2D& vec) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/operator-/GMVector2D_operator-(const_GMVector2D@_vec)_const">operator-(const GMVector2D& vec) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/operator*/GMVector2D_operator*(const_GMVector2D@_vec)_const">operator*(const GMVector2D& vec) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/operator//GMVector2D_operator/(const_GMVector2D@_vec)_const">operator/(const GMVector2D& vec) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/operator*/GMVector2D_operator*(double_value)_const">operator*(double value) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/operator//GMVector2D_operator/(double_value)_const">operator/(double value) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/operator+=/GMVector2D@_operator+=(const_GMVector2D@_vec)">operator+=(const GMVector2D& vec)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/operator-=/GMVector2D@_operator-=(const_GMVector2D@_vec)">operator-=(const GMVector2D& vec)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/operator*=/GMVector2D@_operator*=(const_GMVector2D@_vec)">operator*=(const GMVector2D& vec)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/operator/=/GMVector2D@_operator/=(const_GMVector2D@_vec)">operator/=(const GMVector2D& vec)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/operator*=/GMVector2D@_operator*=(double_value)">operator*=(double value)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/operator/=/GMVector2D@_operator/=(double_value)">operator/=(double value)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/operator==/bool_operator==(const_GMVector2D@_vec)_const">operator==(const GMVector2D& vec) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMVector2D/operator!=/bool_operator!=(const_GMVector2D@_vec)_const">operator!=(const GMVector2D& vec) const</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+		<h2>Constants</h2>		
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>One</h3>
+				<div class="declare">static const GMVector2D&    One</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>UnitX</h3>
+				<div class="declare">static const GMVector2D&    UnitX</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>UnitY</h3>
+				<div class="declare">static const GMVector2D&    UnitY</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Zero</h3>
+				<div class="declare">static const GMVector2D&    Zero</div>
+				
+				
+			</div>
+		
+	
+
+	
+		<h2>Instant Variables</h2>
+		
+			<a name=""></a>
+			<h3>x</h3>
+			<div class="declare">double x</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>y</h3>
+			<div class="declare">double y</div>
+			
+			
+		
+	
+
+	
+		<h2>Class Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMVector2D/Barycentric/static_GMVector2D_Barycentric(const_GMVector2D@_v1,_const_GMVector2D@_v2,_const_GMVector2D@_v3,_double_amount1,_double_amount2)"></a>
+				<h3>Barycentric</h3>
+				<div class="declare">static GMVector2D   Barycentric(const GMVector2D& v1, const GMVector2D& v2, const GMVector2D& v3, double amount1, double amount2)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMVector2D/CatmullRom/static_GMVector2D_CatmullRom(const_GMVector2D@_vec1,_const_GMVector2D@_vec2,_const_GMVector2D@_vec3,_const_GMVector2D@_vec4,_double_amount)"></a>
+				<h3>CatmullRom</h3>
+				<div class="declare">static GMVector2D   CatmullRom(const GMVector2D& vec1, const GMVector2D& vec2, const GMVector2D& vec3, const GMVector2D& vec4, double amount)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMVector2D/EaseIn/static_GMVector2D_EaseIn(const_GMVector2D@_vec1,_const_GMVector2D@_vec2,_double_amount)"></a>
+				<h3>EaseIn</h3>
+				<div class="declare">static GMVector2D   EaseIn(const GMVector2D& vec1, const GMVector2D& vec2, double amount)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMVector2D/EaseInOut/static_GMVector2D_EaseInOut(const_GMVector2D@_vec1,_const_GMVector2D@_vec2,_double_amount)"></a>
+				<h3>EaseInOut</h3>
+				<div class="declare">static GMVector2D   EaseInOut(const GMVector2D& vec1, const GMVector2D& vec2, double amount)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMVector2D/EaseOut/static_GMVector2D_EaseOut(const_GMVector2D@_vec1,_const_GMVector2D@_vec2,_double_amount)"></a>
+				<h3>EaseOut</h3>
+				<div class="declare">static GMVector2D   EaseOut(const GMVector2D& vec1, const GMVector2D& vec2, double amount)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMVector2D/Hermite/static_GMVector2D_Hermite(const_GMVector2D@_vec1,_const_GMVector2D@_tan1,_const_GMVector2D@_vec2,_const_GMVector2D@_tan2,_double_amount)"></a>
+				<h3>Hermite</h3>
+				<div class="declare">static GMVector2D   Hermite(const GMVector2D& vec1, const GMVector2D& tan1, const GMVector2D& vec2, const GMVector2D& tan2, double amount)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMVector2D/Lerp/static_GMVector2D_Lerp(const_GMVector2D@_vec1,_const_GMVector2D@_vec2,_double_amount)"></a>
+				<h3>Lerp</h3>
+				<div class="declare">static GMVector2D   Lerp(const GMVector2D& vec1, const GMVector2D& vec2, double amount)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMVector2D/SmoothStep/static_GMVector2D_SmoothStep(const_GMVector2D@_vec1,_const_GMVector2D@_vec2,_double_amount)"></a>
+				<h3>SmoothStep</h3>
+				<div class="declare">static GMVector2D   SmoothStep(const GMVector2D& vec1, const GMVector2D& vec2, double amount)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMVector2D/Max/static_GMVector2D_Max(const_GMVector2D@_vec1,_const_GMVector2D@_vec2)"></a>
+				<h3>Max</h3>
+				<div class="declare">static GMVector2D   Max(const GMVector2D& vec1, const GMVector2D& vec2)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMVector2D/Min/static_GMVector2D_Min(const_GMVector2D@_vec1,_const_GMVector2D@_vec2)"></a>
+				<h3>Min</h3>
+				<div class="declare">static GMVector2D   Min(const GMVector2D& vec1, const GMVector2D& vec2)</div>
+				
+				
+			</div>
+		
+	
+
+	
+		<h2>Instant Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/GMVector2D/GMVector2D()"></a>
+				<h3>GMVector2D</h3>
+				<div class="declare">GMVector2D()</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/GMVector2D/GMVector2D(double_value)"></a>
+				<h3>GMVector2D</h3>
+				<div class="declare">GMVector2D(double value)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/GMVector2D/GMVector2D(double_x,_double_y)"></a>
+				<h3>GMVector2D</h3>
+				<div class="declare">GMVector2D(double x, double y)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/GMVector2D/GMVector2D(const_GMVector2D@_vec)"></a>
+				<h3>GMVector2D</h3>
+				<div class="declare">GMVector2D(const GMVector2D& vec)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/clamp/GMVector2D_clamp(const_GMVector2D@_min,_const_GMVector2D@_max)_const"></a>
+				<h3>clamp</h3>
+				<div class="declare">GMVector2D  clamp(const GMVector2D& min, const GMVector2D& max) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/cross/double_cross(const_GMVector2D@_vec)_const"></a>
+				<h3>cross</h3>
+				<div class="declare">double      cross(const GMVector2D& vec) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/distance/double_distance(const_GMVector2D@_vec)_const"></a>
+				<h3>distance</h3>
+				<div class="declare">double      distance(const GMVector2D& vec) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/distanceSq/double_distanceSq(const_GMVector2D@_vec)_const"></a>
+				<h3>distanceSq</h3>
+				<div class="declare">double      distanceSq(const GMVector2D& vec) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/dot/double_dot(const_GMVector2D@_vec)_const"></a>
+				<h3>dot</h3>
+				<div class="declare">double      dot(const GMVector2D& vec) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/equals/bool_equals(const_GMVector2D@_vec,_double_accuracy)_const"></a>
+				<h3>equals</h3>
+				<div class="declare">bool        equals(const GMVector2D& vec, double accuracy) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/length/double_length()_const"></a>
+				<h3>length</h3>
+				<div class="declare">double      length() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/lengthSq/double_lengthSq()_const"></a>
+				<h3>lengthSq</h3>
+				<div class="declare">double      lengthSq() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/normal/GMVector2D_normal()_const"></a>
+				<h3>normal</h3>
+				<div class="declare">GMVector2D  normal() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/normalize/GMVector2D@_normalize()"></a>
+				<h3>normalize</h3>
+				<div class="declare">GMVector2D& normalize()</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/reflect/GMVector2D_reflect(const_GMVector2D@_normal)_const"></a>
+				<h3>reflect</h3>
+				<div class="declare">GMVector2D  reflect(const GMVector2D& normal) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/transform/GMVector2D_transform(const_GMMatrix@_matrix)_const"></a>
+				<h3>transform</h3>
+				<div class="declare">GMVector2D  transform(const GMMatrix& matrix) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/transform/GMVector2D_transform(const_GMQuat@_quat)_const"></a>
+				<h3>transform</h3>
+				<div class="declare">GMVector2D  transform(const GMQuat& quat) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/operator=/GMVector2D@_operator=(const_GMVector2D@_vec)"></a>
+				<h3>operator=</h3>
+				<div class="declare">GMVector2D& operator=(const GMVector2D& vec)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/operator-/GMVector2D_operator-()_const"></a>
+				<h3>operator-</h3>
+				<div class="declare">GMVector2D operator-() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/operator+/GMVector2D_operator+(const_GMVector2D@_vec)_const"></a>
+				<h3>operator+</h3>
+				<div class="declare">GMVector2D operator+(const GMVector2D& vec) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/operator-/GMVector2D_operator-(const_GMVector2D@_vec)_const"></a>
+				<h3>operator-</h3>
+				<div class="declare">GMVector2D operator-(const GMVector2D& vec) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/operator*/GMVector2D_operator*(const_GMVector2D@_vec)_const"></a>
+				<h3>operator*</h3>
+				<div class="declare">GMVector2D operator*(const GMVector2D& vec) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/operator//GMVector2D_operator/(const_GMVector2D@_vec)_const"></a>
+				<h3>operator/</h3>
+				<div class="declare">GMVector2D operator/(const GMVector2D& vec) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/operator*/GMVector2D_operator*(double_value)_const"></a>
+				<h3>operator*</h3>
+				<div class="declare">GMVector2D operator*(double value) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/operator//GMVector2D_operator/(double_value)_const"></a>
+				<h3>operator/</h3>
+				<div class="declare">GMVector2D operator/(double value) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/operator+=/GMVector2D@_operator+=(const_GMVector2D@_vec)"></a>
+				<h3>operator+=</h3>
+				<div class="declare">GMVector2D& operator+=(const GMVector2D& vec)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/operator-=/GMVector2D@_operator-=(const_GMVector2D@_vec)"></a>
+				<h3>operator-=</h3>
+				<div class="declare">GMVector2D& operator-=(const GMVector2D& vec)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/operator*=/GMVector2D@_operator*=(const_GMVector2D@_vec)"></a>
+				<h3>operator*=</h3>
+				<div class="declare">GMVector2D& operator*=(const GMVector2D& vec)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/operator/=/GMVector2D@_operator/=(const_GMVector2D@_vec)"></a>
+				<h3>operator/=</h3>
+				<div class="declare">GMVector2D& operator/=(const GMVector2D& vec)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/operator*=/GMVector2D@_operator*=(double_value)"></a>
+				<h3>operator*=</h3>
+				<div class="declare">GMVector2D& operator*=(double value)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/operator/=/GMVector2D@_operator/=(double_value)"></a>
+				<h3>operator/=</h3>
+				<div class="declare">GMVector2D& operator/=(double value)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/operator==/bool_operator==(const_GMVector2D@_vec)_const"></a>
+				<h3>operator==</h3>
+				<div class="declare">bool        operator==(const GMVector2D& vec) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMVector2D/operator!=/bool_operator!=(const_GMVector2D@_vec)_const"></a>
+				<h3>operator!=</h3>
+				<div class="declare">bool        operator!=(const GMVector2D& vec) const</div>
+				
+				
+			</div>
+		
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

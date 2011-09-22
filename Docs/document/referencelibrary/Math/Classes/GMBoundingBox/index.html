@@ -1,0 +1,290 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMBoundingBox Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMBoundingBox"></a>
+	<h1>GMBoundingBox Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p></p>
+		<p></p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>生成メソッド</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMBoundingBox/CreateFromPoints/static_GMBoundingBox_CreateFromPoints(const_GMVector3D*_vecs,_size_t_count)">CreateFromPoints(const GMVector3D* vecs, size_t count)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMBoundingBox/CreateFromSphere/static_GMBoundingBox_CreateFromSphere(const_GMBoundingSphere@_sphere)">CreateFromSphere(const GMBoundingSphere& sphere)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMBoundingBox/CreateMerged/static_GMBoundingBox_CreateMerged(const_GMBoundingBox@_original,_const_GMBoundingBox@_additional)">CreateMerged(const GMBoundingBox& original, const GMBoundingBox& additional)</a></li>
+			
+			</ul>
+		
+			<h3>コンストラクタ</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMBoundingBox/GMBoundingBox/GMBoundingBox()">GMBoundingBox()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMBoundingBox/GMBoundingBox/GMBoundingBox(const_GMVector3D@_min,_const_GMVector3D@_max)">GMBoundingBox(const GMVector3D& min, const GMVector3D& max)</a></li>
+			
+			</ul>
+		
+			<h3>メインの操作</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMBoundingBox/contains/GMContainmentType_contains(const_GMBoundingBox@_box)_const">contains(const GMBoundingBox& box) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMBoundingBox/contains/GMContainmentType_contains(const_GMBoundingFrustum@_frustum)_const">contains(const GMBoundingFrustum& frustum) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMBoundingBox/contains/GMContainmentType_contains(const_GMBoundingSphere@_sphere)_const">contains(const GMBoundingSphere& sphere) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMBoundingBox/contains/GMContainmentType_contains(const_GMVector3D@_point)_const">contains(const GMVector3D& point) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMBoundingBox/equals/bool_equals(const_GMBoundingBox@_box,_double_accuracy)_const">equals(const GMBoundingBox& box, double accuracy) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMBoundingBox/getCorners/void_getCorners(GMVector3D*_vecs)_const">getCorners(GMVector3D* vecs) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMBoundingBox/intersects/bool_intersects(const_GMBoundingBox@_box)_const">intersects(const GMBoundingBox& box) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMBoundingBox/intersects/bool_intersects(const_GMBoundingFrustum@_frustum)_const">intersects(const GMBoundingFrustum& frustum) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMBoundingBox/intersects/bool_intersects(const_GMBoundingSphere@_sphere)_const">intersects(const GMBoundingSphere& sphere) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMBoundingBox/intersects/GMPlaneIntersectionType_intersects(const_GMPlane@_plane)_const">intersects(const GMPlane& plane) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMBoundingBox/intersects/double_intersects(const_GMRay@_ray)_const">intersects(const GMRay& ray) const</a></li>
+			
+			</ul>
+		
+			<h3>演算子のオーバーロード</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMBoundingBox/operator==/bool_operator==(const_GMBoundingBox@_box)_const">operator==(const GMBoundingBox& box) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMBoundingBox/operator!=/bool_operator!=(const_GMBoundingBox@_box)_const">operator!=(const GMBoundingBox& box) const</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+		<h2>Constants</h2>		
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>CornerCount</h3>
+				<div class="declare">static const int    CornerCount</div>
+				
+				
+			</div>
+		
+	
+
+	
+		<h2>Instant Variables</h2>
+		
+			<a name=""></a>
+			<h3>max</h3>
+			<div class="declare">GMVector3D  max</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>min</h3>
+			<div class="declare">GMVector3D  min</div>
+			
+			
+		
+	
+
+	
+		<h2>Class Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMBoundingBox/CreateFromPoints/static_GMBoundingBox_CreateFromPoints(const_GMVector3D*_vecs,_size_t_count)"></a>
+				<h3>CreateFromPoints</h3>
+				<div class="declare">static GMBoundingBox    CreateFromPoints(const GMVector3D* vecs, size_t count)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMBoundingBox/CreateFromSphere/static_GMBoundingBox_CreateFromSphere(const_GMBoundingSphere@_sphere)"></a>
+				<h3>CreateFromSphere</h3>
+				<div class="declare">static GMBoundingBox    CreateFromSphere(const GMBoundingSphere& sphere)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMBoundingBox/CreateMerged/static_GMBoundingBox_CreateMerged(const_GMBoundingBox@_original,_const_GMBoundingBox@_additional)"></a>
+				<h3>CreateMerged</h3>
+				<div class="declare">static GMBoundingBox    CreateMerged(const GMBoundingBox& original, const GMBoundingBox& additional)</div>
+				
+				
+			</div>
+		
+	
+
+	
+		<h2>Instant Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMBoundingBox/GMBoundingBox/GMBoundingBox()"></a>
+				<h3>GMBoundingBox</h3>
+				<div class="declare">GMBoundingBox()</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMBoundingBox/GMBoundingBox/GMBoundingBox(const_GMVector3D@_min,_const_GMVector3D@_max)"></a>
+				<h3>GMBoundingBox</h3>
+				<div class="declare">GMBoundingBox(const GMVector3D& min, const GMVector3D& max)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMBoundingBox/contains/GMContainmentType_contains(const_GMBoundingBox@_box)_const"></a>
+				<h3>contains</h3>
+				<div class="declare">GMContainmentType   contains(const GMBoundingBox& box) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMBoundingBox/contains/GMContainmentType_contains(const_GMBoundingFrustum@_frustum)_const"></a>
+				<h3>contains</h3>
+				<div class="declare">GMContainmentType   contains(const GMBoundingFrustum& frustum) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMBoundingBox/contains/GMContainmentType_contains(const_GMBoundingSphere@_sphere)_const"></a>
+				<h3>contains</h3>
+				<div class="declare">GMContainmentType   contains(const GMBoundingSphere& sphere) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMBoundingBox/contains/GMContainmentType_contains(const_GMVector3D@_point)_const"></a>
+				<h3>contains</h3>
+				<div class="declare">GMContainmentType   contains(const GMVector3D& point) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMBoundingBox/equals/bool_equals(const_GMBoundingBox@_box,_double_accuracy)_const"></a>
+				<h3>equals</h3>
+				<div class="declare">bool    equals(const GMBoundingBox& box, double accuracy) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMBoundingBox/getCorners/void_getCorners(GMVector3D*_vecs)_const"></a>
+				<h3>getCorners</h3>
+				<div class="declare">void    getCorners(GMVector3D* vecs) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMBoundingBox/intersects/bool_intersects(const_GMBoundingBox@_box)_const"></a>
+				<h3>intersects</h3>
+				<div class="declare">bool                    intersects(const GMBoundingBox& box) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMBoundingBox/intersects/bool_intersects(const_GMBoundingFrustum@_frustum)_const"></a>
+				<h3>intersects</h3>
+				<div class="declare">bool                    intersects(const GMBoundingFrustum& frustum) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMBoundingBox/intersects/bool_intersects(const_GMBoundingSphere@_sphere)_const"></a>
+				<h3>intersects</h3>
+				<div class="declare">bool                    intersects(const GMBoundingSphere& sphere) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMBoundingBox/intersects/GMPlaneIntersectionType_intersects(const_GMPlane@_plane)_const"></a>
+				<h3>intersects</h3>
+				<div class="declare">GMPlaneIntersectionType intersects(const GMPlane& plane) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMBoundingBox/intersects/double_intersects(const_GMRay@_ray)_const"></a>
+				<h3>intersects</h3>
+				<div class="declare">double                  intersects(const GMRay& ray) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMBoundingBox/operator==/bool_operator==(const_GMBoundingBox@_box)_const"></a>
+				<h3>operator==</h3>
+				<div class="declare">bool    operator==(const GMBoundingBox& box) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMBoundingBox/operator!=/bool_operator!=(const_GMBoundingBox@_box)_const"></a>
+				<h3>operator!=</h3>
+				<div class="declare">bool    operator!=(const GMBoundingBox& box) const</div>
+				
+				
+			</div>
+		
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

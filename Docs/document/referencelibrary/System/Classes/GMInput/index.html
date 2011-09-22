@@ -1,0 +1,421 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMInput Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMInput"></a>
+	<h1>GMInput Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p>キーボードとマウスの入力を管理するためのクラスです。
+</p>
+		<p>このクラスのインスタンスには、クラス変数 GMInput::Inst を使ってアクセスできます。
+</p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>キーボードの管理</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMInput/isKeyDown/bool_isKeyDown(GMKeyMask_mask)_const">isKeyDown(GMKeyMask mask) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMInput/isKeyDownTriggered/bool_isKeyDownTriggered(GMKeyMask_mask)_const">isKeyDownTriggered(GMKeyMask mask) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMInput/isKeyUp/bool_isKeyUp(GMKeyMask_mask)_const">isKeyUp(GMKeyMask mask) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMInput/isKeyUpTriggered/bool_isKeyUpTriggered(GMKeyMask_mask)_const">isKeyUpTriggered(GMKeyMask mask) const</a></li>
+			
+			</ul>
+		
+			<h3>マウスの管理</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMInput/getMouseLocation/GMVector2D_getMouseLocation()_const">getMouseLocation() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMInput/isMouseDown/bool_isMouseDown()_const">isMouseDown() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMInput/isMouseDownTriggered/bool_isMouseDownTriggered()_const">isMouseDownTriggered() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMInput/isMouseUp/bool_isMouseUp()_const">isMouseUp() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMInput/isMouseUpTriggered/bool_isMouseUpTriggered()_const">isMouseUpTriggered() const</a></li>
+			
+			</ul>
+		
+			<h3>タッチの管理（ID指定なし）</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMInput/getTapCountMax/unsigned_getTapCountMax()_const">getTapCountMax() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMInput/getTouchCount/unsigned_getTouchCount()_const">getTouchCount() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMInput/getTouchLocationAny/GMVector2D_getTouchLocationAny()_const">getTouchLocationAny() const</a></li>
+			
+			</ul>
+		
+			<h3>タッチの管理（ID指定）</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMInput/getTapCount/unsigned_getTapCount(unsigned_touchID)_const">getTapCount(unsigned touchID) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMInput/getTouchIDs/std::set@lt;unsigned@gt;_getTouchIDs()_const">getTouchIDs() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMInput/getTouchLocation/GMVector2D_getTouchLocation(unsigned_touchID)_const">getTouchLocation(unsigned touchID) const</a></li>
+			
+			</ul>
+		
+			<h3>モーションの管理</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMInput/StartMotionUpdates/static_void_StartMotionUpdates()">StartMotionUpdates()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMInput/StopMotionUpdates/static_void_StopMotionUpdates()">StopMotionUpdates()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMInput/GetAcceleration/static_GMVector3D_GetAcceleration()">GetAcceleration()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMInput/GetGyroRotationRate/static_GMVector3D_GetGyroRotationRate()">GetGyroRotationRate()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMInput/IsAccelerometerAvailable/static_bool_IsAccelerometerAvailable()">IsAccelerometerAvailable()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMInput/IsGyroAvailable/static_bool_IsGyroAvailable()">IsGyroAvailable()</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+
+	
+		<h2>Instant Variables</h2>
+		
+			<a name=""></a>
+			<h3>Inst</h3>
+			<div class="declare">static GMInput*     Inst</div>
+			
+			
+		
+	
+
+	
+		<h2>Class Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMInput/StartMotionUpdates/static_void_StartMotionUpdates()"></a>
+				<h3>StartMotionUpdates</h3>
+				<div class="declare">static void         StartMotionUpdates()</div>
+				
+					<div class="abstract">加速度センサまたはジャイロを使用したユーザモーションの取得を開始します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMInput/StopMotionUpdates/static_void_StopMotionUpdates()"></a>
+				<h3>StopMotionUpdates</h3>
+				<div class="declare">static void         StopMotionUpdates()</div>
+				
+					<div class="abstract">加速度センサまたはジャイロを使用したユーザモーションの取得を終了します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMInput/GetAcceleration/static_GMVector3D_GetAcceleration()"></a>
+				<h3>GetAcceleration</h3>
+				<div class="declare">static GMVector3D   GetAcceleration()</div>
+				
+					<div class="abstract">加速度センサによって取得された3次元の加速度を取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMInput/GetGyroRotationRate/static_GMVector3D_GetGyroRotationRate()"></a>
+				<h3>GetGyroRotationRate</h3>
+				<div class="declare">static GMVector3D   GetGyroRotationRate()</div>
+				
+					<div class="abstract">ジャイロセンサによって取得された3次元の回転値を取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMInput/IsAccelerometerAvailable/static_bool_IsAccelerometerAvailable()"></a>
+				<h3>IsAccelerometerAvailable</h3>
+				<div class="declare">static bool         IsAccelerometerAvailable()</div>
+				
+					<div class="abstract">加速度センサが使用可能かどうかを取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMInput/IsGyroAvailable/static_bool_IsGyroAvailable()"></a>
+				<h3>IsGyroAvailable</h3>
+				<div class="declare">static bool         IsGyroAvailable()</div>
+				
+					<div class="abstract">ジャイロセンサが使用可能かどうかを取得します。
+</div>
+				
+				
+			</div>
+		
+	
+
+	
+		<h2>Instant Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMInput/isKeyDown/bool_isKeyDown(GMKeyMask_mask)_const"></a>
+				<h3>isKeyDown</h3>
+				<div class="declare">bool    isKeyDown(GMKeyMask mask) const</div>
+				
+					<div class="abstract">マスクで指定されたキーが押されていることをチェックします。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMInput/isKeyDownTriggered/bool_isKeyDownTriggered(GMKeyMask_mask)_const"></a>
+				<h3>isKeyDownTriggered</h3>
+				<div class="declare">bool    isKeyDownTriggered(GMKeyMask mask) const</div>
+				
+					<div class="abstract">マスクで指定されたキーが押されていることをチェックします。キーが押された直後のフレームでしか判定されません。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMInput/isKeyUp/bool_isKeyUp(GMKeyMask_mask)_const"></a>
+				<h3>isKeyUp</h3>
+				<div class="declare">bool    isKeyUp(GMKeyMask mask) const</div>
+				
+					<div class="abstract">マスクで指定されたキーが押されていないことをチェックします。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMInput/isKeyUpTriggered/bool_isKeyUpTriggered(GMKeyMask_mask)_const"></a>
+				<h3>isKeyUpTriggered</h3>
+				<div class="declare">bool    isKeyUpTriggered(GMKeyMask mask) const</div>
+				
+					<div class="abstract">マスクで指定されたキーが押されていないことをチェックします。キーが離された直後のフレームでしか判定されません。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMInput/getMouseLocation/GMVector2D_getMouseLocation()_const"></a>
+				<h3>getMouseLocation</h3>
+				<div class="declare">GMVector2D  getMouseLocation() const</div>
+				
+					<div class="abstract">マウスの現在のカーソル位置を取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMInput/isMouseDown/bool_isMouseDown()_const"></a>
+				<h3>isMouseDown</h3>
+				<div class="declare">bool    isMouseDown() const</div>
+				
+					<div class="abstract">マウスボタンが押されていることをチェックします。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						左のマウスボタンにのみ対応します。
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMInput/isMouseDownTriggered/bool_isMouseDownTriggered()_const"></a>
+				<h3>isMouseDownTriggered</h3>
+				<div class="declare">bool    isMouseDownTriggered() const</div>
+				
+					<div class="abstract">マウスボタンが押されていることをチェックします。ボタンが押された直後のフレームでしか判定されません。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						左のマウスボタンにのみ対応します。
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMInput/isMouseUp/bool_isMouseUp()_const"></a>
+				<h3>isMouseUp</h3>
+				<div class="declare">bool    isMouseUp() const</div>
+				
+					<div class="abstract">マウスボタンが押されていないことをチェックします。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						左のマウスボタンにのみ対応します。
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMInput/isMouseUpTriggered/bool_isMouseUpTriggered()_const"></a>
+				<h3>isMouseUpTriggered</h3>
+				<div class="declare">bool    isMouseUpTriggered() const</div>
+				
+					<div class="abstract">マウスボタンが押されていないことをチェックします。ボタンが離された直後のフレームでしか判定されません。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						左のマウスボタンにのみ対応します。
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMInput/getTapCountMax/unsigned_getTapCountMax()_const"></a>
+				<h3>getTapCountMax</h3>
+				<div class="declare">unsigned    getTapCountMax() const</div>
+				
+					<div class="abstract">すべてのタッチの中から、最大のタップ回数を取得します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						画面がタッチされていない場合、0 がリターンされます。
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMInput/getTouchCount/unsigned_getTouchCount()_const"></a>
+				<h3>getTouchCount</h3>
+				<div class="declare">unsigned    getTouchCount() const</div>
+				
+					<div class="abstract">現在のマルチタッチの個数を取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMInput/getTouchLocationAny/GMVector2D_getTouchLocationAny()_const"></a>
+				<h3>getTouchLocationAny</h3>
+				<div class="declare">GMVector2D  getTouchLocationAny() const</div>
+				
+					<div class="abstract">現在タッチされている画面上の位置をいずれか1点取得します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						1点もタッチされていない場合には、X座標、Y座標ともに DBL_MAX がセットされた GMVector2D がリターンされます。
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMInput/getTapCount/unsigned_getTapCount(unsigned_touchID)_const"></a>
+				<h3>getTapCount</h3>
+				<div class="declare">unsigned    getTapCount(unsigned touchID) const</div>
+				
+					<div class="abstract">タッチのIDを指定して、タップ回数を取得します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						タッチIDに対応するタッチが見つからない場合、0 がリターンされます。
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMInput/getTouchIDs/std::set@lt;unsigned@gt;_getTouchIDs()_const"></a>
+				<h3>getTouchIDs</h3>
+				<div class="declare">std::set&lt;unsigned&gt;  getTouchIDs() const</div>
+				
+					<div class="abstract">現在のすべてのタッチのIDを取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMInput/getTouchLocation/GMVector2D_getTouchLocation(unsigned_touchID)_const"></a>
+				<h3>getTouchLocation</h3>
+				<div class="declare">GMVector2D  getTouchLocation(unsigned touchID) const</div>
+				
+					<div class="abstract">タッチのIDを指定して、現在タッチされている画面上の位置を取得します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						タッチIDに対応するタッチが見つからない場合、X座標、Y座標ともに DBL_MAX がセットされます。
+
+					</div>
+				
+			</div>
+		
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

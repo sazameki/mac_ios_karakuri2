@@ -1,0 +1,270 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMPlane Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMPlane"></a>
+	<h1>GMPlane Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p></p>
+		<p></p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>コンストラクタ</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMPlane/GMPlane/GMPlane()">GMPlane()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMPlane/GMPlane/GMPlane(double_a,_double_b,_double_c,_double_d)">GMPlane(double a, double b, double c, double d)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMPlane/GMPlane/GMPlane(const_GMVector3D@_normal,_double_d)">GMPlane(const GMVector3D& normal, double d)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMPlane/GMPlane/GMPlane(const_GMVector3D@_p1,_const_GMVector3D@_p2,_const_GMVector3D@_p3)">GMPlane(const GMVector3D& p1, const GMVector3D& p2, const GMVector3D& p3)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMPlane/GMPlane/GMPlane(const_GMVector4D@_vec)">GMPlane(const GMVector4D& vec)</a></li>
+			
+			</ul>
+		
+			<h3>メインの操作</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMPlane/dot/double_dot(const_GMVector4D@_vec)_const">dot(const GMVector4D& vec) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMPlane/dotCoordinate/double_dotCoordinate(const_GMVector3D@_vec)_const">dotCoordinate(const GMVector3D& vec) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMPlane/dotNormal/double_dotNormal(const_GMVector3D@_vec)_const">dotNormal(const GMVector3D& vec) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMPlane/equals/bool_equals(const_GMPlane@_plane,_double_accuracy)_const">equals(const GMPlane& plane, double accuracy) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMPlane/intersects/GMPlaneIntersectionType_intersects(const_GMBoundingBox@_box)_const">intersects(const GMBoundingBox& box) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMPlane/intersects/GMPlaneIntersectionType_intersects(const_GMBoundingFrustum@_frustum)_const">intersects(const GMBoundingFrustum& frustum) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMPlane/intersects/GMPlaneIntersectionType_intersects(const_GMBoundingSphere@_sphere)_const">intersects(const GMBoundingSphere& sphere) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMPlane/normal/GMPlane_normal()_const">normal() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMPlane/normalize/void_normalize()">normalize()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMPlane/transform/GMPlane_transform(const_GMMatrix@_matrix)_const">transform(const GMMatrix& matrix) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMPlane/transform/GMPlane_transform(const_GMQuat@_quat)_const">transform(const GMQuat& quat) const</a></li>
+			
+			</ul>
+		
+			<h3>演算子のオーバーロード</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMPlane/operator==/bool_operator==(const_GMPlane@_plane)_const">operator==(const GMPlane& plane) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMPlane/operator!=/bool_operator!=(const_GMPlane@_plane)_const">operator!=(const GMPlane& plane) const</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+
+	
+		<h2>Instant Variables</h2>
+		
+			<a name=""></a>
+			<h3>distance</h3>
+			<div class="declare">double      distance</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>normalVec</h3>
+			<div class="declare">GMVector3D  normalVec</div>
+			
+			
+		
+	
+
+	
+
+	
+		<h2>Instant Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMPlane/GMPlane/GMPlane()"></a>
+				<h3>GMPlane</h3>
+				<div class="declare">GMPlane()</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMPlane/GMPlane/GMPlane(double_a,_double_b,_double_c,_double_d)"></a>
+				<h3>GMPlane</h3>
+				<div class="declare">GMPlane(double a, double b, double c, double d)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMPlane/GMPlane/GMPlane(const_GMVector3D@_normal,_double_d)"></a>
+				<h3>GMPlane</h3>
+				<div class="declare">GMPlane(const GMVector3D& normal, double d)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMPlane/GMPlane/GMPlane(const_GMVector3D@_p1,_const_GMVector3D@_p2,_const_GMVector3D@_p3)"></a>
+				<h3>GMPlane</h3>
+				<div class="declare">GMPlane(const GMVector3D& p1, const GMVector3D& p2, const GMVector3D& p3)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMPlane/GMPlane/GMPlane(const_GMVector4D@_vec)"></a>
+				<h3>GMPlane</h3>
+				<div class="declare">GMPlane(const GMVector4D& vec)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMPlane/dot/double_dot(const_GMVector4D@_vec)_const"></a>
+				<h3>dot</h3>
+				<div class="declare">double      dot(const GMVector4D& vec) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMPlane/dotCoordinate/double_dotCoordinate(const_GMVector3D@_vec)_const"></a>
+				<h3>dotCoordinate</h3>
+				<div class="declare">double      dotCoordinate(const GMVector3D& vec) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMPlane/dotNormal/double_dotNormal(const_GMVector3D@_vec)_const"></a>
+				<h3>dotNormal</h3>
+				<div class="declare">double      dotNormal(const GMVector3D& vec) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMPlane/equals/bool_equals(const_GMPlane@_plane,_double_accuracy)_const"></a>
+				<h3>equals</h3>
+				<div class="declare">bool        equals(const GMPlane& plane, double accuracy) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMPlane/intersects/GMPlaneIntersectionType_intersects(const_GMBoundingBox@_box)_const"></a>
+				<h3>intersects</h3>
+				<div class="declare">GMPlaneIntersectionType intersects(const GMBoundingBox& box) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMPlane/intersects/GMPlaneIntersectionType_intersects(const_GMBoundingFrustum@_frustum)_const"></a>
+				<h3>intersects</h3>
+				<div class="declare">GMPlaneIntersectionType intersects(const GMBoundingFrustum& frustum) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMPlane/intersects/GMPlaneIntersectionType_intersects(const_GMBoundingSphere@_sphere)_const"></a>
+				<h3>intersects</h3>
+				<div class="declare">GMPlaneIntersectionType intersects(const GMBoundingSphere& sphere) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMPlane/normal/GMPlane_normal()_const"></a>
+				<h3>normal</h3>
+				<div class="declare">GMPlane     normal() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMPlane/normalize/void_normalize()"></a>
+				<h3>normalize</h3>
+				<div class="declare">void        normalize()</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMPlane/transform/GMPlane_transform(const_GMMatrix@_matrix)_const"></a>
+				<h3>transform</h3>
+				<div class="declare">GMPlane     transform(const GMMatrix& matrix) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMPlane/transform/GMPlane_transform(const_GMQuat@_quat)_const"></a>
+				<h3>transform</h3>
+				<div class="declare">GMPlane     transform(const GMQuat& quat) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMPlane/operator==/bool_operator==(const_GMPlane@_plane)_const"></a>
+				<h3>operator==</h3>
+				<div class="declare">bool        operator==(const GMPlane& plane) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMPlane/operator!=/bool_operator!=(const_GMPlane@_plane)_const"></a>
+				<h3>operator!=</h3>
+				<div class="declare">bool        operator!=(const GMPlane& plane) const</div>
+				
+				
+			</div>
+		
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

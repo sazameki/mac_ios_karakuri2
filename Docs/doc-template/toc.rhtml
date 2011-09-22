@@ -1,0 +1,161 @@
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../css/main.css" type="text/css" />
+	<title>DocSet Maker TOC</title>
+	
+	<style>
+	   h3.tips {
+	       font-size: 100%;
+	   }
+	   .tips ul {
+	       font-size: 90%;
+	   }
+	   .tips p.fig {
+	       font-size: 90%;
+	   }
+	   .tips p.fig img {
+	       margin-left: 80px;
+	   }
+	</style>
+</head>
+
+<body class="toc">
+
+	<h1>Karakuri 2 API リファレンス</h1>
+	<p>Karakuri 2 は、純粋な C++ で記述できる、2D・3D ゲーム開発フレームワークです。</p>
+	<p><small>Karakuri の歴史については<a href="../guide/history.html">こちら</a>。</small></p>
+
+    <div class="tips">
+	<h2>Karakuri 2 について</h2>
+	<h3 class="tips">フレームワークについて</h3>
+	<p>
+	   <ul>
+	       <li>フレームワークで用意しているクラス・構造体・列挙型・グローバル関数には、「GM」というプリフィクスがついています。</li>
+	       <li>クラスメソッドは大文字から、インスタンスメソッドは小文字から始まります。</li>
+	       <li>名前が「__」から始まるクラス・構造体・列挙型・関数は内部での使用を想定していますので、使用しないでください。</li>
+	   </ul>
+	</p>
+	<h3 class="tips">ゲーム全体について</h3>
+	<p>
+	   <ul>
+	       <li>ゲームの基本設定は、Globals.h と Globals.cpp の値で変更できます。</li>
+	       <li>Mac OS X / iOS などのターゲットによって、利用できる機能が少しずつ異なります。</li>
+	       <li>シーンの変更は、GMGame::ChangeScene("シーン名") で行います。</li>
+	   </ul>
+	</p>
+	<h3 class="tips">描画について</h3>
+	<p>
+	   <ul>
+	       <li><strong>フォント一覧</strong>は<a href="../guide/font_list.html">こちら</a>です。</li>
+	       <li><strong>カラーチャート</strong>は<a href="../guide/color_chart.html">こちら</a>です。</li>
+	       <li>描画は基本的に左下を原点として行われます。</li>
+	       <li>テクスチャ座標も左下を原点とした座標で (0, 0)〜(1, 1) の値で指定します。</li>
+	   </ul>
+    </p>
+	<p class="fig">
+	   下図に、Karakuri 2 の描画関係のクラスの概略を示します（クリックで大きいバージョンを表示）。
+	   <a href="../images/graphic_system.pdf" target="_blank"><img src="../images/graphic_system_small.png"/></a>
+	</p>
+	<h3 class="tips">オーディオについて</h3>
+	<p>
+	   <ul>
+	       <li>WAV, AIFF, MP3, AAC といった一般的なオーディオファイルをサポートしています。</li>
+	       <li>iOS デバイス上での使用には、<a href="../guide/sound_format.html">こちら</a>を参照して、CAF 形式に変換しておくことを推奨します。</li>
+	       <li>すべての環境で保証されている同時再生数は、BGM 1ソース、SE 1ソースです。</li>
+	   </ul>
+	</p>
+	<h3 class="tips">乱数について</h3>
+	<p>
+	   <ul>
+	       <li>乱数は、<a href="./Math/Classes/GMRandom/index.html">GMRandom</a> クラスのクラスメソッドを利用してください。</li>
+	   </ul>
+	</p>
+	</div>
+	<% $groups.each do |group| %>
+		<h2><%= group.d_name %></h2>
+
+		<% if (group.d_classes.size > 0) %>
+			<div class="column">
+				<h3>Classes</h3>
+				<ul>
+				<% group.d_classes.each do |a_class| %>
+					<li><a href="<%= a_class.d_href %>"><%= a_class.d_name %></a></li>
+				<% end %>
+				</ul>
+				<% if (group.d_structs.size > 0) %>
+					<h3>Structs</h3>
+					<ul>
+					<% group.d_structs.each do |a_struct| %>
+						<li><a href="<%= a_struct.d_href %>"><%= a_struct.d_name %></a></li>
+					<% end %>
+					</ul>
+				<% end %>
+			</div>
+		<% end %>
+
+		<% if (group.d_functions.size > 0) %>
+			<div class="column">
+				<h3>Functions</h3>
+				<ul>
+				<% group.d_functions.each do |a_func| %>
+					<li><a href="<%= a_func.d_href %>"><%= a_func.d_name %></a></li>
+				<% end %>
+				</ul>
+			</div>
+		<% end %>
+
+		<% if (group.d_structs.size > 0) || (group.d_enums.size > 0) || (group.d_typedefs.size > 0) || (group.d_variables.size > 0) || (group.d_macros.size > 0) %>
+			<div class="column">
+				<% if (group.d_enums.size > 0) %>
+					<h3>Enums</h3>
+					<ul>
+					<% group.d_enums.each do |an_enum| %>
+						<li><a href="<%= an_enum.d_href %>"><%= an_enum.d_name %></a></li>
+					<% end %>
+					</ul>
+				<% end %>
+				<% if (group.d_typedefs.size > 0) %>
+					<h3>Type defs</h3>
+					<ul>
+					<% group.d_typedefs.each do |a_typedef| %>
+						<li><a href="<%= a_typedef.d_href %>"><%= a_typedef.d_name %></a></li>
+					<% end %>
+					</ul>
+				<% end %>
+				<% if (group.d_variables.size > 0) %>
+					<h3>Variables</h3>
+					<ul>
+					<% group.d_variables.each do |a_var| %>
+						<li><a href="<%= a_var.d_href %>"><%= a_var.d_name %></a></li>
+					<% end %>
+					</ul>
+				<% end %>
+				<% if (group.d_constants.size > 0) %>
+					<h3>Constants</h3>
+					<ul>
+					<% group.d_constants.each do |a_var| %>
+						<li><a href="<%= a_var.d_href %>"><%= a_var.d_name %></a></li>
+					<% end %>
+					</ul>
+				<% end %>
+				<% if (group.d_macros.size > 0) %>
+					<h3>Macros</h3>
+					<ul>
+					<% group.d_macros.each do |a_macro| %>
+						<li><a href="<%= a_macro.d_href %>"><%= a_macro.d_name %></a></li>
+					<% end %>
+					</ul>
+				<% end %>
+			<% end %>
+			</div>
+
+		<% end %>
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+	
+</body>
+
+</html>

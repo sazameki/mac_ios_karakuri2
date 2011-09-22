@@ -1,0 +1,803 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMMatrix Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMMatrix"></a>
+	<h1>GMMatrix Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p>4x4 の変換行列をサポートするためのクラスです。
+</p>
+		<p></p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>生成メソッド</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreateBillboard/static_GMMatrix_CreateBillboard(const_GMVector3D@_objectPos,_const_GMVector3D@_cameraPos,">CreateBillboard(const GMVector3D& objectPos, const GMVector3D& cameraPos,</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreateConstrainedBillboard/static_GMMatrix_CreateConstrainedBillboard(const_GMVector3D@_objectPos,_const_GMVector3D@_cameraPos,_const_GMVector3D@_rotateAxis,">CreateConstrainedBillboard(const GMVector3D& objectPos, const GMVector3D& cameraPos, const GMVector3D& rotateAxis,</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreateFromAxisAngle/static_GMMatrix_CreateFromAxisAngle(const_GMVector3D@_axis,_double_angle)">CreateFromAxisAngle(const GMVector3D& axis, double angle)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreateFromYawPitchRoll/static_GMMatrix_CreateFromYawPitchRoll(double_yaw,_double_pitch,_double_roll)">CreateFromYawPitchRoll(double yaw, double pitch, double roll)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreateLookAt/static_GMMatrix_CreateLookAt(const_GMVector3D@_cameraPos,_const_GMVector3D@_cameraTarget,_const_GMVector3D@_cameraUpVec)">CreateLookAt(const GMVector3D& cameraPos, const GMVector3D& cameraTarget, const GMVector3D& cameraUpVec)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreateOrthographic/static_GMMatrix_CreateOrthographic(double_width,_double_height,_double_zNear,_double_zFar)">CreateOrthographic(double width, double height, double zNear, double zFar)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreateOrthographicOffCenter/static_GMMatrix_CreateOrthographicOffCenter(double_left,_double_right,_double_bottom,_double_top,_double_zNear,_double_zFar)">CreateOrthographicOffCenter(double left, double right, double bottom, double top, double zNear, double zFar)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreatePerspective/static_GMMatrix_CreatePerspective(double_width,_double_height,_double_nearDist,_double_farDist)">CreatePerspective(double width, double height, double nearDist, double farDist)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreatePerspectiveFieldOfView/static_GMMatrix_CreatePerspectiveFieldOfView(double_fieldOfView,_double_aspectRatio,_double_nearDist,_double_farDist)">CreatePerspectiveFieldOfView(double fieldOfView, double aspectRatio, double nearDist, double farDist)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreatePerspectiveOffCenter/static_GMMatrix_CreatePerspectiveOffCenter(double_left,_double_right,_double_bottom,_double_top,_double_nearDist,_double_farDist)">CreatePerspectiveOffCenter(double left, double right, double bottom, double top, double nearDist, double farDist)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreateReflection/static_GMMatrix_CreateReflection(const_GMPlane@_plane)">CreateReflection(const GMPlane& plane)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreateRotationX/static_GMMatrix_CreateRotationX(double_radians)">CreateRotationX(double radians)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreateRotationY/static_GMMatrix_CreateRotationY(double_radians)">CreateRotationY(double radians)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreateRotationZ/static_GMMatrix_CreateRotationZ(double_radians)">CreateRotationZ(double radians)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreateScale/static_GMMatrix_CreateScale(double_scale)">CreateScale(double scale)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreateScale/static_GMMatrix_CreateScale(double_x,_double_y,_double_z)">CreateScale(double x, double y, double z)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreateScale/static_GMMatrix_CreateScale(const_GMVector3D@_vec)">CreateScale(const GMVector3D& vec)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreateShadow/static_GMMatrix_CreateShadow(const_GMVector3D@_lightDir,_const_GMPlane@_plane)">CreateShadow(const GMVector3D& lightDir, const GMPlane& plane)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreateTranslation/static_GMMatrix_CreateTranslation(double_x,_double_y,_double_z)">CreateTranslation(double x, double y, double z)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreateTranslation/static_GMMatrix_CreateTranslation(const_GMVector3D@_vec)">CreateTranslation(const GMVector3D& vec)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/CreateWorld/static_GMMatrix_CreateWorld(const_GMVector3D@_pos,_const_GMVector3D@_forward,_const_GMVector3D@_up)">CreateWorld(const GMVector3D& pos, const GMVector3D& forward, const GMVector3D& up)</a></li>
+			
+			</ul>
+		
+			<h3>数値補完</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/EaseIn/static_GMMatrix_EaseIn(const_GMMatrix@_mat1,_const_GMMatrix@_mat2,_double_amount)">EaseIn(const GMMatrix& mat1, const GMMatrix& mat2, double amount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/EaseInOut/static_GMMatrix_EaseInOut(const_GMMatrix@_mat1,_const_GMMatrix@_mat2,_double_amount)">EaseInOut(const GMMatrix& mat1, const GMMatrix& mat2, double amount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/EaseOut/static_GMMatrix_EaseOut(const_GMMatrix@_mat1,_const_GMMatrix@_mat2,_double_amount)">EaseOut(const GMMatrix& mat1, const GMMatrix& mat2, double amount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMMatrix/Lerp/static_GMMatrix_Lerp(const_GMMatrix@_mat1,_const_GMMatrix@_mat2,_double_amount)">Lerp(const GMMatrix& mat1, const GMMatrix& mat2, double amount)</a></li>
+			
+			</ul>
+		
+			<h3>コンストラクタ</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/GMMatrix/GMMatrix()">GMMatrix()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/GMMatrix/GMMatrix(double_m11,_double_m12,_double_m13,_double_m14,_double_m21,_double_m22,_double_m23,_double_m24,_double_m31,_double_m32,_double_m33,_double_m34,_double_m41,_double_m42,_double_m43,_double_m44)">GMMatrix(double m11, double m12, double m13, double m14, double m21, double m22, double m23, double m24, double m31, double m32, double m33, double m34, double m41, double m42, double m43, double m44)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/GMMatrix/GMMatrix(const_GMQuat@_quat)">GMMatrix(const GMQuat& quat)</a></li>
+			
+			</ul>
+		
+			<h3>メインの操作</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/decompose/bool_decompose(GMVector3D@_scale,_GMQuat@_rotation,_GMVector3D@_translation)_const">decompose(GMVector3D& scale, GMQuat& rotation, GMVector3D& translation) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/determinant/double_determinant()_const">determinant() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/equals/bool_equals(const_GMMatrix@_matrix,_double_accuracy)_const">equals(const GMMatrix& matrix, double accuracy) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/invert/GMMatrix_invert()_const">invert() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/toQuat/GMQuat_toQuat()_const">toQuat() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/transform/GMMatrix_transform(const_GMQuat@_quat)_const">transform(const GMQuat& quat) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/transpose/GMMatrix_transpose()_const">transpose() const</a></li>
+			
+			</ul>
+		
+			<h3>アクセッサ</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/setBackward/void_setBackward(const_GMVector3D@_vec)">setBackward(const GMVector3D& vec)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/setDown/void_setDown(const_GMVector3D@_vec)">setDown(const GMVector3D& vec)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/setForward/void_setForward(const_GMVector3D@_vec)">setForward(const GMVector3D& vec)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/setLeft/void_setLeft(const_GMVector3D@_vec)">setLeft(const GMVector3D& vec)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/setRight/void_setRight(const_GMVector3D@_vec)">setRight(const GMVector3D& vec)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/setTranslation/void_setTranslation(const_GMVector3D@_vec)">setTranslation(const GMVector3D& vec)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/setUp/void_setUp(const_GMVector3D@_vec)">setUp(const GMVector3D& vec)</a></li>
+			
+			</ul>
+		
+			<h3>演算子のオーバーロード</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/operator=/GMMatrix@_operator=(const_GMMatrix@_matrix)">operator=(const GMMatrix& matrix)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/operator-/GMMatrix_operator-()_const">operator-() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/operator+/GMMatrix_operator+(const_GMMatrix@_matrix)_const">operator+(const GMMatrix& matrix) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/operator-/GMMatrix_operator-(const_GMMatrix@_matrix)_const">operator-(const GMMatrix& matrix) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/operator*/GMMatrix_operator*(const_GMMatrix@_matrix)_const">operator*(const GMMatrix& matrix) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/operator//GMMatrix_operator/(const_GMMatrix@_matrix)_const">operator/(const GMMatrix& matrix) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/operator*/GMMatrix_operator*(double_value)_const">operator*(double value) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/operator//GMMatrix_operator/(double_value)_const">operator/(double value) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/operator+=/GMMatrix@_operator+=(const_GMMatrix@_matrix)">operator+=(const GMMatrix& matrix)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/operator-=/GMMatrix@_operator-=(const_GMMatrix@_matrix)">operator-=(const GMMatrix& matrix)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/operator*=/GMMatrix@_operator*=(const_GMMatrix@_matrix)">operator*=(const GMMatrix& matrix)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/operator/=/GMMatrix@_operator/=(const_GMMatrix@_matrix)">operator/=(const GMMatrix& matrix)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/operator*=/GMMatrix@_operator*=(double_value)">operator*=(double value)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/operator/=/GMMatrix@_operator/=(double_value)">operator/=(double value)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/operator==/bool_operator==(const_GMMatrix@_matrix)_const">operator==(const GMMatrix& matrix) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMatrix/operator!=/bool_operator!=(const_GMMatrix@_matrix)_const">operator!=(const GMMatrix& matrix) const</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+		<h2>Constants</h2>		
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Identity</h3>
+				<div class="declare">static const GMMatrix&  Identity</div>
+				
+				
+			</div>
+		
+	
+
+	
+		<h2>Instant Variables</h2>
+		
+			<a name=""></a>
+			<h3>m11</h3>
+			<div class="declare">float m11</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>m12</h3>
+			<div class="declare">float m12</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>m13</h3>
+			<div class="declare">float m13</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>m14</h3>
+			<div class="declare">float m14</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>m21</h3>
+			<div class="declare">float m21</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>m22</h3>
+			<div class="declare">float m22</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>m23</h3>
+			<div class="declare">float m23</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>m24</h3>
+			<div class="declare">float m24</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>m31</h3>
+			<div class="declare">float m31</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>m32</h3>
+			<div class="declare">float m32</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>m33</h3>
+			<div class="declare">float m33</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>m34</h3>
+			<div class="declare">float m34</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>m41</h3>
+			<div class="declare">float m41</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>m42</h3>
+			<div class="declare">float m42</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>m43</h3>
+			<div class="declare">float m43</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>m44</h3>
+			<div class="declare">float m44</div>
+			
+			
+		
+	
+
+	
+		<h2>Class Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreateBillboard/static_GMMatrix_CreateBillboard(const_GMVector3D@_objectPos,_const_GMVector3D@_cameraPos,"></a>
+				<h3>CreateBillboard</h3>
+				<div class="declare">static GMMatrix     CreateBillboard(const GMVector3D& objectPos, const GMVector3D& cameraPos,</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreateConstrainedBillboard/static_GMMatrix_CreateConstrainedBillboard(const_GMVector3D@_objectPos,_const_GMVector3D@_cameraPos,_const_GMVector3D@_rotateAxis,"></a>
+				<h3>CreateConstrainedBillboard</h3>
+				<div class="declare">static GMMatrix     CreateConstrainedBillboard(const GMVector3D& objectPos, const GMVector3D& cameraPos, const GMVector3D& rotateAxis,</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreateFromAxisAngle/static_GMMatrix_CreateFromAxisAngle(const_GMVector3D@_axis,_double_angle)"></a>
+				<h3>CreateFromAxisAngle</h3>
+				<div class="declare">static GMMatrix     CreateFromAxisAngle(const GMVector3D& axis, double angle)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreateFromYawPitchRoll/static_GMMatrix_CreateFromYawPitchRoll(double_yaw,_double_pitch,_double_roll)"></a>
+				<h3>CreateFromYawPitchRoll</h3>
+				<div class="declare">static GMMatrix     CreateFromYawPitchRoll(double yaw, double pitch, double roll)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreateLookAt/static_GMMatrix_CreateLookAt(const_GMVector3D@_cameraPos,_const_GMVector3D@_cameraTarget,_const_GMVector3D@_cameraUpVec)"></a>
+				<h3>CreateLookAt</h3>
+				<div class="declare">static GMMatrix     CreateLookAt(const GMVector3D& cameraPos, const GMVector3D& cameraTarget, const GMVector3D& cameraUpVec)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreateOrthographic/static_GMMatrix_CreateOrthographic(double_width,_double_height,_double_zNear,_double_zFar)"></a>
+				<h3>CreateOrthographic</h3>
+				<div class="declare">static GMMatrix     CreateOrthographic(double width, double height, double zNear, double zFar)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreateOrthographicOffCenter/static_GMMatrix_CreateOrthographicOffCenter(double_left,_double_right,_double_bottom,_double_top,_double_zNear,_double_zFar)"></a>
+				<h3>CreateOrthographicOffCenter</h3>
+				<div class="declare">static GMMatrix     CreateOrthographicOffCenter(double left, double right, double bottom, double top, double zNear, double zFar)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreatePerspective/static_GMMatrix_CreatePerspective(double_width,_double_height,_double_nearDist,_double_farDist)"></a>
+				<h3>CreatePerspective</h3>
+				<div class="declare">static GMMatrix     CreatePerspective(double width, double height, double nearDist, double farDist)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreatePerspectiveFieldOfView/static_GMMatrix_CreatePerspectiveFieldOfView(double_fieldOfView,_double_aspectRatio,_double_nearDist,_double_farDist)"></a>
+				<h3>CreatePerspectiveFieldOfView</h3>
+				<div class="declare">static GMMatrix     CreatePerspectiveFieldOfView(double fieldOfView, double aspectRatio, double nearDist, double farDist)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreatePerspectiveOffCenter/static_GMMatrix_CreatePerspectiveOffCenter(double_left,_double_right,_double_bottom,_double_top,_double_nearDist,_double_farDist)"></a>
+				<h3>CreatePerspectiveOffCenter</h3>
+				<div class="declare">static GMMatrix     CreatePerspectiveOffCenter(double left, double right, double bottom, double top, double nearDist, double farDist)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreateReflection/static_GMMatrix_CreateReflection(const_GMPlane@_plane)"></a>
+				<h3>CreateReflection</h3>
+				<div class="declare">static GMMatrix     CreateReflection(const GMPlane& plane)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreateRotationX/static_GMMatrix_CreateRotationX(double_radians)"></a>
+				<h3>CreateRotationX</h3>
+				<div class="declare">static GMMatrix     CreateRotationX(double radians)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreateRotationY/static_GMMatrix_CreateRotationY(double_radians)"></a>
+				<h3>CreateRotationY</h3>
+				<div class="declare">static GMMatrix     CreateRotationY(double radians)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreateRotationZ/static_GMMatrix_CreateRotationZ(double_radians)"></a>
+				<h3>CreateRotationZ</h3>
+				<div class="declare">static GMMatrix     CreateRotationZ(double radians)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreateScale/static_GMMatrix_CreateScale(double_scale)"></a>
+				<h3>CreateScale</h3>
+				<div class="declare">static GMMatrix     CreateScale(double scale)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreateScale/static_GMMatrix_CreateScale(double_x,_double_y,_double_z)"></a>
+				<h3>CreateScale</h3>
+				<div class="declare">static GMMatrix     CreateScale(double x, double y, double z)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreateScale/static_GMMatrix_CreateScale(const_GMVector3D@_vec)"></a>
+				<h3>CreateScale</h3>
+				<div class="declare">static GMMatrix     CreateScale(const GMVector3D& vec)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreateShadow/static_GMMatrix_CreateShadow(const_GMVector3D@_lightDir,_const_GMPlane@_plane)"></a>
+				<h3>CreateShadow</h3>
+				<div class="declare">static GMMatrix     CreateShadow(const GMVector3D& lightDir, const GMPlane& plane)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreateTranslation/static_GMMatrix_CreateTranslation(double_x,_double_y,_double_z)"></a>
+				<h3>CreateTranslation</h3>
+				<div class="declare">static GMMatrix     CreateTranslation(double x, double y, double z)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreateTranslation/static_GMMatrix_CreateTranslation(const_GMVector3D@_vec)"></a>
+				<h3>CreateTranslation</h3>
+				<div class="declare">static GMMatrix     CreateTranslation(const GMVector3D& vec)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/CreateWorld/static_GMMatrix_CreateWorld(const_GMVector3D@_pos,_const_GMVector3D@_forward,_const_GMVector3D@_up)"></a>
+				<h3>CreateWorld</h3>
+				<div class="declare">static GMMatrix     CreateWorld(const GMVector3D& pos, const GMVector3D& forward, const GMVector3D& up)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/EaseIn/static_GMMatrix_EaseIn(const_GMMatrix@_mat1,_const_GMMatrix@_mat2,_double_amount)"></a>
+				<h3>EaseIn</h3>
+				<div class="declare">static GMMatrix     EaseIn(const GMMatrix& mat1, const GMMatrix& mat2, double amount)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/EaseInOut/static_GMMatrix_EaseInOut(const_GMMatrix@_mat1,_const_GMMatrix@_mat2,_double_amount)"></a>
+				<h3>EaseInOut</h3>
+				<div class="declare">static GMMatrix     EaseInOut(const GMMatrix& mat1, const GMMatrix& mat2, double amount)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/EaseOut/static_GMMatrix_EaseOut(const_GMMatrix@_mat1,_const_GMMatrix@_mat2,_double_amount)"></a>
+				<h3>EaseOut</h3>
+				<div class="declare">static GMMatrix     EaseOut(const GMMatrix& mat1, const GMMatrix& mat2, double amount)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMMatrix/Lerp/static_GMMatrix_Lerp(const_GMMatrix@_mat1,_const_GMMatrix@_mat2,_double_amount)"></a>
+				<h3>Lerp</h3>
+				<div class="declare">static GMMatrix     Lerp(const GMMatrix& mat1, const GMMatrix& mat2, double amount)</div>
+				
+				
+			</div>
+		
+	
+
+	
+		<h2>Instant Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/GMMatrix/GMMatrix()"></a>
+				<h3>GMMatrix</h3>
+				<div class="declare">GMMatrix()</div>
+				
+					<div class="abstract">すべての要素が 0.0 の行列を生成します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/GMMatrix/GMMatrix(double_m11,_double_m12,_double_m13,_double_m14,_double_m21,_double_m22,_double_m23,_double_m24,_double_m31,_double_m32,_double_m33,_double_m34,_double_m41,_double_m42,_double_m43,_double_m44)"></a>
+				<h3>GMMatrix</h3>
+				<div class="declare">GMMatrix(double m11, double m12, double m13, double m14, double m21, double m22, double m23, double m24, double m31, double m32, double m33, double m34, double m41, double m42, double m43, double m44)</div>
+				
+					<div class="abstract">各要素を設定して行列を生成します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/GMMatrix/GMMatrix(const_GMQuat@_quat)"></a>
+				<h3>GMMatrix</h3>
+				<div class="declare">GMMatrix(const GMQuat& quat)</div>
+				
+					<div class="abstract">各要素をコピーして行列を生成します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/decompose/bool_decompose(GMVector3D@_scale,_GMQuat@_rotation,_GMVector3D@_translation)_const"></a>
+				<h3>decompose</h3>
+				<div class="declare">bool        decompose(GMVector3D& scale, GMQuat& rotation, GMVector3D& translation) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/determinant/double_determinant()_const"></a>
+				<h3>determinant</h3>
+				<div class="declare">double      determinant() const</div>
+				
+					<div class="abstract">この行列の行列式を計算します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/equals/bool_equals(const_GMMatrix@_matrix,_double_accuracy)_const"></a>
+				<h3>equals</h3>
+				<div class="declare">bool        equals(const GMMatrix& matrix, double accuracy) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/invert/GMMatrix_invert()_const"></a>
+				<h3>invert</h3>
+				<div class="declare">GMMatrix    invert() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/toQuat/GMQuat_toQuat()_const"></a>
+				<h3>toQuat</h3>
+				<div class="declare">GMQuat      toQuat() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/transform/GMMatrix_transform(const_GMQuat@_quat)_const"></a>
+				<h3>transform</h3>
+				<div class="declare">GMMatrix    transform(const GMQuat& quat) const</div>
+				
+					<div class="abstract">この行列にクォータニオンの回転を適用した行列を求めます。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/transpose/GMMatrix_transpose()_const"></a>
+				<h3>transpose</h3>
+				<div class="declare">GMMatrix    transpose() const</div>
+				
+					<div class="abstract">この行列の転置行列を求めます。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/setBackward/void_setBackward(const_GMVector3D@_vec)"></a>
+				<h3>setBackward</h3>
+				<div class="declare">void        setBackward(const GMVector3D& vec)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/setDown/void_setDown(const_GMVector3D@_vec)"></a>
+				<h3>setDown</h3>
+				<div class="declare">void        setDown(const GMVector3D& vec)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/setForward/void_setForward(const_GMVector3D@_vec)"></a>
+				<h3>setForward</h3>
+				<div class="declare">void        setForward(const GMVector3D& vec)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/setLeft/void_setLeft(const_GMVector3D@_vec)"></a>
+				<h3>setLeft</h3>
+				<div class="declare">void        setLeft(const GMVector3D& vec)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/setRight/void_setRight(const_GMVector3D@_vec)"></a>
+				<h3>setRight</h3>
+				<div class="declare">void        setRight(const GMVector3D& vec)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/setTranslation/void_setTranslation(const_GMVector3D@_vec)"></a>
+				<h3>setTranslation</h3>
+				<div class="declare">void        setTranslation(const GMVector3D& vec)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/setUp/void_setUp(const_GMVector3D@_vec)"></a>
+				<h3>setUp</h3>
+				<div class="declare">void        setUp(const GMVector3D& vec)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/operator=/GMMatrix@_operator=(const_GMMatrix@_matrix)"></a>
+				<h3>operator=</h3>
+				<div class="declare">GMMatrix&   operator=(const GMMatrix& matrix)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/operator-/GMMatrix_operator-()_const"></a>
+				<h3>operator-</h3>
+				<div class="declare">GMMatrix    operator-() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/operator+/GMMatrix_operator+(const_GMMatrix@_matrix)_const"></a>
+				<h3>operator+</h3>
+				<div class="declare">GMMatrix    operator+(const GMMatrix& matrix) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/operator-/GMMatrix_operator-(const_GMMatrix@_matrix)_const"></a>
+				<h3>operator-</h3>
+				<div class="declare">GMMatrix    operator-(const GMMatrix& matrix) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/operator*/GMMatrix_operator*(const_GMMatrix@_matrix)_const"></a>
+				<h3>operator*</h3>
+				<div class="declare">GMMatrix    operator*(const GMMatrix& matrix) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/operator//GMMatrix_operator/(const_GMMatrix@_matrix)_const"></a>
+				<h3>operator/</h3>
+				<div class="declare">GMMatrix    operator/(const GMMatrix& matrix) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/operator*/GMMatrix_operator*(double_value)_const"></a>
+				<h3>operator*</h3>
+				<div class="declare">GMMatrix    operator*(double value) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/operator//GMMatrix_operator/(double_value)_const"></a>
+				<h3>operator/</h3>
+				<div class="declare">GMMatrix    operator/(double value) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/operator+=/GMMatrix@_operator+=(const_GMMatrix@_matrix)"></a>
+				<h3>operator+=</h3>
+				<div class="declare">GMMatrix&   operator+=(const GMMatrix& matrix)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/operator-=/GMMatrix@_operator-=(const_GMMatrix@_matrix)"></a>
+				<h3>operator-=</h3>
+				<div class="declare">GMMatrix&   operator-=(const GMMatrix& matrix)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/operator*=/GMMatrix@_operator*=(const_GMMatrix@_matrix)"></a>
+				<h3>operator*=</h3>
+				<div class="declare">GMMatrix&   operator*=(const GMMatrix& matrix)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/operator/=/GMMatrix@_operator/=(const_GMMatrix@_matrix)"></a>
+				<h3>operator/=</h3>
+				<div class="declare">GMMatrix&   operator/=(const GMMatrix& matrix)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/operator*=/GMMatrix@_operator*=(double_value)"></a>
+				<h3>operator*=</h3>
+				<div class="declare">GMMatrix&   operator*=(double value)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/operator/=/GMMatrix@_operator/=(double_value)"></a>
+				<h3>operator/=</h3>
+				<div class="declare">GMMatrix&   operator/=(double value)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/operator==/bool_operator==(const_GMMatrix@_matrix)_const"></a>
+				<h3>operator==</h3>
+				<div class="declare">bool        operator==(const GMMatrix& matrix) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMatrix/operator!=/bool_operator!=(const_GMMatrix@_matrix)_const"></a>
+				<h3>operator!=</h3>
+				<div class="declare">bool        operator!=(const GMMatrix& matrix) const</div>
+				
+				
+			</div>
+		
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

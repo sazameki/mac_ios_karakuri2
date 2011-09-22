@@ -1,0 +1,1886 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMColor Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMColor"></a>
+	<h1>GMColor Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p>ゲームで使用される色を表現するためのクラスです。
+</p>
+		<p></p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>補間計算</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMColor/EaseIn/static_GMColor_EaseIn(const_GMColor@_color1,_const_GMColor@_color2,_double_amount)">EaseIn(const GMColor& color1, const GMColor& color2, double amount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMColor/EaseInOut/static_GMColor_EaseInOut(const_GMColor@_color1,_const_GMColor@_color2,_double_amount)">EaseInOut(const GMColor& color1, const GMColor& color2, double amount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMColor/EaseOut/static_GMColor_EaseOut(const_GMColor@_color1,_const_GMColor@_color2,_double_amount)">EaseOut(const GMColor& color1, const GMColor& color2, double amount)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMColor/Lerp/static_GMColor_Lerp(const_GMColor@_color1,_const_GMColor@_color2,_double_amount)">Lerp(const GMColor& color1, const GMColor& color2, double amount)</a></li>
+			
+			</ul>
+		
+			<h3>コンストラクタ</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMColor/GMColor/GMColor()">GMColor()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMColor/GMColor/GMColor(double_r,_double_g,_double_b,_double_a)">GMColor(double r, double g, double b, double a)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMColor/GMColor/GMColor(const_GMColor@_color)">GMColor(const GMColor& color)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMColor/GMColor/GMColor(const_GMVector3D@_vector)">GMColor(const GMVector3D& vector)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMColor/GMColor/GMColor(const_GMVector4D@_vector)">GMColor(const GMVector4D& vector)</a></li>
+			
+			</ul>
+		
+			<h3>メインの操作</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMColor/equals/bool_equals(const_GMColor@_color,_double_accuracy)_const">equals(const GMColor& color, double accuracy) const</a></li>
+			
+			</ul>
+		
+			<h3>演算子のオーバーロード</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMColor/operator=/GMColor@_operator=(const_GMColor@_color)">operator=(const GMColor& color)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMColor/operator==/bool_operator==(const_GMColor@_color)_const">operator==(const GMColor& color) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMColor/operator!=/bool_operator!=(const_GMColor@_color)_const">operator!=(const GMColor& color) const</a></li>
+			
+			</ul>
+		
+			<h3>ベクトルサポート</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMColor/toVector3D/GMVector3D_toVector3D()_const">toVector3D() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMColor/toVector4D/GMVector4D_toVector4D()_const">toVector4D() const</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+		<h2>Constants</h2>		
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>AliceBlue</h3>
+				<div class="declare">static const GMColor&   AliceBlue</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>AntiqueWhite</h3>
+				<div class="declare">static const GMColor&   AntiqueWhite</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Aqua</h3>
+				<div class="declare">static const GMColor&   Aqua</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Aquamarine</h3>
+				<div class="declare">static const GMColor&   Aquamarine</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Azure</h3>
+				<div class="declare">static const GMColor&   Azure</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Beige</h3>
+				<div class="declare">static const GMColor&   Beige</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Bisque</h3>
+				<div class="declare">static const GMColor&   Bisque</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Black</h3>
+				<div class="declare">static const GMColor&   Black</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>BlanchedAlmond</h3>
+				<div class="declare">static const GMColor&   BlanchedAlmond</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Blue</h3>
+				<div class="declare">static const GMColor&   Blue</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>BlueViolet</h3>
+				<div class="declare">static const GMColor&   BlueViolet</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Brown</h3>
+				<div class="declare">static const GMColor&   Brown</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>BurlyWood</h3>
+				<div class="declare">static const GMColor&   BurlyWood</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>CadetBlue</h3>
+				<div class="declare">static const GMColor&   CadetBlue</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Chartreuse</h3>
+				<div class="declare">static const GMColor&   Chartreuse</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Chocolate</h3>
+				<div class="declare">static const GMColor&   Chocolate</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Coral</h3>
+				<div class="declare">static const GMColor&   Coral</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>CornflowerBlue</h3>
+				<div class="declare">static const GMColor&   CornflowerBlue</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Cornsilk</h3>
+				<div class="declare">static const GMColor&   Cornsilk</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Crimson</h3>
+				<div class="declare">static const GMColor&   Crimson</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Cyan</h3>
+				<div class="declare">static const GMColor&   Cyan</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DarkBlue</h3>
+				<div class="declare">static const GMColor&   DarkBlue</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>AliceBlue</h3>
+				<div class="declare">static const GMColor&   DarkCyan</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DarkGoldenrod</h3>
+				<div class="declare">static const GMColor&   DarkGoldenrod</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DarkGray</h3>
+				<div class="declare">static const GMColor&   DarkGray</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DarkGreen</h3>
+				<div class="declare">static const GMColor&   DarkGreen</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DarkKhaki</h3>
+				<div class="declare">static const GMColor&   DarkKhaki</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DarkMagenta</h3>
+				<div class="declare">static const GMColor&   DarkMagenta</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DarkOliveGreen</h3>
+				<div class="declare">static const GMColor&   DarkOliveGreen</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DarkOrange</h3>
+				<div class="declare">static const GMColor&   DarkOrange</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DarkOrchid</h3>
+				<div class="declare">static const GMColor&   DarkOrchid</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DarkRed</h3>
+				<div class="declare">static const GMColor&   DarkRed</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DarkSalmon</h3>
+				<div class="declare">static const GMColor&   DarkSalmon</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DarkSeaGreen</h3>
+				<div class="declare">static const GMColor&   DarkSeaGreen</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DarkSlateBlue</h3>
+				<div class="declare">static const GMColor&   DarkSlateBlue</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DarkSlateGray</h3>
+				<div class="declare">static const GMColor&   DarkSlateGray</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DarkTurquoise</h3>
+				<div class="declare">static const GMColor&   DarkTurquoise</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DarkViolet</h3>
+				<div class="declare">static const GMColor&   DarkViolet</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DeepPink</h3>
+				<div class="declare">static const GMColor&   DeepPink</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DeepSkyBlue</h3>
+				<div class="declare">static const GMColor&   DeepSkyBlue</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DimGray</h3>
+				<div class="declare">static const GMColor&   DimGray</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>DodgerBlue</h3>
+				<div class="declare">static const GMColor&   DodgerBlue</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Firebrick</h3>
+				<div class="declare">static const GMColor&   Firebrick</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>FloralWhite</h3>
+				<div class="declare">static const GMColor&   FloralWhite</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>ForestGreen</h3>
+				<div class="declare">static const GMColor&   ForestGreen</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Fuchsia</h3>
+				<div class="declare">static const GMColor&   Fuchsia</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Gainsboro</h3>
+				<div class="declare">static const GMColor&   Gainsboro</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>GhostWhite</h3>
+				<div class="declare">static const GMColor&   GhostWhite</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Gold</h3>
+				<div class="declare">static const GMColor&   Gold</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Goldenrod</h3>
+				<div class="declare">static const GMColor&   Goldenrod</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Gray</h3>
+				<div class="declare">static const GMColor&   Gray</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Green</h3>
+				<div class="declare">static const GMColor&   Green</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>GreenYellow</h3>
+				<div class="declare">static const GMColor&   GreenYellow</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Honeydew</h3>
+				<div class="declare">static const GMColor&   Honeydew</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>HotPink</h3>
+				<div class="declare">static const GMColor&   HotPink</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>IndianRed</h3>
+				<div class="declare">static const GMColor&   IndianRed</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Indigo</h3>
+				<div class="declare">static const GMColor&   Indigo</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Ivory</h3>
+				<div class="declare">static const GMColor&   Ivory</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Khaki</h3>
+				<div class="declare">static const GMColor&   Khaki</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Lavender</h3>
+				<div class="declare">static const GMColor&   Lavender</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>LavenderBlush</h3>
+				<div class="declare">static const GMColor&   LavenderBlush</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>LawnGreen</h3>
+				<div class="declare">static const GMColor&   LawnGreen</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>LemonChiffon</h3>
+				<div class="declare">static const GMColor&   LemonChiffon</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>LightBlue</h3>
+				<div class="declare">static const GMColor&   LightBlue</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>LightCoral</h3>
+				<div class="declare">static const GMColor&   LightCoral</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>LightCyan</h3>
+				<div class="declare">static const GMColor&   LightCyan</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>LightGoldenrodYellow</h3>
+				<div class="declare">static const GMColor&   LightGoldenrodYellow</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>LightGray</h3>
+				<div class="declare">static const GMColor&   LightGray</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>LightGreen</h3>
+				<div class="declare">static const GMColor&   LightGreen</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>LightPink</h3>
+				<div class="declare">static const GMColor&   LightPink</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>LightSalmon</h3>
+				<div class="declare">static const GMColor&   LightSalmon</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>LightSeaGreen</h3>
+				<div class="declare">static const GMColor&   LightSeaGreen</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>LightSkyBlue</h3>
+				<div class="declare">static const GMColor&   LightSkyBlue</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>LightSlateGray</h3>
+				<div class="declare">static const GMColor&   LightSlateGray</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>LightSteelBlue</h3>
+				<div class="declare">static const GMColor&   LightSteelBlue</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>LightYellow</h3>
+				<div class="declare">static const GMColor&   LightYellow</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Lime</h3>
+				<div class="declare">static const GMColor&   Lime</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>LimeGreen</h3>
+				<div class="declare">static const GMColor&   LimeGreen</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Linen</h3>
+				<div class="declare">static const GMColor&   Linen</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Magenta</h3>
+				<div class="declare">static const GMColor&   Magenta</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Maroon</h3>
+				<div class="declare">static const GMColor&   Maroon</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>MediumAquamarine</h3>
+				<div class="declare">static const GMColor&   MediumAquamarine</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>MediumBlue</h3>
+				<div class="declare">static const GMColor&   MediumBlue</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>MediumOrchid</h3>
+				<div class="declare">static const GMColor&   MediumOrchid</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>MediumPurple</h3>
+				<div class="declare">static const GMColor&   MediumPurple</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>MediumSeaGreen</h3>
+				<div class="declare">static const GMColor&   MediumSeaGreen</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>MediumSlateBlue</h3>
+				<div class="declare">static const GMColor&   MediumSlateBlue</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>MediumSpringGreen</h3>
+				<div class="declare">static const GMColor&   MediumSpringGreen</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>MediumTurquoise</h3>
+				<div class="declare">static const GMColor&   MediumTurquoise</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>MediumVioletRed</h3>
+				<div class="declare">static const GMColor&   MediumVioletRed</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>MidnightBlue</h3>
+				<div class="declare">static const GMColor&   MidnightBlue</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>MintCream</h3>
+				<div class="declare">static const GMColor&   MintCream</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>MistyRose</h3>
+				<div class="declare">static const GMColor&   MistyRose</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Moccasin</h3>
+				<div class="declare">static const GMColor&   Moccasin</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>NavajoWhite</h3>
+				<div class="declare">static const GMColor&   NavajoWhite</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Navy</h3>
+				<div class="declare">static const GMColor&   Navy</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>OldLace</h3>
+				<div class="declare">static const GMColor&   OldLace</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Olive</h3>
+				<div class="declare">static const GMColor&   Olive</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>OliveDrab</h3>
+				<div class="declare">static const GMColor&   OliveDrab</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Orange</h3>
+				<div class="declare">static const GMColor&   Orange</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>OrangeRed</h3>
+				<div class="declare">static const GMColor&   OrangeRed</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Orchid</h3>
+				<div class="declare">static const GMColor&   Orchid</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>PaleGoldenrod</h3>
+				<div class="declare">static const GMColor&   PaleGoldenrod</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>PaleGreen</h3>
+				<div class="declare">static const GMColor&   PaleGreen</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>PaleTurquoise</h3>
+				<div class="declare">static const GMColor&   PaleTurquoise</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>PaleVioletRed</h3>
+				<div class="declare">static const GMColor&   PaleVioletRed</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>PapayaWhip</h3>
+				<div class="declare">static const GMColor&   PapayaWhip</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>PeachPuff</h3>
+				<div class="declare">static const GMColor&   PeachPuff</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Peru</h3>
+				<div class="declare">static const GMColor&   Peru</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Pink</h3>
+				<div class="declare">static const GMColor&   Pink</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Plum</h3>
+				<div class="declare">static const GMColor&   Plum</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>PowderBlue</h3>
+				<div class="declare">static const GMColor&   PowderBlue</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Purple</h3>
+				<div class="declare">static const GMColor&   Purple</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Red</h3>
+				<div class="declare">static const GMColor&   Red</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>RosyBrown</h3>
+				<div class="declare">static const GMColor&   RosyBrown</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>RoyalBlue</h3>
+				<div class="declare">static const GMColor&   RoyalBlue</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>SaddleBrown</h3>
+				<div class="declare">static const GMColor&   SaddleBrown</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Salmon</h3>
+				<div class="declare">static const GMColor&   Salmon</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>SandyBrown</h3>
+				<div class="declare">static const GMColor&   SandyBrown</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>SeaGreen</h3>
+				<div class="declare">static const GMColor&   SeaGreen</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>SeaShell</h3>
+				<div class="declare">static const GMColor&   SeaShell</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Sienna</h3>
+				<div class="declare">static const GMColor&   Sienna</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Silver</h3>
+				<div class="declare">static const GMColor&   Silver</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>SkyBlue</h3>
+				<div class="declare">static const GMColor&   SkyBlue</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>SlateBlue</h3>
+				<div class="declare">static const GMColor&   SlateBlue</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>SlateGray</h3>
+				<div class="declare">static const GMColor&   SlateGray</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Snow</h3>
+				<div class="declare">static const GMColor&   Snow</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>SpringGreen</h3>
+				<div class="declare">static const GMColor&   SpringGreen</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>SteelBlue</h3>
+				<div class="declare">static const GMColor&   SteelBlue</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Tan</h3>
+				<div class="declare">static const GMColor&   Tan</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Teal</h3>
+				<div class="declare">static const GMColor&   Teal</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Thistle</h3>
+				<div class="declare">static const GMColor&   Thistle</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Tomato</h3>
+				<div class="declare">static const GMColor&   Tomato</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>TransparentBlack</h3>
+				<div class="declare">static const GMColor&   TransparentBlack</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>TransparentWhite</h3>
+				<div class="declare">static const GMColor&   TransparentWhite</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Turquoise</h3>
+				<div class="declare">static const GMColor&   Turquoise</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Violet</h3>
+				<div class="declare">static const GMColor&   Violet</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Wheat</h3>
+				<div class="declare">static const GMColor&   Wheat</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>White</h3>
+				<div class="declare">static const GMColor&   White</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>WhiteSmoke</h3>
+				<div class="declare">static const GMColor&   WhiteSmoke</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Yellow</h3>
+				<div class="declare">static const GMColor&   Yellow</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>YellowGreen</h3>
+				<div class="declare">static const GMColor&   YellowGreen</div>
+				
+					<div class="abstract">色の定数です。
+</div>
+				
+				
+			</div>
+		
+	
+
+	
+		<h2>Instant Variables</h2>
+		
+			<a name=""></a>
+			<h3>r</h3>
+			<div class="declare">GLfloat     r</div>
+			
+				<div class="abstract">赤の色成分（0〜255）
+</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>g</h3>
+			<div class="declare">GLfloat     g</div>
+			
+				<div class="abstract">緑の色成分（0〜255）
+</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>b</h3>
+			<div class="declare">GLfloat     b</div>
+			
+				<div class="abstract">青の色成分（0〜255）
+</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>a</h3>
+			<div class="declare">GLfloat     a</div>
+			
+				<div class="abstract">アルファの色成分（0〜255）
+</div>
+			
+			
+		
+	
+
+	
+		<h2>Class Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMColor/EaseIn/static_GMColor_EaseIn(const_GMColor@_color1,_const_GMColor@_color2,_double_amount)"></a>
+				<h3>EaseIn</h3>
+				<div class="declare">static GMColor  EaseIn(const GMColor& color1, const GMColor& color2, double amount)</div>
+				
+					<div class="abstract">2つの色の間を Ease In 補間した色を作成します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMColor/EaseInOut/static_GMColor_EaseInOut(const_GMColor@_color1,_const_GMColor@_color2,_double_amount)"></a>
+				<h3>EaseInOut</h3>
+				<div class="declare">static GMColor  EaseInOut(const GMColor& color1, const GMColor& color2, double amount)</div>
+				
+					<div class="abstract">2つの色の間を Ease In Out 補間した色を作成します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMColor/EaseOut/static_GMColor_EaseOut(const_GMColor@_color1,_const_GMColor@_color2,_double_amount)"></a>
+				<h3>EaseOut</h3>
+				<div class="declare">static GMColor  EaseOut(const GMColor& color1, const GMColor& color2, double amount)</div>
+				
+					<div class="abstract">2つの色の間を Ease Out 補間した色を作成します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMColor/Lerp/static_GMColor_Lerp(const_GMColor@_color1,_const_GMColor@_color2,_double_amount)"></a>
+				<h3>Lerp</h3>
+				<div class="declare">static GMColor  Lerp(const GMColor& color1, const GMColor& color2, double amount)</div>
+				
+					<div class="abstract">2つの色の間を線形補間した色を作成します。
+</div>
+				
+				
+			</div>
+		
+	
+
+	
+		<h2>Instant Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMColor/GMColor/GMColor()"></a>
+				<h3>GMColor</h3>
+				<div class="declare">GMColor()</div>
+				
+					<div class="abstract">赤、緑、青の各色成分が 0 で、アルファ成分が 255 の色を作成します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMColor/GMColor/GMColor(double_r,_double_g,_double_b,_double_a)"></a>
+				<h3>GMColor</h3>
+				<div class="declare">GMColor(double r, double g, double b, double a)</div>
+				
+					<div class="abstract">赤、緑、青、アルファの各色成分を 0.0〜1.0 で指定して色を作成します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMColor/GMColor/GMColor(const_GMColor@_color)"></a>
+				<h3>GMColor</h3>
+				<div class="declare">GMColor(const GMColor& color)</div>
+				
+					<div class="abstract">渡された色と同じ色情報をもつ色を作成します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMColor/GMColor/GMColor(const_GMVector3D@_vector)"></a>
+				<h3>GMColor</h3>
+				<div class="declare">GMColor(const GMVector3D& vector)</div>
+				
+					<div class="abstract">渡されたベクトルを利用して、r=x, g=y, b=z となるように、アルファ成分が 255 の色を作成します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMColor/GMColor/GMColor(const_GMVector4D@_vector)"></a>
+				<h3>GMColor</h3>
+				<div class="declare">GMColor(const GMVector4D& vector)</div>
+				
+					<div class="abstract">渡されたベクトルを利用して、r=x, g=y, b=z, a=w となるように色を作成します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMColor/equals/bool_equals(const_GMColor@_color,_double_accuracy)_const"></a>
+				<h3>equals</h3>
+				<div class="declare">bool        equals(const GMColor& color, double accuracy) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMColor/operator=/GMColor@_operator=(const_GMColor@_color)"></a>
+				<h3>operator=</h3>
+				<div class="declare">GMColor&    operator=(const GMColor& color)</div>
+				
+					<div class="abstract">渡された色情報をこのオブジェクトにコピーします。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMColor/operator==/bool_operator==(const_GMColor@_color)_const"></a>
+				<h3>operator==</h3>
+				<div class="declare">bool        operator==(const GMColor& color) const</div>
+				
+					<div class="abstract">渡された色の色情報とこのオブジェクトのもつ色情報が等しいかどうかをチェックします。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMColor/operator!=/bool_operator!=(const_GMColor@_color)_const"></a>
+				<h3>operator!=</h3>
+				<div class="declare">bool        operator!=(const GMColor& color) const</div>
+				
+					<div class="abstract">渡された色の色情報とこのオブジェクトのもつ色情報が等しくないかどうかをチェックします。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMColor/toVector3D/GMVector3D_toVector3D()_const"></a>
+				<h3>toVector3D</h3>
+				<div class="declare">GMVector3D  toVector3D() const</div>
+				
+					<div class="abstract">3次元ベクトルに変換します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMColor/toVector4D/GMVector4D_toVector4D()_const"></a>
+				<h3>toVector4D</h3>
+				<div class="declare">GMVector4D  toVector4D() const</div>
+				
+					<div class="abstract">4次元ベクトルに変換します。
+</div>
+				
+				
+			</div>
+		
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

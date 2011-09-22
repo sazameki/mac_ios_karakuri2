@@ -1,0 +1,171 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMSpriteBatch Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMSpriteBatch"></a>
+	<h1>GMSpriteBatch Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p><p><strong>GMSpriteBatch クラスのオブジェクトを使用した描画は、GMBasicEffect クラスのオブジェクトの begin()〜end() の呼び出し内で行う必要があります。</strong></p><p>このクラスのインスタンスは、GMScene クラスのサブクラスの willAppear() メソッドが呼ばれたときに new して作成してください。</p><p>実際の OpenGL / OpenGL ES の描画命令の発行は、GMDraw クラスを介して、GMDrawSys クラスによって行われます。</p>
+</p>
+		<p></p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>コンストラクタ</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMSpriteBatch/GMSpriteBatch/GMSpriteBatch()">GMSpriteBatch()</a></li>
+			
+			</ul>
+		
+			<h3>描画の開始と終了</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMSpriteBatch/begin/void_begin(GMSpriteSortMode_sortMode_=_GMSpriteSortModeDeferred,_const_GMMatrix@_transform_=_GMMatrix::Identity)">begin(GMSpriteSortMode sortMode = GMSpriteSortModeDeferred, const GMMatrix& transform = GMMatrix::Identity)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMSpriteBatch/end/void_end()">end()</a></li>
+			
+			</ul>
+		
+			<h3>矩形を指定する描画</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMSpriteBatch/draw/void_draw(GMTexture2D*_tex,_const_GMRect2D@_destRect,_const_GMColor@_color_=_GMColor::White,_double_layerDepth_=_0.0)">draw(GMTexture2D* tex, const GMRect2D& destRect, const GMColor& color = GMColor::White, double layerDepth = 0.0)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMSpriteBatch/draw/void_draw(GMTexture2D*_tex,_const_GMRect2D@_destRect,_const_GMRect2D@_srcRect,_const_GMColor@_color_=_GMColor::White,_double_layerDepth_=_0.0)">draw(GMTexture2D* tex, const GMRect2D& destRect, const GMRect2D& srcRect, const GMColor& color = GMColor::White, double layerDepth = 0.0)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMSpriteBatch/draw/void_draw(GMTexture2D*_tex,_const_GMRect2D@_destRect,_const_GMRect2D@_srcRect,_const_GMColor@_color,_double_rotation,_const_GMVector2D@_origin,_GMSpriteFlip_flip,_double_layerDepth)">draw(GMTexture2D* tex, const GMRect2D& destRect, const GMRect2D& srcRect, const GMColor& color, double rotation, const GMVector2D& origin, GMSpriteFlip flip, double layerDepth)</a></li>
+			
+			</ul>
+		
+			<h3>位置を指定する描画</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMSpriteBatch/draw/void_draw(GMTexture2D*_tex,_const_GMVector2D@_pos,_const_GMColor@_color_=_GMColor::White,_double_layerDepth_=_0.0)">draw(GMTexture2D* tex, const GMVector2D& pos, const GMColor& color = GMColor::White, double layerDepth = 0.0)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMSpriteBatch/draw/void_draw(GMTexture2D*_tex,_const_GMVector2D@_pos,_const_GMRect2D@_srcRect,_const_GMColor@_color_=_GMColor::White,_double_layerDepth_=_0.0)">draw(GMTexture2D* tex, const GMVector2D& pos, const GMRect2D& srcRect, const GMColor& color = GMColor::White, double layerDepth = 0.0)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMSpriteBatch/draw/void_draw(GMTexture2D*_tex,_const_GMVector2D@_pos,_const_GMRect2D@_srcRect,_const_GMColor@_color,_double_rotation,_const_GMVector2D@_origin,_const_GMVector2D@_scale,_GMSpriteFlip_flip,_double_layerDepth)">draw(GMTexture2D* tex, const GMVector2D& pos, const GMRect2D& srcRect, const GMColor& color, double rotation, const GMVector2D& origin, const GMVector2D& scale, GMSpriteFlip flip, double layerDepth)</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+		<h2>Instant Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMSpriteBatch/GMSpriteBatch/GMSpriteBatch()"></a>
+				<h3>GMSpriteBatch</h3>
+				<div class="declare">GMSpriteBatch()</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMSpriteBatch/begin/void_begin(GMSpriteSortMode_sortMode_=_GMSpriteSortModeDeferred,_const_GMMatrix@_transform_=_GMMatrix::Identity)"></a>
+				<h3>begin</h3>
+				<div class="declare">void    begin(GMSpriteSortMode sortMode = GMSpriteSortModeDeferred, const GMMatrix& transform = GMMatrix::Identity)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMSpriteBatch/end/void_end()"></a>
+				<h3>end</h3>
+				<div class="declare">void    end()</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMSpriteBatch/draw/void_draw(GMTexture2D*_tex,_const_GMRect2D@_destRect,_const_GMColor@_color_=_GMColor::White,_double_layerDepth_=_0.0)"></a>
+				<h3>draw</h3>
+				<div class="declare">void    draw(GMTexture2D* tex, const GMRect2D& destRect, const GMColor& color = GMColor::White, double layerDepth = 0.0)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMSpriteBatch/draw/void_draw(GMTexture2D*_tex,_const_GMRect2D@_destRect,_const_GMRect2D@_srcRect,_const_GMColor@_color_=_GMColor::White,_double_layerDepth_=_0.0)"></a>
+				<h3>draw</h3>
+				<div class="declare">void    draw(GMTexture2D* tex, const GMRect2D& destRect, const GMRect2D& srcRect, const GMColor& color = GMColor::White, double layerDepth = 0.0)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMSpriteBatch/draw/void_draw(GMTexture2D*_tex,_const_GMRect2D@_destRect,_const_GMRect2D@_srcRect,_const_GMColor@_color,_double_rotation,_const_GMVector2D@_origin,_GMSpriteFlip_flip,_double_layerDepth)"></a>
+				<h3>draw</h3>
+				<div class="declare">void    draw(GMTexture2D* tex, const GMRect2D& destRect, const GMRect2D& srcRect, const GMColor& color, double rotation, const GMVector2D& origin, GMSpriteFlip flip, double layerDepth)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMSpriteBatch/draw/void_draw(GMTexture2D*_tex,_const_GMVector2D@_pos,_const_GMColor@_color_=_GMColor::White,_double_layerDepth_=_0.0)"></a>
+				<h3>draw</h3>
+				<div class="declare">void    draw(GMTexture2D* tex, const GMVector2D& pos, const GMColor& color = GMColor::White, double layerDepth = 0.0)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMSpriteBatch/draw/void_draw(GMTexture2D*_tex,_const_GMVector2D@_pos,_const_GMRect2D@_srcRect,_const_GMColor@_color_=_GMColor::White,_double_layerDepth_=_0.0)"></a>
+				<h3>draw</h3>
+				<div class="declare">void    draw(GMTexture2D* tex, const GMVector2D& pos, const GMRect2D& srcRect, const GMColor& color = GMColor::White, double layerDepth = 0.0)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMSpriteBatch/draw/void_draw(GMTexture2D*_tex,_const_GMVector2D@_pos,_const_GMRect2D@_srcRect,_const_GMColor@_color,_double_rotation,_const_GMVector2D@_origin,_const_GMVector2D@_scale,_GMSpriteFlip_flip,_double_layerDepth)"></a>
+				<h3>draw</h3>
+				<div class="declare">void    draw(GMTexture2D* tex, const GMVector2D& pos, const GMRect2D& srcRect, const GMColor& color, double rotation, const GMVector2D& origin, const GMVector2D& scale, GMSpriteFlip flip, double layerDepth)</div>
+				
+				
+			</div>
+		
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

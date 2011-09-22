@@ -1,0 +1,272 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMDraw Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMDraw"></a>
+	<h1>GMDraw Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p>ポリゴンを作成して簡易な画面描画を行う機能を提供するためのクラスです。<br/>色とテクスチャを指定して、点、線、三角形、四角形を描画することができます。
+</p>
+		<p><p><strong>GMDraw クラスを使用した描画は、GMBasicEffect クラスのオブジェクトの begin()〜end() の呼び出し内で行う必要があります。</strong></p><p>このクラスにおける複数の描画処理は、可能な限りまとめられてバッチ処理されます。<br/><strong>必ず描画の前後で GMDraw::Begin() メソッドと GMDraw::End() メソッドを呼び出してください。</strong></p><p>実際の OpenGL / OpenGL ES の描画命令の発行は、GMDrawSys クラスによって行われます。</p>
+</p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>描画の開始と終了</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDraw/Begin/static_void_Begin()">Begin()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDraw/End/static_void_End()">End()</a></li>
+			
+			</ul>
+		
+			<h3>点の描画</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDraw/DrawPoint/static_void_DrawPoint(const_GMVector2D@_pos,_const_GMColor@_color,_double_size=1.0)">DrawPoint(const GMVector2D& pos, const GMColor& color, double size=1.0)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDraw/DrawPoint/static_void_DrawPoint(const_GMVector3D@_pos,_const_GMColor@_color,_double_size=1.0)">DrawPoint(const GMVector3D& pos, const GMColor& color, double size=1.0)</a></li>
+			
+			</ul>
+		
+			<h3>線の描画</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDraw/DrawLine/static_void_DrawLine(const_GMVector2D@_p1,_const_GMVector2D@_p2,_const_GMColor@_color,_double_width_=_1.0)">DrawLine(const GMVector2D& p1, const GMVector2D& p2, const GMColor& color, double width = 1.0)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDraw/DrawLine/static_void_DrawLine(const_GMVector2D@_p1,_const_GMVector2D@_p2,_const_GMColor@_color1,_const_GMColor@_color2,_double_width_=_1.0)">DrawLine(const GMVector2D& p1, const GMVector2D& p2, const GMColor& color1, const GMColor& color2, double width = 1.0)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDraw/DrawLine/static_void_DrawLine(const_GMVector3D@_p1,_const_GMVector3D@_p2,_const_GMColor@_color,_double_width_=_1.0)">DrawLine(const GMVector3D& p1, const GMVector3D& p2, const GMColor& color, double width = 1.0)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDraw/DrawLine/static_void_DrawLine(const_GMVector3D@_p1,_const_GMVector3D@_p2,_const_GMColor@_color1,_const_GMColor@_color2,_double_width_=_1.0)">DrawLine(const GMVector3D& p1, const GMVector3D& p2, const GMColor& color1, const GMColor& color2, double width = 1.0)</a></li>
+			
+			</ul>
+		
+			<h3>三角形の描画</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDraw/FillTriangle/static_void_FillTriangle(const_GMVector2D@_p1,_const_GMVector2D@_p2,_const_GMVector2D@_p3,_const_GMColor@_color_=_GMColor::White,_const_GMVector2D@_t1_=_GMVector2D::Zero,_const_GMVector2D@_t2_=_GMVector2D::Zero,_const_GMVector2D@_t3_=_GMVector2D::Zero)">FillTriangle(const GMVector2D& p1, const GMVector2D& p2, const GMVector2D& p3, const GMColor& color = GMColor::White, const GMVector2D& t1 = GMVector2D::Zero, const GMVector2D& t2 = GMVector2D::Zero, const GMVector2D& t3 = GMVector2D::Zero)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDraw/FillTriangle/static_void_FillTriangle(const_GMVector2D@_p1,_const_GMVector2D@_p2,_const_GMVector2D@_p3,_const_GMColor@_c1,_const_GMColor@_c2,_const_GMColor@_c3,_const_GMVector2D@_t1_=_GMVector2D::Zero,_const_GMVector2D@_t2_=_GMVector2D::Zero,_const_GMVector2D@_t3_=_GMVector2D::Zero)">FillTriangle(const GMVector2D& p1, const GMVector2D& p2, const GMVector2D& p3, const GMColor& c1, const GMColor& c2, const GMColor& c3, const GMVector2D& t1 = GMVector2D::Zero, const GMVector2D& t2 = GMVector2D::Zero, const GMVector2D& t3 = GMVector2D::Zero)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDraw/FillTriangle/static_void_FillTriangle(const_GMVector3D@_p1,_const_GMVector3D@_p2,_const_GMVector3D@_p3,_const_GMVector3D@_n1,_const_GMVector3D@_n2,_const_GMVector3D@_n3,_const_GMVector2D@_t1_=_GMVector2D::Zero,_const_GMVector2D@_t2_=_GMVector2D::Zero,_const_GMVector2D@_t3_=_GMVector2D::Zero)">FillTriangle(const GMVector3D& p1, const GMVector3D& p2, const GMVector3D& p3, const GMVector3D& n1, const GMVector3D& n2, const GMVector3D& n3, const GMVector2D& t1 = GMVector2D::Zero, const GMVector2D& t2 = GMVector2D::Zero, const GMVector2D& t3 = GMVector2D::Zero)</a></li>
+			
+			</ul>
+		
+			<h3>四角形の描画</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDraw/FillQuad/static_void_FillQuad(const_GMVector2D@_p1,_const_GMVector2D@_p2,_const_GMVector2D@_p3,_const_GMVector2D@_p4,_const_GMColor@_color_=_GMColor::White,_const_GMVector2D@_t1_=_GMVector2D::Zero,_const_GMVector2D@_t2_=_GMVector2D::Zero,_const_GMVector2D@_t3_=_GMVector2D::Zero,_const_GMVector2D@_t4_=_GMVector2D::Zero)">FillQuad(const GMVector2D& p1, const GMVector2D& p2, const GMVector2D& p3, const GMVector2D& p4, const GMColor& color = GMColor::White, const GMVector2D& t1 = GMVector2D::Zero, const GMVector2D& t2 = GMVector2D::Zero, const GMVector2D& t3 = GMVector2D::Zero, const GMVector2D& t4 = GMVector2D::Zero)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDraw/FillQuad/static_void_FillQuad(const_GMVector2D@_p1,_const_GMVector2D@_p2,_const_GMVector2D@_p3,_const_GMVector2D@_p4,_const_GMColor@_c1,_const_GMColor@_c2,_const_GMColor@_c3,_const_GMColor@_c4,_const_GMVector2D@_t1_=_GMVector2D::Zero,_const_GMVector2D@_t2_=_GMVector2D::Zero,_const_GMVector2D@_t3_=_GMVector2D::Zero,_const_GMVector2D@_t4_=_GMVector2D::Zero)">FillQuad(const GMVector2D& p1, const GMVector2D& p2, const GMVector2D& p3, const GMVector2D& p4, const GMColor& c1, const GMColor& c2, const GMColor& c3, const GMColor& c4, const GMVector2D& t1 = GMVector2D::Zero, const GMVector2D& t2 = GMVector2D::Zero, const GMVector2D& t3 = GMVector2D::Zero, const GMVector2D& t4 = GMVector2D::Zero)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMDraw/FillQuad/static_void_FillQuad(const_GMVector3D@_p1,_const_GMVector3D@_p2,_const_GMVector3D@_p3,_const_GMVector3D@_p4,_const_GMVector3D@_n1,_const_GMVector3D@_n2,_const_GMVector3D@_n3,_const_GMVector3D@_n4,_const_GMVector2D@_t1_=_GMVector2D::Zero,_const_GMVector2D@_t2_=_GMVector2D::Zero,_const_GMVector2D@_t3_=_GMVector2D::Zero,_const_GMVector2D@_t4_=_GMVector2D::Zero)">FillQuad(const GMVector3D& p1, const GMVector3D& p2, const GMVector3D& p3, const GMVector3D& p4, const GMVector3D& n1, const GMVector3D& n2, const GMVector3D& n3, const GMVector3D& n4, const GMVector2D& t1 = GMVector2D::Zero, const GMVector2D& t2 = GMVector2D::Zero, const GMVector2D& t3 = GMVector2D::Zero, const GMVector2D& t4 = GMVector2D::Zero)</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+
+	
+
+	
+		<h2>Class Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDraw/Begin/static_void_Begin()"></a>
+				<h3>Begin</h3>
+				<div class="declare">static void Begin()</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDraw/End/static_void_End()"></a>
+				<h3>End</h3>
+				<div class="declare">static void End()</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDraw/DrawPoint/static_void_DrawPoint(const_GMVector2D@_pos,_const_GMColor@_color,_double_size=1.0)"></a>
+				<h3>DrawPoint</h3>
+				<div class="declare">static void DrawPoint(const GMVector2D& pos, const GMColor& color, double size=1.0)</div>
+				
+					<div class="abstract">座標を指定して点を描画します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						GMGraphics クラスの enablePointSprite() メソッドを使用することにより、ポイントスプライトを有効化して使用することができます。ポイントスプライトに使用できる点のサイズには上限があります。
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDraw/DrawPoint/static_void_DrawPoint(const_GMVector3D@_pos,_const_GMColor@_color,_double_size=1.0)"></a>
+				<h3>DrawPoint</h3>
+				<div class="declare">static void DrawPoint(const GMVector3D& pos, const GMColor& color, double size=1.0)</div>
+				
+					<div class="abstract">座標を指定して点を描画します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						GMGraphics クラスの enablePointSprite() メソッドを使用することにより、ポイントスプライトを有効化して使用することができます。ポイントスプライトに使用できる点のサイズには上限があります。
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDraw/DrawLine/static_void_DrawLine(const_GMVector2D@_p1,_const_GMVector2D@_p2,_const_GMColor@_color,_double_width_=_1.0)"></a>
+				<h3>DrawLine</h3>
+				<div class="declare">static void DrawLine(const GMVector2D& p1, const GMVector2D& p2, const GMColor& color, double width = 1.0)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDraw/DrawLine/static_void_DrawLine(const_GMVector2D@_p1,_const_GMVector2D@_p2,_const_GMColor@_color1,_const_GMColor@_color2,_double_width_=_1.0)"></a>
+				<h3>DrawLine</h3>
+				<div class="declare">static void DrawLine(const GMVector2D& p1, const GMVector2D& p2, const GMColor& color1, const GMColor& color2, double width = 1.0)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDraw/DrawLine/static_void_DrawLine(const_GMVector3D@_p1,_const_GMVector3D@_p2,_const_GMColor@_color,_double_width_=_1.0)"></a>
+				<h3>DrawLine</h3>
+				<div class="declare">static void DrawLine(const GMVector3D& p1, const GMVector3D& p2, const GMColor& color, double width = 1.0)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDraw/DrawLine/static_void_DrawLine(const_GMVector3D@_p1,_const_GMVector3D@_p2,_const_GMColor@_color1,_const_GMColor@_color2,_double_width_=_1.0)"></a>
+				<h3>DrawLine</h3>
+				<div class="declare">static void DrawLine(const GMVector3D& p1, const GMVector3D& p2, const GMColor& color1, const GMColor& color2, double width = 1.0)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDraw/FillTriangle/static_void_FillTriangle(const_GMVector2D@_p1,_const_GMVector2D@_p2,_const_GMVector2D@_p3,_const_GMColor@_color_=_GMColor::White,_const_GMVector2D@_t1_=_GMVector2D::Zero,_const_GMVector2D@_t2_=_GMVector2D::Zero,_const_GMVector2D@_t3_=_GMVector2D::Zero)"></a>
+				<h3>FillTriangle</h3>
+				<div class="declare">static void FillTriangle(const GMVector2D& p1, const GMVector2D& p2, const GMVector2D& p3, const GMColor& color = GMColor::White, const GMVector2D& t1 = GMVector2D::Zero, const GMVector2D& t2 = GMVector2D::Zero, const GMVector2D& t3 = GMVector2D::Zero)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDraw/FillTriangle/static_void_FillTriangle(const_GMVector2D@_p1,_const_GMVector2D@_p2,_const_GMVector2D@_p3,_const_GMColor@_c1,_const_GMColor@_c2,_const_GMColor@_c3,_const_GMVector2D@_t1_=_GMVector2D::Zero,_const_GMVector2D@_t2_=_GMVector2D::Zero,_const_GMVector2D@_t3_=_GMVector2D::Zero)"></a>
+				<h3>FillTriangle</h3>
+				<div class="declare">static void FillTriangle(const GMVector2D& p1, const GMVector2D& p2, const GMVector2D& p3, const GMColor& c1, const GMColor& c2, const GMColor& c3, const GMVector2D& t1 = GMVector2D::Zero, const GMVector2D& t2 = GMVector2D::Zero, const GMVector2D& t3 = GMVector2D::Zero)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDraw/FillTriangle/static_void_FillTriangle(const_GMVector3D@_p1,_const_GMVector3D@_p2,_const_GMVector3D@_p3,_const_GMVector3D@_n1,_const_GMVector3D@_n2,_const_GMVector3D@_n3,_const_GMVector2D@_t1_=_GMVector2D::Zero,_const_GMVector2D@_t2_=_GMVector2D::Zero,_const_GMVector2D@_t3_=_GMVector2D::Zero)"></a>
+				<h3>FillTriangle</h3>
+				<div class="declare">static void FillTriangle(const GMVector3D& p1, const GMVector3D& p2, const GMVector3D& p3, const GMVector3D& n1, const GMVector3D& n2, const GMVector3D& n3, const GMVector2D& t1 = GMVector2D::Zero, const GMVector2D& t2 = GMVector2D::Zero, const GMVector2D& t3 = GMVector2D::Zero)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDraw/FillQuad/static_void_FillQuad(const_GMVector2D@_p1,_const_GMVector2D@_p2,_const_GMVector2D@_p3,_const_GMVector2D@_p4,_const_GMColor@_color_=_GMColor::White,_const_GMVector2D@_t1_=_GMVector2D::Zero,_const_GMVector2D@_t2_=_GMVector2D::Zero,_const_GMVector2D@_t3_=_GMVector2D::Zero,_const_GMVector2D@_t4_=_GMVector2D::Zero)"></a>
+				<h3>FillQuad</h3>
+				<div class="declare">static void FillQuad(const GMVector2D& p1, const GMVector2D& p2, const GMVector2D& p3, const GMVector2D& p4, const GMColor& color = GMColor::White, const GMVector2D& t1 = GMVector2D::Zero, const GMVector2D& t2 = GMVector2D::Zero, const GMVector2D& t3 = GMVector2D::Zero, const GMVector2D& t4 = GMVector2D::Zero)</div>
+				
+					<div class="abstract">4点の頂点座標を指定して、四角形を描画します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						<p>すべての頂点に共通の色を指定することができますが、ライティングが有効な環境下では有効になりません。</p><p>各頂点のテクスチャ座標を指定することができますが、別途 GMBasicEffect クラスでのテクスチャの有効化とテクスチャ指定が必要です。</p>
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDraw/FillQuad/static_void_FillQuad(const_GMVector2D@_p1,_const_GMVector2D@_p2,_const_GMVector2D@_p3,_const_GMVector2D@_p4,_const_GMColor@_c1,_const_GMColor@_c2,_const_GMColor@_c3,_const_GMColor@_c4,_const_GMVector2D@_t1_=_GMVector2D::Zero,_const_GMVector2D@_t2_=_GMVector2D::Zero,_const_GMVector2D@_t3_=_GMVector2D::Zero,_const_GMVector2D@_t4_=_GMVector2D::Zero)"></a>
+				<h3>FillQuad</h3>
+				<div class="declare">static void FillQuad(const GMVector2D& p1, const GMVector2D& p2, const GMVector2D& p3, const GMVector2D& p4, const GMColor& c1, const GMColor& c2, const GMColor& c3, const GMColor& c4, const GMVector2D& t1 = GMVector2D::Zero, const GMVector2D& t2 = GMVector2D::Zero, const GMVector2D& t3 = GMVector2D::Zero, const GMVector2D& t4 = GMVector2D::Zero)</div>
+				
+					<div class="abstract">4点の頂点座標を指定して、四角形を描画します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						<p>各頂点に個別の色を指定することができますが、ライティングが有効な環境下では有効になりません。</p><p>各頂点のテクスチャ座標を指定することができますが、別途 GMBasicEffect クラスでのテクスチャの有効化とテクスチャ指定が必要です。</p>
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMDraw/FillQuad/static_void_FillQuad(const_GMVector3D@_p1,_const_GMVector3D@_p2,_const_GMVector3D@_p3,_const_GMVector3D@_p4,_const_GMVector3D@_n1,_const_GMVector3D@_n2,_const_GMVector3D@_n3,_const_GMVector3D@_n4,_const_GMVector2D@_t1_=_GMVector2D::Zero,_const_GMVector2D@_t2_=_GMVector2D::Zero,_const_GMVector2D@_t3_=_GMVector2D::Zero,_const_GMVector2D@_t4_=_GMVector2D::Zero)"></a>
+				<h3>FillQuad</h3>
+				<div class="declare">static void FillQuad(const GMVector3D& p1, const GMVector3D& p2, const GMVector3D& p3, const GMVector3D& p4, const GMVector3D& n1, const GMVector3D& n2, const GMVector3D& n3, const GMVector3D& n4, const GMVector2D& t1 = GMVector2D::Zero, const GMVector2D& t2 = GMVector2D::Zero, const GMVector2D& t3 = GMVector2D::Zero, const GMVector2D& t4 = GMVector2D::Zero)</div>
+				
+					<div class="abstract">4点の頂点座標、各頂点の法線ベクトル、テクスチャ座標を指定して、四角形を描画します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						<p>テクスチャマッピングには、別途 GMBasicEffect クラスでのテクスチャの有効化とテクスチャ指定が必要です。</p>
+
+					</div>
+				
+			</div>
+		
+	
+
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

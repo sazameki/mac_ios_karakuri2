@@ -1,0 +1,265 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMGraphics Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMGraphics"></a>
+	<h1>GMGraphics Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p>ビューの大きさ、ポイントスプライトの設定、デプステストの設定などを管理するためのクラスです。
+</p>
+		<p>このクラスのインスタンスには、クラス変数 GMGraphics::Graphics1 または GMGraphics::Graphics2 を使ってアクセスできます。
+</p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>画面のクリア</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMGraphics/clear/void_clear(const_GMColor@_color)">clear(const GMColor& color)</a></li>
+			
+			</ul>
+		
+			<h3>ビューポートの操作</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMGraphics/getScreenSize/GMVector2D_getScreenSize()_const">getScreenSize() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMGraphics/getViewport/GMViewport_getViewport()_const">getViewport() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMGraphics/setViewport/void_setViewport(const_GMViewport@_viewport)">setViewport(const GMViewport& viewport)</a></li>
+			
+			</ul>
+		
+			<h3>レンダリング・ターゲットの操作（未実装）</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMGraphics/getRenderTarget/GMRenderTarget2D*_getRenderTarget()_const">getRenderTarget() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMGraphics/setRenderTarget/void_setRenderTarget(GMRenderTarget2D*_target)">setRenderTarget(GMRenderTarget2D* target)</a></li>
+			
+			</ul>
+		
+			<h3>各種設定</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMGraphics/enableDepthTest/void_enableDepthTest(bool_flag)">enableDepthTest(bool flag)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMGraphics/enablePointSprite/void_enablePointSprite(bool_flag)">enablePointSprite(bool flag)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMGraphics/enableScissorTest/void_enableScissorTest(bool_flag)">enableScissorTest(bool flag)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMGraphics/enableWireframeMode/void_enableWireframeMode(bool_flag)">enableWireframeMode(bool flag)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMGraphics/isDepthTestEnabled/bool_isDepthTestEnabled()_const">isDepthTestEnabled() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMGraphics/isPointSpriteEnabled/bool_isPointSpriteEnabled()_const">isPointSpriteEnabled() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMGraphics/isScissorTestEnabled/bool_isScissorTestEnabled()_const">isScissorTestEnabled() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMGraphics/isShaderEnabled/bool_isShaderEnabled()_const">isShaderEnabled() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMGraphics/isWireframeModeEnabled/bool_isWireframeModeEnabled()_const">isWireframeModeEnabled() const</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+
+	
+		<h2>Instant Variables</h2>
+		
+			<a name=""></a>
+			<h3>CurrentGraphics</h3>
+			<div class="declare">static GMGraphics*     CurrentGraphics</div>
+			
+				<div class="abstract">現在の描画のために選択されているインスタンスです。
+</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>Graphics1</h3>
+			<div class="declare">static GMGraphics*     Graphics1</div>
+			
+				<div class="abstract">メインディスプレイのためのインスタンスです。
+</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>Graphics2</h3>
+			<div class="declare">static GMGraphics*     Graphics2</div>
+			
+				<div class="abstract">サブディスプレイのためのインスタンスです。
+</div>
+			
+			
+		
+	
+
+	
+
+	
+		<h2>Instant Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMGraphics/clear/void_clear(const_GMColor@_color)"></a>
+				<h3>clear</h3>
+				<div class="declare">void    clear(const GMColor& color)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMGraphics/getScreenSize/GMVector2D_getScreenSize()_const"></a>
+				<h3>getScreenSize</h3>
+				<div class="declare">GMVector2D  getScreenSize() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMGraphics/getViewport/GMViewport_getViewport()_const"></a>
+				<h3>getViewport</h3>
+				<div class="declare">GMViewport  getViewport() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMGraphics/setViewport/void_setViewport(const_GMViewport@_viewport)"></a>
+				<h3>setViewport</h3>
+				<div class="declare">void        setViewport(const GMViewport& viewport)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMGraphics/getRenderTarget/GMRenderTarget2D*_getRenderTarget()_const"></a>
+				<h3>getRenderTarget</h3>
+				<div class="declare">GMRenderTarget2D*   getRenderTarget() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMGraphics/setRenderTarget/void_setRenderTarget(GMRenderTarget2D*_target)"></a>
+				<h3>setRenderTarget</h3>
+				<div class="declare">void    setRenderTarget(GMRenderTarget2D* target)</div>
+				
+					<div class="abstract">レンダリングターゲットを設定します。NULL を指定すると、デフォルトのレンダリングターゲットが選択されます。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMGraphics/enableDepthTest/void_enableDepthTest(bool_flag)"></a>
+				<h3>enableDepthTest</h3>
+				<div class="declare">void        enableDepthTest(bool flag)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMGraphics/enablePointSprite/void_enablePointSprite(bool_flag)"></a>
+				<h3>enablePointSprite</h3>
+				<div class="declare">void        enablePointSprite(bool flag)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMGraphics/enableScissorTest/void_enableScissorTest(bool_flag)"></a>
+				<h3>enableScissorTest</h3>
+				<div class="declare">void        enableScissorTest(bool flag)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMGraphics/enableWireframeMode/void_enableWireframeMode(bool_flag)"></a>
+				<h3>enableWireframeMode</h3>
+				<div class="declare">void        enableWireframeMode(bool flag)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMGraphics/isDepthTestEnabled/bool_isDepthTestEnabled()_const"></a>
+				<h3>isDepthTestEnabled</h3>
+				<div class="declare">bool        isDepthTestEnabled() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMGraphics/isPointSpriteEnabled/bool_isPointSpriteEnabled()_const"></a>
+				<h3>isPointSpriteEnabled</h3>
+				<div class="declare">bool        isPointSpriteEnabled() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMGraphics/isScissorTestEnabled/bool_isScissorTestEnabled()_const"></a>
+				<h3>isScissorTestEnabled</h3>
+				<div class="declare">bool        isScissorTestEnabled() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMGraphics/isShaderEnabled/bool_isShaderEnabled()_const"></a>
+				<h3>isShaderEnabled</h3>
+				<div class="declare">bool        isShaderEnabled() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMGraphics/isWireframeModeEnabled/bool_isWireframeModeEnabled()_const"></a>
+				<h3>isWireframeModeEnabled</h3>
+				<div class="declare">bool        isWireframeModeEnabled() const</div>
+				
+				
+			</div>
+		
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

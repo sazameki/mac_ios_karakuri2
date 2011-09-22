@@ -1,0 +1,46 @@
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../css/main.css" type="text/css" />
+	<title>Karakuri 開発ガイド - サウンド形式について</title>
+</head>
+
+<body class="guide">
+
+<p><a href="index.html">開発ガイドの目次に戻る</a></p>
+
+<h1>サウンド形式について</h1>
+
+<h2>利用可能なオーディオファイルの形式</h2>
+
+<p>
+    <ul>
+        <li>オーディオファイルには、22.05kHz あるいは 44.1kHz の CAF (Core Audio File) 形式 (〜.caf) の利用を推奨します。</li>
+        <li>CAF ファイルの内部エンコーディングは、BGM であれば AAC、効果音であれば IMA4 を推奨します。</li>
+    </ul>
+    <ul>
+        <li>WAV、AIFF、MP3、AAC などの一般的な形式のオーディオファイルも利用できます。</li>
+        <li>MP3 よりは AAC の方が同じサイズにおいて音質が良くなります。</li>
+    </ul>
+</p>
+
+<h2>iOS SDK でのオーディオファイルの変換方法</h2>
+
+<p>iOS SDK がインストールされている環境下で、ターミナルから以下のように afconvert コマンドを実行します。</p>
+
+<dl class="section">
+    <dt>BGM 用のファイル（ステレオ）</dt>
+    <dd><blockquote class="code">% afconvert -f caff -d aac@44100 -c 2 [元ファイル] [出力ファイル.caf]</blockquote></dd>
+    <dt>効果音用のファイル（モノラル）</dt>
+    <dd><blockquote class="code">% afconvert -f caff -d ima4@22050 -c 1 [元ファイル] [出力ファイル.caf]</blockquote></dd>
+    <dt>効果音用のファイル（ステレオ）</dt>
+    <dd><blockquote class="code">% afconvert -f caff -d ima4@22050 -c 2 [元ファイル] [出力ファイル.caf]</blockquote></dd>
+</dl>
+
+<div class="footer">
+	Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+</div>
+
+</body>
+
+<html>

@@ -1,0 +1,298 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMSound Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMSound"></a>
+	<h1>GMSound Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p><p>ゲームの効果音を再生するためのクラスです。</p><h3>複数回の再生について</h3><p>再生中に play() 関数を呼んだ場合、その再生は中断され、冒頭から再生が再開されます。</p><h3>3次元の音場操作について</h3><p>このクラスでは、3次元の音場に1人の聴取者（リスナ）と、複数の音源（ソース）があるものとしてモデル化されています。ひとつひとつのソースの位置は移動させることができ、それぞれの位置に応じて聞こえ方が変化します。またリスナの位置や向きも変化させることができます。</p>
+</p>
+		<p></p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>コンストラクタ</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMSound/GMSound/GMSound(const_std::string@_filename,_bool_doLoop_=_false)">GMSound(const std::string& filename, bool doLoop = false)</a></li>
+			
+			</ul>
+		
+			<h3>基本の操作</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMSound/getVolume/double_getVolume()_const">getVolume() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMSound/isPlaying/bool_isPlaying()_const">isPlaying() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMSound/play/void_play()">play()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMSound/stop/void_stop()">stop()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMSound/getPitch/double_getPitch()_const">getPitch() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMSound/setPitch/void_setPitch(double_value)">setPitch(double value)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMSound/setVolume/void_setVolume(double_value)">setVolume(double value)</a></li>
+			
+			</ul>
+		
+			<h3>3次元音場の操作（ソースの操作）</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMSound/getSourcePos/GMVector3D_getSourcePos()_const">getSourcePos() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMSound/setSourcePos/void_setSourcePos(const_GMVector3D_@vec3)">setSourcePos(const GMVector3D &vec3)</a></li>
+			
+			</ul>
+		
+			<h3>3次元音場の操作（リスナの操作）</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMSound/getListenerHorizontalOrientation/static_double_getListenerHorizontalOrientation()">getListenerHorizontalOrientation()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMSound/getListenerPos/static_GMVector3D_getListenerPos()">getListenerPos()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMSound/setListenerHorizontalOrientation/static_void_setListenerHorizontalOrientation(double_radAngle)">setListenerHorizontalOrientation(double radAngle)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMSound/setListenerPos/static_void_setListenerPos(double_x,_double_y,_double_z)">setListenerPos(double x, double y, double z)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMSound/setListenerPos/static_void_setListenerPos(const_GMVector3D@_vec3)">setListenerPos(const GMVector3D& vec3)</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+
+	
+
+	
+		<h2>Class Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMSound/getListenerHorizontalOrientation/static_double_getListenerHorizontalOrientation()"></a>
+				<h3>getListenerHorizontalOrientation</h3>
+				<div class="declare">static  double      getListenerHorizontalOrientation()</div>
+				
+					<div class="abstract">水平線上でのリスナの向きを取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMSound/getListenerPos/static_GMVector3D_getListenerPos()"></a>
+				<h3>getListenerPos</h3>
+				<div class="declare">static  GMVector3D  getListenerPos()</div>
+				
+					<div class="abstract">3次元空間上でのリスナの現在位置を取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMSound/setListenerHorizontalOrientation/static_void_setListenerHorizontalOrientation(double_radAngle)"></a>
+				<h3>setListenerHorizontalOrientation</h3>
+				<div class="declare">static  void        setListenerHorizontalOrientation(double radAngle)</div>
+				
+					<div class="abstract">水平線上でのリスナの向きを設定します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMSound/setListenerPos/static_void_setListenerPos(double_x,_double_y,_double_z)"></a>
+				<h3>setListenerPos</h3>
+				<div class="declare">static  void        setListenerPos(double x, double y, double z)</div>
+				
+					<div class="abstract">3次元空間上でのリスナの現在位置を設定します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMSound/setListenerPos/static_void_setListenerPos(const_GMVector3D@_vec3)"></a>
+				<h3>setListenerPos</h3>
+				<div class="declare">static  void        setListenerPos(const GMVector3D& vec3)</div>
+				
+					<div class="abstract">3次元空間上でのリスナの現在位置を設定します。
+</div>
+				
+				
+			</div>
+		
+	
+
+	
+		<h2>Instant Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMSound/GMSound/GMSound(const_std::string@_filename,_bool_doLoop_=_false)"></a>
+				<h3>GMSound</h3>
+				<div class="declare">GMSound(const std::string& filename, bool doLoop = false)</div>
+				
+					<div class="abstract">ファイル名（拡張子含む）を指定して、効果音再生用のインスタンスを作成します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						デフォルトではループ再生しませんが、第2引数に true を指定するとループ再生するようになります。
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMSound/getVolume/double_getVolume()_const"></a>
+				<h3>getVolume</h3>
+				<div class="declare">double      getVolume() const</div>
+				
+					<div class="abstract">現在設定されている音量を取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMSound/isPlaying/bool_isPlaying()_const"></a>
+				<h3>isPlaying</h3>
+				<div class="declare">bool        isPlaying() const</div>
+				
+					<div class="abstract">このサウンドが再生中かどうかをリターンします。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMSound/play/void_play()"></a>
+				<h3>play</h3>
+				<div class="declare">void        play()</div>
+				
+					<div class="abstract">サウンドの再生を開始します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						このサウンドがすでに再生済みであった場合には、その再生が中断され、頭から再生が再開されます。
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMSound/stop/void_stop()"></a>
+				<h3>stop</h3>
+				<div class="declare">void        stop()</div>
+				
+					<div class="abstract">サウンドの再生を中断します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMSound/getPitch/double_getPitch()_const"></a>
+				<h3>getPitch</h3>
+				<div class="declare">double      getPitch() const</div>
+				
+					<div class="abstract">現在設定されているピッチを取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMSound/setPitch/void_setPitch(double_value)"></a>
+				<h3>setPitch</h3>
+				<div class="declare">void        setPitch(double value)</div>
+				
+					<div class="abstract">ピッチを設定します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						<p>動作が保証されている値の範囲は、0.5〜2.0 です。</p><p>デフォルトで設定されている値は 1.0 で、これが通常の再生速度となります。</p>
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMSound/setVolume/void_setVolume(double_value)"></a>
+				<h3>setVolume</h3>
+				<div class="declare">void        setVolume(double value)</div>
+				
+					<div class="abstract">音量を設定します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMSound/getSourcePos/GMVector3D_getSourcePos()_const"></a>
+				<h3>getSourcePos</h3>
+				<div class="declare">GMVector3D  getSourcePos() const</div>
+				
+					<div class="abstract">このサウンドの3次元音場での現在位置を取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMSound/setSourcePos/void_setSourcePos(const_GMVector3D_@vec3)"></a>
+				<h3>setSourcePos</h3>
+				<div class="declare">void        setSourcePos(const GMVector3D &vec3)</div>
+				
+					<div class="abstract">このサウンドの3次元音場での位置を設定します。
+</div>
+				
+				
+			</div>
+		
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

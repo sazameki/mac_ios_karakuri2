@@ -1,0 +1,47 @@
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../css/main.css" type="text/css" />
+	<title>DocSet Maker List</title>
+</head>
+
+<body class="list">
+
+	<div class="logo">Karakuri 2</div>
+
+    <ul class="toc">
+    	<li><a href="toc.html" target="toc">クラス・関数などの一覧</a></li>
+    	<li><a href="../guide/index.html" target="toc">開発ガイド</a></li>
+    </ul>
+
+	<h1>クラス一覧</h1>
+
+	<% $groups.each do |group| %>
+		<% if (group.d_classes_and_structs.size > 0) %>
+        	<h2> <%= group.d_name %></h2>
+        	<ul>
+        	<% group.d_classes.each do |a_class| %>
+        		<% if !a_class.d_deprecated %>
+	        	   <li><a href="<%= a_class.d_href %>" target="toc"><%= a_class.d_name %></a></li>
+	        	<% end %>
+        	<% end %>
+        	</ul>
+        	<ul>
+        	<% group.d_structs.each do |a_class| %>
+        		<% if !a_class.d_deprecated %>
+	        	   <li><a href="<%= a_class.d_href %>" target="toc"><%= a_class.d_name %></a></li>
+	        	<% end %>
+        	<% end %>
+        	</ul>
+        	<ul>
+        	<% group.d_classes_and_structs.each do |a_class| %>
+        		<% if a_class.d_deprecated %>
+	        	   <li><a href="<%= a_class.d_href %>" target="toc" class="deprecated"><%= a_class.d_name %></a></li>
+	        	<% end %>
+        	<% end %>
+        	</ul>
+        <% end %>
+    <% end %>
+</body>
+
+</html>

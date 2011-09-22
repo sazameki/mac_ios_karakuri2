@@ -1,0 +1,124 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMLabel Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMLabel"></a>
+	<h1>GMLabel Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p><p>テキストラベルを表すためのクラスです。</p><p>このクラスは、フォントの名前と大きさを指定して作成し、表示したいテキストを適宜セットします。<br />描画が必要なときには、getTexture() メソッドでテクスチャを取得して描画してください。<br />テクスチャは、白のテキスト色で用意されます。</p><p>利用できるフォントの名前は、開発ガイドの「<a href="../../../../guide/font_list.html">フォント一覧</a>」を参照してください。</p>
+</p>
+		<p></p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>基本の操作</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMLabel/GMLabel/GMLabel(const_std::string@_fontName,_double_fontSize)">GMLabel(const std::string& fontName, double fontSize)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMLabel/getTexture/GMTexture2D*_getTexture()_const">getTexture() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMLabel/getText/std::string_getText()_const">getText() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMLabel/setText/void_setText(const_std::string@_str)">setText(const std::string& str)</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+		<h2>Instant Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMLabel/GMLabel/GMLabel(const_std::string@_fontName,_double_fontSize)"></a>
+				<h3>GMLabel</h3>
+				<div class="declare">GMLabel(const std::string& fontName, double fontSize)</div>
+				
+					<div class="abstract">フォントの名前と大きさを指定して、このラベルを生成します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMLabel/getTexture/GMTexture2D*_getTexture()_const"></a>
+				<h3>getTexture</h3>
+				<div class="declare">GMTexture2D*    getTexture() const</div>
+				
+					<div class="abstract">現在のテキストラベルの内容を表すテクスチャを取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMLabel/getText/std::string_getText()_const"></a>
+				<h3>getText</h3>
+				<div class="declare">std::string     getText() const</div>
+				
+					<div class="abstract">現在設定されているテキストを取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMLabel/setText/void_setText(const_std::string@_str)"></a>
+				<h3>setText</h3>
+				<div class="declare">void            setText(const std::string& str)</div>
+				
+					<div class="abstract">新しいテキストを設定します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						渡されたテキストが前と同じものであった場合、テクスチャの更新を行いません。
+
+					</div>
+				
+			</div>
+		
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

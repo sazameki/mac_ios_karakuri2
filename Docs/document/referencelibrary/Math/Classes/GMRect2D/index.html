@@ -1,0 +1,303 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMRect2D Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMRect2D"></a>
+	<h1>GMRect2D Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p></p>
+		<p></p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>コンストラクタ</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMRect2D/GMRect2D/GMRect2D()">GMRect2D()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMRect2D/GMRect2D/GMRect2D(double_x,_double_y,_double_width,_double_height)">GMRect2D(double x, double y, double width, double height)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMRect2D/GMRect2D/GMRect2D(const_GMVector2D@_pos,_const_GMVector2D@_size)">GMRect2D(const GMVector2D& pos, const GMVector2D& size)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMRect2D/GMRect2D/GMRect2D(const_GMRect2D@_rect)">GMRect2D(const GMRect2D& rect)</a></li>
+			
+			</ul>
+		
+			<h3>メインの操作</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMRect2D/contains/bool_contains(const_GMVector2D@_pos)_const">contains(const GMVector2D& pos) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMRect2D/contains/bool_contains(const_GMRect2D@_rect)_const">contains(const GMRect2D& rect) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMRect2D/equals/bool_equals(const_GMRect2D@_rect,_double_accuracy)_const">equals(const GMRect2D& rect, double accuracy) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMRect2D/inflate/GMRect2D@_inflate(double_h,_double_v)">inflate(double h, double v)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMRect2D/intersect/GMRect2D_intersect(const_GMRect2D@_rect)_const">intersect(const GMRect2D& rect) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMRect2D/intersects/bool_intersects(const_GMRect2D@_rect)_const">intersects(const GMRect2D& rect) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMRect2D/maxX/double_maxX()_const">maxX() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMRect2D/maxY/double_maxY()_const">maxY() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMRect2D/minX/double_minX()_const">minX() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMRect2D/minY/double_minY()_const">minY() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMRect2D/offset/GMRect2D@_offset(const_GMVector2D@_pos)">offset(const GMVector2D& pos)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMRect2D/unionRect/GMRect2D_unionRect(const_GMRect2D@_rect)_const">unionRect(const GMRect2D& rect) const</a></li>
+			
+			</ul>
+		
+			<h3>演算子のオーバーロード</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMRect2D/operator=/GMRect2D@_operator=(const_GMRect2D@_rect)">operator=(const GMRect2D& rect)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMRect2D/operator==/bool_operator==(const_GMRect2D@_rect)_const">operator==(const GMRect2D& rect) const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMRect2D/operator!=/bool_operator!=(const_GMRect2D@_rect)_const">operator!=(const GMRect2D& rect) const</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+		<h2>Constants</h2>		
+		
+			<div class="one_info">
+				<a name=""></a>
+				<h3>Empty</h3>
+				<div class="declare">static const GMRect2D&  Empty</div>
+				
+				
+			</div>
+		
+	
+
+	
+		<h2>Instant Variables</h2>
+		
+			<a name=""></a>
+			<h3>x</h3>
+			<div class="declare">double  x</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>y</h3>
+			<div class="declare">double  y</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>width</h3>
+			<div class="declare">double  width</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>height</h3>
+			<div class="declare">double  height</div>
+			
+			
+		
+	
+
+	
+
+	
+		<h2>Instant Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMRect2D/GMRect2D/GMRect2D()"></a>
+				<h3>GMRect2D</h3>
+				<div class="declare">GMRect2D()</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMRect2D/GMRect2D/GMRect2D(double_x,_double_y,_double_width,_double_height)"></a>
+				<h3>GMRect2D</h3>
+				<div class="declare">GMRect2D(double x, double y, double width, double height)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMRect2D/GMRect2D/GMRect2D(const_GMVector2D@_pos,_const_GMVector2D@_size)"></a>
+				<h3>GMRect2D</h3>
+				<div class="declare">GMRect2D(const GMVector2D& pos, const GMVector2D& size)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMRect2D/GMRect2D/GMRect2D(const_GMRect2D@_rect)"></a>
+				<h3>GMRect2D</h3>
+				<div class="declare">GMRect2D(const GMRect2D& rect)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMRect2D/contains/bool_contains(const_GMVector2D@_pos)_const"></a>
+				<h3>contains</h3>
+				<div class="declare">bool        contains(const GMVector2D& pos) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMRect2D/contains/bool_contains(const_GMRect2D@_rect)_const"></a>
+				<h3>contains</h3>
+				<div class="declare">bool        contains(const GMRect2D& rect) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMRect2D/equals/bool_equals(const_GMRect2D@_rect,_double_accuracy)_const"></a>
+				<h3>equals</h3>
+				<div class="declare">bool        equals(const GMRect2D& rect, double accuracy) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMRect2D/inflate/GMRect2D@_inflate(double_h,_double_v)"></a>
+				<h3>inflate</h3>
+				<div class="declare">GMRect2D&   inflate(double h, double v)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMRect2D/intersect/GMRect2D_intersect(const_GMRect2D@_rect)_const"></a>
+				<h3>intersect</h3>
+				<div class="declare">GMRect2D    intersect(const GMRect2D& rect) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMRect2D/intersects/bool_intersects(const_GMRect2D@_rect)_const"></a>
+				<h3>intersects</h3>
+				<div class="declare">bool        intersects(const GMRect2D& rect) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMRect2D/maxX/double_maxX()_const"></a>
+				<h3>maxX</h3>
+				<div class="declare">double      maxX() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMRect2D/maxY/double_maxY()_const"></a>
+				<h3>maxY</h3>
+				<div class="declare">double      maxY() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMRect2D/minX/double_minX()_const"></a>
+				<h3>minX</h3>
+				<div class="declare">double      minX() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMRect2D/minY/double_minY()_const"></a>
+				<h3>minY</h3>
+				<div class="declare">double      minY() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMRect2D/offset/GMRect2D@_offset(const_GMVector2D@_pos)"></a>
+				<h3>offset</h3>
+				<div class="declare">GMRect2D&   offset(const GMVector2D& pos)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMRect2D/unionRect/GMRect2D_unionRect(const_GMRect2D@_rect)_const"></a>
+				<h3>unionRect</h3>
+				<div class="declare">GMRect2D    unionRect(const GMRect2D& rect) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMRect2D/operator=/GMRect2D@_operator=(const_GMRect2D@_rect)"></a>
+				<h3>operator=</h3>
+				<div class="declare">GMRect2D&   operator=(const GMRect2D& rect)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMRect2D/operator==/bool_operator==(const_GMRect2D@_rect)_const"></a>
+				<h3>operator==</h3>
+				<div class="declare">bool        operator==(const GMRect2D& rect) const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMRect2D/operator!=/bool_operator!=(const_GMRect2D@_rect)_const"></a>
+				<h3>operator!=</h3>
+				<div class="declare">bool        operator!=(const GMRect2D& rect) const</div>
+				
+				
+			</div>
+		
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

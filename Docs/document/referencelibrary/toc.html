@@ -1,0 +1,311 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../css/main.css" type="text/css" />
+	<title>DocSet Maker TOC</title>
+	
+	<style>
+	   h3.tips {
+	       font-size: 100%;
+	   }
+	   .tips ul {
+	       font-size: 90%;
+	   }
+	   .tips p.fig {
+	       font-size: 90%;
+	   }
+	   .tips p.fig img {
+	       margin-left: 80px;
+	   }
+	</style>
+</head>
+
+<body class="toc">
+
+	<h1>Karakuri 2 API リファレンス</h1>
+	<p>Karakuri 2 は、純粋な C++ で記述できる、2D・3D ゲーム開発フレームワークです。</p>
+	<p><small>Karakuri の歴史については<a href="../guide/history.html">こちら</a>。</small></p>
+
+    <div class="tips">
+	<h2>Karakuri 2 について</h2>
+	<h3 class="tips">フレームワークについて</h3>
+	<p>
+	   <ul>
+	       <li>フレームワークで用意しているクラス・構造体・列挙型・グローバル関数には、「GM」というプリフィクスがついています。</li>
+	       <li>クラスメソッドは大文字から、インスタンスメソッドは小文字から始まります。</li>
+	       <li>名前が「__」から始まるクラス・構造体・列挙型・関数は内部での使用を想定していますので、使用しないでください。</li>
+	   </ul>
+	</p>
+	<h3 class="tips">ゲーム全体について</h3>
+	<p>
+	   <ul>
+	       <li>ゲームの基本設定は、Globals.h と Globals.cpp の値で変更できます。</li>
+	       <li>Mac OS X / iOS などのターゲットによって、利用できる機能が少しずつ異なります。</li>
+	       <li>シーンの変更は、GMGame::ChangeScene("シーン名") で行います。</li>
+	   </ul>
+	</p>
+	<h3 class="tips">描画について</h3>
+	<p>
+	   <ul>
+	       <li><strong>フォント一覧</strong>は<a href="../guide/font_list.html">こちら</a>です。</li>
+	       <li><strong>カラーチャート</strong>は<a href="../guide/color_chart.html">こちら</a>です。</li>
+	       <li>描画は基本的に左下を原点として行われます。</li>
+	       <li>テクスチャ座標も左下を原点とした座標で (0, 0)〜(1, 1) の値で指定します。</li>
+	   </ul>
+    </p>
+	<p class="fig">
+	   下図に、Karakuri 2 の描画関係のクラスの概略を示します（クリックで大きいバージョンを表示）。
+	   <a href="../images/graphic_system.pdf" target="_blank"><img src="../images/graphic_system_small.png"/></a>
+	</p>
+	<h3 class="tips">オーディオについて</h3>
+	<p>
+	   <ul>
+	       <li>WAV, AIFF, MP3, AAC といった一般的なオーディオファイルをサポートしています。</li>
+	       <li>iOS デバイス上での使用には、<a href="../guide/sound_format.html">こちら</a>を参照して、CAF 形式に変換しておくことを推奨します。</li>
+	       <li>すべての環境で保証されている同時再生数は、BGM 1ソース、SE 1ソースです。</li>
+	   </ul>
+	</p>
+	<h3 class="tips">乱数について</h3>
+	<p>
+	   <ul>
+	       <li>乱数は、<a href="./Math/Classes/GMRandom/index.html">GMRandom</a> クラスのクラスメソッドを利用してください。</li>
+	   </ul>
+	</p>
+	</div>
+	
+		<h2>System</h2>
+
+		
+			<div class="column">
+				<h3>Classes</h3>
+				<ul>
+				
+					<li><a href="System/Classes/GMGame/index.html#//apple_ref/cpp/cl/GMGame">GMGame</a></li>
+				
+					<li><a href="System/Classes/GMInput/index.html#//apple_ref/cpp/cl/GMInput">GMInput</a></li>
+				
+					<li><a href="System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+				
+					<li><a href="System/Classes/GMScene/index.html#//apple_ref/cpp/cl/GMScene">GMScene</a></li>
+				
+					<li><a href="System/Classes/GMTextReader/index.html#//apple_ref/cpp/cl/GMTextReader">GMTextReader</a></li>
+				
+				</ul>
+				
+			</div>
+		
+
+		
+			<div class="column">
+				<h3>Functions</h3>
+				<ul>
+				
+					<li><a href="System/functions.html#//apple_ref/cpp/func/GMFS/std::string_GMFS(const_char*_format,_...)">GMFS</a></li>
+				
+					<li><a href="System/functions.html#//apple_ref/cpp/func/GMSplitString/std::vector@lt;std::string@gt;_GMSplitString(const_std::string@_str,_const_std::string@_separators)">GMSplitString</a></li>
+				
+				</ul>
+			</div>
+		
+
+		
+			</div>
+
+		
+		<h2>Graphics</h2>
+
+		
+			<div class="column">
+				<h3>Classes</h3>
+				<ul>
+				
+					<li><a href="Graphics/Classes/GMBasicEffect/index.html#//apple_ref/cpp/cl/GMBasicEffect">GMBasicEffect</a></li>
+				
+					<li><a href="Graphics/Classes/GMButton/index.html#//apple_ref/cpp/cl/GMButton">GMButton</a></li>
+				
+					<li><a href="Graphics/Classes/GMColor/index.html#//apple_ref/cpp/cl/GMColor">GMColor</a></li>
+				
+					<li><a href="Graphics/Classes/GMDraw/index.html#//apple_ref/cpp/cl/GMDraw">GMDraw</a></li>
+				
+					<li><a href="Graphics/Classes/GMDrawSys/index.html#//apple_ref/cpp/cl/GMDrawSys">GMDrawSys</a></li>
+				
+					<li><a href="Graphics/Classes/GMEffect/index.html#//apple_ref/cpp/cl/GMEffect">GMEffect</a></li>
+				
+					<li><a href="Graphics/Classes/GMGraphics/index.html#//apple_ref/cpp/cl/GMGraphics">GMGraphics</a></li>
+				
+					<li><a href="Graphics/Classes/GMIndexBuffer/index.html#//apple_ref/cpp/cl/GMIndexBuffer">GMIndexBuffer</a></li>
+				
+					<li><a href="Graphics/Classes/GMLabel/index.html#//apple_ref/cpp/cl/GMLabel">GMLabel</a></li>
+				
+					<li><a href="Graphics/Classes/GMRenderTarget2D/index.html#//apple_ref/cpp/cl/GMRenderTarget2D">GMRenderTarget2D</a></li>
+				
+					<li><a href="Graphics/Classes/GMSpriteBatch/index.html#//apple_ref/cpp/cl/GMSpriteBatch">GMSpriteBatch</a></li>
+				
+					<li><a href="Graphics/Classes/GMTexture2D/index.html#//apple_ref/cpp/cl/GMTexture2D">GMTexture2D</a></li>
+				
+					<li><a href="Graphics/Classes/GMVertexBuffer/index.html#//apple_ref/cpp/cl/GMVertexBuffer">GMVertexBuffer</a></li>
+				
+				</ul>
+				
+					<h3>Structs</h3>
+					<ul>
+					
+						<li><a href="Graphics/Data Types/GMVertexDataVC/index.html#//apple_ref/cpp/tag/GMVertexDataVC">GMVertexDataVC</a></li>
+					
+						<li><a href="Graphics/Data Types/GMVertexDataVCT/index.html#//apple_ref/cpp/tag/GMVertexDataVCT">GMVertexDataVCT</a></li>
+					
+						<li><a href="Graphics/Data Types/GMVertexDataVNT/index.html#//apple_ref/cpp/tag/GMVertexDataVNT">GMVertexDataVNT</a></li>
+					
+						<li><a href="Graphics/Data Types/GMVertexDataVT/index.html#//apple_ref/cpp/tag/GMVertexDataVT">GMVertexDataVT</a></li>
+					
+					</ul>
+				
+			</div>
+		
+
+		
+
+		
+			<div class="column">
+				
+					<h3>Enums</h3>
+					<ul>
+					
+						<li><a href="Graphics/Data Types/index.html#//apple_ref/cpp/tag/GMBlendMode">GMBlendMode</a></li>
+					
+						<li><a href="Graphics/Data Types/index.html#//apple_ref/cpp/tag/GMPrimitiveType">GMPrimitiveType</a></li>
+					
+						<li><a href="Graphics/Data Types/index.html#//apple_ref/cpp/tag/GMSpriteSortMode">GMSpriteSortMode</a></li>
+					
+						<li><a href="Graphics/Data Types/index.html#//apple_ref/cpp/tag/GMTextureFormat">GMTextureFormat</a></li>
+					
+					</ul>
+				
+				
+				
+				
+				
+			
+			</div>
+
+		
+		<h2>Audio</h2>
+
+		
+			<div class="column">
+				<h3>Classes</h3>
+				<ul>
+				
+					<li><a href="Audio/Classes/GMMusic/index.html#//apple_ref/cpp/cl/GMMusic">GMMusic</a></li>
+				
+					<li><a href="Audio/Classes/GMSound/index.html#//apple_ref/cpp/cl/GMSound">GMSound</a></li>
+				
+				</ul>
+				
+			</div>
+		
+
+		
+
+		
+			</div>
+
+		
+		<h2>Math</h2>
+
+		
+			<div class="column">
+				<h3>Classes</h3>
+				<ul>
+				
+					<li><a href="Math/Classes/GMBoundingBox/index.html#//apple_ref/cpp/cl/GMBoundingBox">GMBoundingBox</a></li>
+				
+					<li><a href="Math/Classes/GMBoundingFrustum/index.html#//apple_ref/cpp/cl/GMBoundingFrustum">GMBoundingFrustum</a></li>
+				
+					<li><a href="Math/Classes/GMBoundingSphere/index.html#//apple_ref/cpp/cl/GMBoundingSphere">GMBoundingSphere</a></li>
+				
+					<li><a href="Math/Classes/GMMathHelper/index.html#//apple_ref/cpp/cl/GMMathHelper">GMMathHelper</a></li>
+				
+					<li><a href="Math/Classes/GMMatrix/index.html#//apple_ref/cpp/cl/GMMatrix">GMMatrix</a></li>
+				
+					<li><a href="Math/Classes/GMPlane/index.html#//apple_ref/cpp/cl/GMPlane">GMPlane</a></li>
+				
+					<li><a href="Math/Classes/GMQuat/index.html#//apple_ref/cpp/cl/GMQuat">GMQuat</a></li>
+				
+					<li><a href="Math/Classes/GMRandom/index.html#//apple_ref/cpp/cl/GMRandom">GMRandom</a></li>
+				
+					<li><a href="Math/Classes/GMRay/index.html#//apple_ref/cpp/cl/GMRay">GMRay</a></li>
+				
+					<li><a href="Math/Classes/GMRect2D/index.html#//apple_ref/cpp/cl/GMRect2D">GMRect2D</a></li>
+				
+					<li><a href="Math/Classes/GMVector2D/index.html#//apple_ref/cpp/cl/GMVector2D">GMVector2D</a></li>
+				
+					<li><a href="Math/Classes/GMVector3D/index.html#//apple_ref/cpp/cl/GMVector3D">GMVector3D</a></li>
+				
+					<li><a href="Math/Classes/GMVector4D/index.html#//apple_ref/cpp/cl/GMVector4D">GMVector4D</a></li>
+				
+					<li><a href="Math/Classes/GMViewport/index.html#//apple_ref/cpp/cl/GMViewport">GMViewport</a></li>
+				
+				</ul>
+				
+			</div>
+		
+
+		
+
+		
+			<div class="column">
+				
+					<h3>Enums</h3>
+					<ul>
+					
+						<li><a href="Math/Data Types/index.html#//apple_ref/cpp/tag/GMContainmentType">GMContainmentType</a></li>
+					
+						<li><a href="Math/Data Types/index.html#//apple_ref/cpp/tag/GMPlaneIntersectionType">GMPlaneIntersectionType</a></li>
+					
+					</ul>
+				
+				
+				
+				
+				
+			
+			</div>
+
+		
+		<h2>Error Handling</h2>
+
+		
+			<div class="column">
+				<h3>Classes</h3>
+				<ul>
+				
+					<li><a href="Error Handling/Classes/GMArithmeticException/index.html#//apple_ref/cpp/cl/GMArithmeticException">GMArithmeticException</a></li>
+				
+					<li><a href="Error Handling/Classes/GMException/index.html#//apple_ref/cpp/cl/GMException">GMException</a></li>
+				
+					<li><a href="Error Handling/Classes/GMInvalidOperationException/index.html#//apple_ref/cpp/cl/GMInvalidOperationException">GMInvalidOperationException</a></li>
+				
+					<li><a href="Error Handling/Classes/GMOutOfMemoryException/index.html#//apple_ref/cpp/cl/GMOutOfMemoryException">GMOutOfMemoryException</a></li>
+				
+				</ul>
+				
+			</div>
+		
+
+		
+
+		
+			</div>
+
+		
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+	
+</body>
+
+</html>

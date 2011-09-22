@@ -1,0 +1,176 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMGame Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMGame"></a>
+	<h1>GMGame Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p>ゲームの基本設定の確認とシーン管理の機能を提供するためのクラスです。
+</p>
+		<p></p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>ゲームの基本設定</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMGame/getStartUpColor/GMColor_getStartUpColor()_const">getStartUpColor() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMGame/getTitle/std::string_getTitle()_const">getTitle() const</a></li>
+			
+			</ul>
+		
+			<h3>シーン管理（登録）</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMGame/addScene/void_addScene(const_std::string@_name,_GMScene*_aScene)">addScene(const std::string& name, GMScene* aScene)</a></li>
+			
+			</ul>
+		
+			<h3>シーン管理</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMGame/ChangeScene/static_void_ChangeScene(const_std::string@_name)">ChangeScene(const std::string& name)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMGame/GetCurrentScene/static_GMScene*_GetCurrentScene()">GetCurrentScene()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/clm/GMGame/GetScene/static_GMScene*_GetScene(const_std::string@_name)">GetScene(const std::string& name)</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+
+	
+
+	
+		<h2>Class Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMGame/ChangeScene/static_void_ChangeScene(const_std::string@_name)"></a>
+				<h3>ChangeScene</h3>
+				<div class="declare">static void     ChangeScene(const std::string& name)</div>
+				
+					<div class="abstract">名前を指定して次フレームから使用されるシーンを選択します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						<p>このメソッドは、必ず GMScene クラスの updateModel() メソッドの実行中に使用してください。</p><p>このメソッドが実行されても、現在のフレームで実行されている updateModel() メソッドが暗黙的に中断されることはありません。基本的には、このメソッドを呼び出した直後に、return するなどして、updateModel() メソッドの実行を自分で中断してください。</p>
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMGame/GetCurrentScene/static_GMScene*_GetCurrentScene()"></a>
+				<h3>GetCurrentScene</h3>
+				<div class="declare">static GMScene* GetCurrentScene()</div>
+				
+					<div class="abstract">現在選択されているシーンを取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/clm/GMGame/GetScene/static_GMScene*_GetScene(const_std::string@_name)"></a>
+				<h3>GetScene</h3>
+				<div class="declare">static GMScene* GetScene(const std::string& name)</div>
+				
+					<div class="abstract">指定された名前で登録されたシーンを取得します。
+</div>
+				
+				
+			</div>
+		
+	
+
+	
+		<h2>Instant Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMGame/getStartUpColor/GMColor_getStartUpColor()_const"></a>
+				<h3>getStartUpColor</h3>
+				<div class="declare">GMColor     getStartUpColor() const</div>
+				
+					<div class="abstract">特定シーンの drawView() メソッドが呼ばれる前の起動時の画面を塗り潰すための色を取得します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						この色は、Globals.h の STARTUP_COLOR マクロで設定してください。
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMGame/getTitle/std::string_getTitle()_const"></a>
+				<h3>getTitle</h3>
+				<div class="declare">std::string getTitle() const</div>
+				
+					<div class="abstract">このゲームのウィンドウのタイトルバーに表示されているタイトル文字列を取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMGame/addScene/void_addScene(const_std::string@_name,_GMScene*_aScene)"></a>
+				<h3>addScene</h3>
+				<div class="declare">void    addScene(const std::string& name, GMScene* aScene)</div>
+				
+					<div class="abstract">新しいシーンを名前を付けて追加します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						このメソッドで登録されたシーンは、ゲーム終了時に自動的に解放されます。絶対に自分で delete しないでください。
+
+					</div>
+				
+			</div>
+		
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

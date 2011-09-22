@@ -1,0 +1,174 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMMusic Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMMusic"></a>
+	<h1>GMMusic Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p><p>ゲームの BGM を再生するためのクラスです。</p>
+</p>
+		<p></p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>コンストラクタ</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMusic/GMMusic/GMMusic(const_std::string@_filename,_bool_loop=true)">GMMusic(const std::string& filename, bool loop=true)</a></li>
+			
+			</ul>
+		
+			<h3>基本の操作</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMusic/play/void_play()">play()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMusic/pause/void_pause()">pause()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMusic/stop/void_stop()">stop()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMusic/isPlaying/bool_isPlaying()_const">isPlaying() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMusic/getVolume/double_getVolume()_const">getVolume() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMMusic/setVolume/void_setVolume(double_value)">setVolume(double value)</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+		<h2>Instant Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMusic/GMMusic/GMMusic(const_std::string@_filename,_bool_loop=true)"></a>
+				<h3>GMMusic</h3>
+				<div class="declare">GMMusic(const std::string& filename, bool loop=true)</div>
+				
+					<div class="abstract">ファイル名（拡張子含む）を指定して、BGM再生用のインスタンスを作成します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						デフォルトではループ再生しますが、第2引数に false を指定するとループ再生しないようになります。
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMusic/play/void_play()"></a>
+				<h3>play</h3>
+				<div class="declare">void    play()</div>
+				
+					<div class="abstract">BGM の再生を開始します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMusic/pause/void_pause()"></a>
+				<h3>pause</h3>
+				<div class="declare">void    pause()</div>
+				
+					<div class="abstract">BGM の再生を一時停止します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMusic/stop/void_stop()"></a>
+				<h3>stop</h3>
+				<div class="declare">void    stop()</div>
+				
+					<div class="abstract">BGM の再生を中断します。
+</div>
+				
+				
+					<div class="discussion">
+						<h4>Discussion</h4>
+						このメソッドの呼び出し後、BGM の再生位置は先頭に戻ります。
+
+					</div>
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMusic/isPlaying/bool_isPlaying()_const"></a>
+				<h3>isPlaying</h3>
+				<div class="declare">bool    isPlaying() const</div>
+				
+					<div class="abstract">BGM が再生中かどうかを取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMusic/getVolume/double_getVolume()_const"></a>
+				<h3>getVolume</h3>
+				<div class="declare">double  getVolume() const</div>
+				
+					<div class="abstract">BGM の現在の音量を取得します。
+</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMMusic/setVolume/void_setVolume(double_value)"></a>
+				<h3>setVolume</h3>
+				<div class="declare">void    setVolume(double value)</div>
+				
+					<div class="abstract">BGM の音量を設定します。
+</div>
+				
+				
+			</div>
+		
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../css/main.css" type="text/css" />
+	<title>Karakuri 開発ガイド - デバッグについて</title>
+</head>
+
+<body class="guide">
+
+<p><a href="index.html">開発ガイドの目次に戻る</a></p>
+
+<h1>デバッグについて</h1>
+
+<h2>はじめに</h2>
+
+<p>Karakuri Framework では、以下のようなデバッグのための手法を提供しています。</p>
+
+<ul>
+	<li>デバッグ文字列の出力</li>
+	<li>ゲーム実行時の例外処理</li>
+	<li>FPS 情報の表示</li>
+</ul>
+
+<h2>デバッグ文字列の出力</h2>
+
+<h3>デバッグ文字列の取得</h3>
+
+<p>Karakuri Framework に用意されているすべてのクラスは、KRObject クラスから継承しており、現在の状態を文字列として表すための <a href="../referencelibrary/Game Foundation/Classes/KRObject/index.html#//apple_ref/cpp/instm/KRObject/c_str/const_char_*c_str()_const">const char *c_str()</a> 関数をもっています。</p>
+
+<h3>KRDebug(): 標準出力へのデバッグ文字列の出力</h3>
+
+<p>KRDebug() 関数を使うことで、標準出力にデバッグ文字列を出力できます。</p>
+<p>KRDebug() 関数は、printf() 関数と同じ書式を使い、複数の引数を伴って呼び出すことができます。</p>
+<p>KRDebug() 関数は、Debug ビルドでのみ標準出力に文字列を出力します。Release ビルドでは何も行いません。</p>
+
+<h3>KRDebugScreen(): ゲーム画面へのデバッグ文字列の出力</h3>
+
+<p>KRDebug() 関数と同様に使えるのが、KRDebugScreen() 関数です。KRDebugScreen() 関数は、直接ゲーム画面の上に、影付きの白文字でデバッグ文字列を表示します。とくに iPhone 実機でのデバッグに有効な手段となります。</p>
+<p>デバッグ文字列が不要となった場合には、KRClearDebugScreen() 関数を使うことで、ゲーム画面上に表示されたデバッグ文字列を削除できます。iPhone 実機での開発時には、Debug ビルドの際に、指5本タッチで KRClearDebugScreen() 関数を呼び出すようにしておくと、デバッグ作業が行いやすくなります。</p>
+<p>KRDebugScreen() 関数は、printf() 関数と同じ書式を使い、複数の引数を伴って呼び出すことができます。</p>
+<p>KRDebugScreen() 関数は、Debug ビルドでのみ標準出力に文字列を出力します。Release ビルドでは何も行いません。</p>
+
+<h2>ゲーム実行時の例外処理</h2>
+
+<p>ゲーム実行時に何らかのエラーが起きた場合には、<a href="../referencelibrary/Game Foundation/Classes/KRGameError/index.html#//apple_ref/cpp/cl/KRGameError">KRGameError</a> 例外をスローしてください。この例外はフレームワークによってキャッチされ、メッセージボックスやメッセージシートに適切に表示されます。</p>
+
+<blockquote class="code"><pre>if (error) {
+    throw KRGameError("エラーの内容を示す文字列");
+}</pre></blockquote>
+
+<h2>FPS 情報の表示</h2>
+
+<p>GameMain クラスのコンストラクタで <a href="../referencelibrary/Game Foundation/Classes/KarakuriGame/index.html#//apple_ref/cpp/instm/KarakuriGame/setShowsFPS/void_setShowsFPS(bool_flag)">setShowsFPS()</a> 関数を true を引数にして呼び出すことで、ゲームの実行中に、現在のフレームレートなどの情報を表示することができます。</p>
+
+<dl>
+	<dt>FPS</dt>
+	<dd>平均フレームレートです。1秒間に何フレーム描画できているかを表示します。</dd>
+
+	<dt>TPF</dt>
+	<dd>1フレーム当たりの平均のテクスチャ切り替え回数です。</dd>
+
+	<dt>BPF</dt>
+	<dd>1フレーム当たりの平均のテクスチャのバッチ処理回数です。</dd>
+</dl>
+
+<div class="footer">
+	Copyright &copy; 2010 Sazameki and Satoshi Numata Ph.D.
+</div>
+
+</body>
+
+<html>

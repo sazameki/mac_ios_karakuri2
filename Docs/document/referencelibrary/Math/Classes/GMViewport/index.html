@@ -1,0 +1,199 @@
+
+
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="../../../../css/main.css" type="text/css" />
+	<title>GMViewport Class</title>
+</head>
+
+<body class="class">
+
+	<p><a href="../../../index.html" target="_top">Back to TOC</a></p>
+
+	<a name="//apple_ref/cpp/cl/GMViewport"></a>
+	<h1>GMViewport Class</h1>
+	
+	<div class="class_info_box">
+		<h2>Super Class</h2>
+		<ul>
+		
+			<li><a href="../../../System/Classes/GMObject/index.html#//apple_ref/cpp/cl/GMObject">GMObject</a></li>
+		
+		</ul>
+		
+	</div>
+
+	<h2>Overview</h2>
+	<div class="overview">
+		<p></p>
+		<p></p>
+	</div>
+
+	
+		<h2>Tasks</h2>
+		<div class="task">
+		
+			<h3>コンストラクタ</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMViewport/GMViewport/GMViewport()">GMViewport()</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMViewport/GMViewport/GMViewport(int_x,_int_y,_int_width,_int_height)">GMViewport(int x, int y, int width, int height)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMViewport/GMViewport/GMViewport(const_GMViewport@_viewport)">GMViewport(const GMViewport& viewport)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMViewport/GMViewport/GMViewport(const_GMRect2D@_bounds)">GMViewport(const GMRect2D& bounds)</a></li>
+			
+			</ul>
+		
+			<h3>メインの操作</h3>
+			<ul>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMViewport/getAspectRatio/double_getAspectRatio()_const">getAspectRatio() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMViewport/getBounds/GMRect2D_getBounds()_const">getBounds() const</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMViewport/project/GMVector3D_project(const_GMVector3D@_source,_const_GMMatrix@_projection,_const_GMMatrix@_view,_const_GMMatrix@_world)">project(const GMVector3D& source, const GMMatrix& projection, const GMMatrix& view, const GMMatrix& world)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMViewport/setBounds/void_setBounds(const_GMRect2D@_bounds)">setBounds(const GMRect2D& bounds)</a></li>
+			
+				<li><a href="#//apple_ref/cpp/instm/GMViewport/unproject/GMVector3D_unproject(const_GMVector3D@_source,_const_GMMatrix@_projection,_const_GMMatrix@_view,_const_GMMatrix@_world)">unproject(const GMVector3D& source, const GMMatrix& projection, const GMMatrix& view, const GMMatrix& world)</a></li>
+			
+			</ul>
+		
+		</div>
+	
+
+	
+
+	
+
+	
+		<h2>Instant Variables</h2>
+		
+			<a name=""></a>
+			<h3>x</h3>
+			<div class="declare">int x</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>y</h3>
+			<div class="declare">int y</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>width</h3>
+			<div class="declare">int width</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>height</h3>
+			<div class="declare">int height</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>maxDepth</h3>
+			<div class="declare">double maxDepth</div>
+			
+			
+		
+			<a name=""></a>
+			<h3>minDepth</h3>
+			<div class="declare">double minDepth</div>
+			
+			
+		
+	
+
+	
+
+	
+		<h2>Instant Methods</h2>
+
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMViewport/GMViewport/GMViewport()"></a>
+				<h3>GMViewport</h3>
+				<div class="declare">GMViewport()</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMViewport/GMViewport/GMViewport(int_x,_int_y,_int_width,_int_height)"></a>
+				<h3>GMViewport</h3>
+				<div class="declare">GMViewport(int x, int y, int width, int height)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMViewport/GMViewport/GMViewport(const_GMViewport@_viewport)"></a>
+				<h3>GMViewport</h3>
+				<div class="declare">GMViewport(const GMViewport& viewport)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMViewport/GMViewport/GMViewport(const_GMRect2D@_bounds)"></a>
+				<h3>GMViewport</h3>
+				<div class="declare">GMViewport(const GMRect2D& bounds)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMViewport/getAspectRatio/double_getAspectRatio()_const"></a>
+				<h3>getAspectRatio</h3>
+				<div class="declare">double      getAspectRatio() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMViewport/getBounds/GMRect2D_getBounds()_const"></a>
+				<h3>getBounds</h3>
+				<div class="declare">GMRect2D    getBounds() const</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMViewport/project/GMVector3D_project(const_GMVector3D@_source,_const_GMMatrix@_projection,_const_GMMatrix@_view,_const_GMMatrix@_world)"></a>
+				<h3>project</h3>
+				<div class="declare">GMVector3D  project(const GMVector3D& source, const GMMatrix& projection, const GMMatrix& view, const GMMatrix& world)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMViewport/setBounds/void_setBounds(const_GMRect2D@_bounds)"></a>
+				<h3>setBounds</h3>
+				<div class="declare">void        setBounds(const GMRect2D& bounds)</div>
+				
+				
+			</div>
+		
+			<div class="one_info">
+				<a name="//apple_ref/cpp/instm/GMViewport/unproject/GMVector3D_unproject(const_GMVector3D@_source,_const_GMMatrix@_projection,_const_GMMatrix@_view,_const_GMMatrix@_world)"></a>
+				<h3>unproject</h3>
+				<div class="declare">GMVector3D  unproject(const GMVector3D& source, const GMMatrix& projection, const GMMatrix& view, const GMMatrix& world)</div>
+				
+				
+			</div>
+		
+	
+	
+	<div class="footer">
+		Copyright &copy; 2010-2011 Sazameki and Satoshi Numata Ph.D.
+	</div>
+
+</body>
+
+</html>
